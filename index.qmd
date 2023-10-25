@@ -1,0 +1,15 @@
+---
+title: "DiCiHub"
+sidebar: false
+---
+## DiCi-Hub (Digital Cinema Hub): A Research Hub for Digital Film Studies
+Das Verbundprojekt DiCi-Hub, gefördert von der VW-Stiftung im Rahmen der Förderinitiative „Weltwissen – Strukturelle Stärkung kleiner Fächer“, stellt sich den Herausforderung von digitalen Tools und Methoden in der Film- und Medienwissenschaft. Das Projekt bringt drei Forschungsuniversitäten zusammen, um neue konzeptuelle Grundlagen und Methoden für das Fach zu entwickeln.
+Nachfolgend möchten wir einige unserer Projekte vorstellen:
+
+::: {layout-ncol=2}
+
+![[Brunch Lectures](brunchlectures.qmd)](img/Button_DiCiHub_Brunch_Lectures.png){width=200 height=200}
+
+![[Researching Super 8](researchingsuper8.qmd)](img/Button_Researching_Super8.png){width=200 height=200}
+
+:::

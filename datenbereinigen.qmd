@@ -1,0 +1,19 @@
+---
+title: "Daten bereinigen und anreichern mit OpenRefine"
+---
+Diese Lecture-Einheit zielt darauf ab, unseren Übungsdatensatz weiter zu explorieren, Unstimmigkeiten schnell zu erkennen und zu korrigieren. Hierzu stellen wir das freie Programm OpenRefine vor und zeigen anhand unseres Übungsdatensatzes die Grundfunktionen. Neben der Datenbereinigung gehen wir auf die Datenanreicherung mit OpenRefine aus externen Datenquellen wie WikiData ein.
+
+![[Startseite OpenRefine](https://openrefine.org/)](img/OR_webseite.png){width="80%" height="80%" fig-align="center"}
+
+## Was ist OpenRefine?
+- Funktion: OpenRefine ist ein Werkzeug, das unter anderem dazu geeignet ist, um einen Überblick über Datensätze zu erhalten, sie zu bereinigen, mit externen Daten anzureichern oder in andere Formate zu exportieren. Hierfür wird ein Datensatz in das Programm geladen.
+- Open Source Tool, kann kostenfrei genutzt werden, verfügbar für Windows, Linux und Mac OS
+- keine Programmierkenntnisse notwendig, jedoch sind für die fortgeschrittene Nutzung Kenntnisse einer Programmiersprache, regulärer Ausdrücke und zur Datenbankabfrage von Vorteil
+- Alternativ zu Tools wie Excel und Programmiersprachen wie Python und R, mithilfe derer ebenfalls Daten bereinigt werden können.
+
+## Installation
+Es erfolgt keine Installation im klassischen Sinne.
+Das Programm kann für das eigene Betriebssystem von der [Webseite](https://openrefine.org/download) heruntergeladen werden. Im Fall von Windows sollte geprüft werden, ob die Version mit oder ohne der Programmiersprache Java benötigt wird.
+Der Download besteht aus einem komprimierten Ordner. Dieser Ordner muss, damit OpenRefine ausgeführt werden kann, entpackt bzw. entzippt werden.
+
+## Weitere Informationen folgen in Kürze

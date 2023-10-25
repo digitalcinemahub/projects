@@ -1,0 +1,45 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  navbar:
+    pinned: true
+    left:
+      - href: index.qmd
+        text: Home
+      - href: brunchlectures.qmd
+        text: Brunch Lectures
+      - href: researchingsuper8.qmd
+        text: Researching Super 8
+      - href: https://www.uni-marburg.de/en/fb09/institutes/media-studies/research/research-projects/dici-hub
+        text: About
+        target: _blank
+    background: "#82b74b"
+    foreground: "#f2f2f2"
+    logo: "img/DiCi_Hub_transparent.png"
+  sidebar:
+    style: "floating"
+    border: true
+    search: true
+    contents:
+      - section: "Brunch Lectures"
+        contents:
+          - datensortieren.qmd
+          - datenbereinigen.qmd
+          - datenvisualisieren.qmd
+  back-to-top-navigation: true   
+  page-footer: "© 2023 [Digital Cinema Hub](https://www.uni-marburg.de/en/fb09/institutes/media-studies/research/research-projects/dici-hub), Marburg - Mainz - Frankfurt. </br>
+  Für die Inhalte externer Seiten übernehmen wir trotz sorgfältiger Überprüfung keine Verantwortung."
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+    linkcolor: "#c1946a"
+    link-external-icon: true
+    link-external-newwindow: true
+
+
+
+

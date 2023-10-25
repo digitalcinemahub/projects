@@ -1,0 +1,15 @@
+---
+title: "Daten visualisieren mit RAWGraphs"
+---
+Diese Lecture-Einheit zielt darauf ab, die in unserem Übungsdatensatz zu findenden Daten in verschiedenen Typen von Diagrammen graphisch darzustellen. Hierzu werden wir uns zuerst mit der Frage beschäftigen, was eine gute graphische Darstellung ausmacht und worauf generell bei der Erstellung von Datenvisualisierungen geachtet werden sollte. Mithilfe des Web-Tools RAWGraphs, dessen Funktionalitäten wir an ein paar Beispielen erklären, werden wir dann bezogen auf unseren Datensatz verschiedene Diagramme erstellen.
+
+![[Startseite RAWGraphs](https://www.rawgraphs.io/)](img/rawgraphs_startseite.png){width="80%" height="80%" fig-align="center"}
+
+## Was ist RAWGraphs?
+- Funktion: Man kann eine Datentabelle hochladen, um aus den Daten Visualisierungen in Form von Diagrammen zu erstellen (Balkendiagramme, Kurvendiagramme, Tortendiagramme etc.)
+- Open Source Tool, kann kostenfrei genutzt werden
+- keine Installation notwendig, kann als Web-App im Browser benutzt werden
+- keine Programmierkenntnisse notwendig
+- Alternative zu Tools wie Excel, Tableau und Programmiersprachen wie Python und R, mithilfe derer ebenfalls Visualisierungen hergestellt werden können
+
+## Weitere Informationen folgen in Kürze

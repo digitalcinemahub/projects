@@ -1,0 +1,39 @@
+---
+title: "Daten sortieren und filtern mit Excel"
+---
+Diese Lecture-Einheit zielt darauf ab, unseren Übungsdatensatz und das csv-Format kennen zu lernen. Hierzu benutzen wir das Tabellenkalkulationsprogramm Excel. Wir schauen uns an, wie eine csv in Excel geöffnet und formatiert werden kann und zeigen grundlegende Excel-Funktion wie das Filtern und Sortieren von Daten.
+
+## Was ist Excel?
+Excel ist ein kostenpflichtiges Tabellenkalkulationsprogramm von Microsoft. 
+Es dient vor allem der Datenanalyse und -visualisierung und gilt als weltweit verbreitetstes Programm seiner Art.
+
+Excel ist tabellarisch aufgebaut, in  
+
+- durchnummerierte Zeilen:
+
+![](img/00_Excel_Zeile.png)
+
+- und durchalphabetisierte Spalten:
+
+![](img/00_Excel_Spalte.png)
+
+Bei einem einzelnen Feld spricht man von einer Zelle. 
+
+Zellen können mittels Formeln zueinander in Relation gesetzt werden, zum Beispiel aufsummiert. Eine beliebte Anwendung von Excel ist darum im Rechnungswesen. 
+
+Da sich die Höhe und Breite von Zellen automatisch und manuell variieren lassen, gibt es allerdings auch Beispiele für die Zweckentfremdung des Programms zur Herstellung von Pixel Art.
+
+## Installation
+An den Unis Marburg, Mainz und Frankfurt gibt es jeweils Lizenzverträge, damit die Microsoft Office-Programme (inklusive Excel) von Universitätsangehörigen kostenlos genutzt werden können. 
+
+Downloadanleitungen sollten jeweils unter folgenden Links zu finden sein:  
+Hochschulrechenzentrum der Uni Marburg:  
+[https://www.uni-marburg.de/de/hrz/dienste/software/microsoft_office](https://www.uni-marburg.de/de/hrz/dienste/software/microsoft_office)  
+Zentrum für Datenverarbeitung der Uni Mainz:  
+[https://www.zdv.uni-mainz.de/jgu-signin-oidc/tag/lizenzen/](https://www.zdv.uni-mainz.de/jgu-signin-oidc/tag/lizenzen/)  
+Hochschulrechenzentrum der Uni Frankfurt:  
+[https://www.rz.uni-frankfurt.de/73202101/Microsoft_Office_f%25C3%25BCr_Studierende](https://www.rz.uni-frankfurt.de/73202101/Microsoft_Office_f%25C3%25BCr_Studierende)  
+
+Ansonsten kann auch eine kostenlose, aber zeitlich begrenzte Testversion verwendet werden: [https://www.microsoft.com/de-de/microsoft-365/try?culture=de-de&country=de](https://www.microsoft.com/de-de/microsoft-365/try?culture=de-de&country=de)
+
+## Weitere Informationen folgen in Kürze

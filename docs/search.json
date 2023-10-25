@@ -1,0 +1,121 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "DiCiHub",
+    "section": "",
+    "text": "Das Verbundprojekt DiCi-Hub, gefördert von der VW-Stiftung im Rahmen der Förderinitiative „Weltwissen – Strukturelle Stärkung kleiner Fächer“, stellt sich den Herausforderung von digitalen Tools und Methoden in der Film- und Medienwissenschaft. Das Projekt bringt drei Forschungsuniversitäten zusammen, um neue konzeptuelle Grundlagen und Methoden für das Fach zu entwickeln. Nachfolgend möchten wir einige unserer Projekte vorstellen:\n\n\n\n\n\n\nBrunch Lectures\n\n\n\n\n\n\n\nResearching Super 8"
+  },
+  {
+    "objectID": "index.html#dici-hub-digital-cinema-hub-a-research-hub-for-digital-film-studies",
+    "href": "index.html#dici-hub-digital-cinema-hub-a-research-hub-for-digital-film-studies",
+    "title": "DiCiHub",
+    "section": "",
+    "text": "Das Verbundprojekt DiCi-Hub, gefördert von der VW-Stiftung im Rahmen der Förderinitiative „Weltwissen – Strukturelle Stärkung kleiner Fächer“, stellt sich den Herausforderung von digitalen Tools und Methoden in der Film- und Medienwissenschaft. Das Projekt bringt drei Forschungsuniversitäten zusammen, um neue konzeptuelle Grundlagen und Methoden für das Fach zu entwickeln. Nachfolgend möchten wir einige unserer Projekte vorstellen:\n\n\n\n\n\n\nBrunch Lectures\n\n\n\n\n\n\n\nResearching Super 8"
+  },
+  {
+    "objectID": "researchingsuper8.html",
+    "href": "researchingsuper8.html",
+    "title": "Researching Super 8",
+    "section": "",
+    "text": "In Mainz, our research group is collaborating since 2021 with a group of collectors of Super 8 film material and related paratexts such as catalogs, magazines etc. Following a citizen-science principle we want to acknowledge how their experience, expertise and generosity has contributed to our own research.\nAndreas Chmielewski is a German collector of small-gauge films and in particular of Super8 format. He curates the website Super8rezensionen. This exists since 2000 and was first developed by Robert Weidemann. Main aim of the project is to describe and rate Super8 movies, to discuss the quality of the edit or of the color-copy of. Andreas has kindly borrowed us all his Super8 catalogs and allowed us to digitize them for further research.\nJoachim Schmidt is a German collector and the owner and curator of the website Off2.de a website dedicated to the history of Super8, which collects not only historical material and information about Super8 distribution in Germany but also features several video interviews (hosted on its youtube channel) with collectors, experts and ex-employees of Companies selling or working with Super8. Joachim was invited by our research group to present on Super8 history in Germany for an undergraduate course at the Film and Mediadramaturgy Institute in Mainz.\nEivind Mork (and his wife Heidi) developed in 2016 the website Super8database.com, which is a database and repository of Super8 movies distributed internationally in the past. The data is, if not stated otherwise, licenced by CC-BY 4.0. That’s a Creative Commons licence that allows us to work with the data in a way that meets our academic needs as long as we name Eivind Mork. A real advantage is that you can download the data in different file formats like Excel table or JSON, so that you can decide which format suits better. In our teaching and research we profited from the data collected and shared on Super8database.\nWe have reported on our collaboration at the NECS (Network for Cinema and Media Studies) Conference in Oslo in June 2023. Joachim and Eivind have published a short report on our presentations on their website. You can read it here:\nFrom Off2.de (in German)\nFrom Super8database.com (in English)"
+  },
+  {
+    "objectID": "researchingsuper8.html#our-collaboration-with-collectors",
+    "href": "researchingsuper8.html#our-collaboration-with-collectors",
+    "title": "Researching Super 8",
+    "section": "",
+    "text": "In Mainz, our research group is collaborating since 2021 with a group of collectors of Super 8 film material and related paratexts such as catalogs, magazines etc. Following a citizen-science principle we want to acknowledge how their experience, expertise and generosity has contributed to our own research.\nAndreas Chmielewski is a German collector of small-gauge films and in particular of Super8 format. He curates the website Super8rezensionen. This exists since 2000 and was first developed by Robert Weidemann. Main aim of the project is to describe and rate Super8 movies, to discuss the quality of the edit or of the color-copy of. Andreas has kindly borrowed us all his Super8 catalogs and allowed us to digitize them for further research.\nJoachim Schmidt is a German collector and the owner and curator of the website Off2.de a website dedicated to the history of Super8, which collects not only historical material and information about Super8 distribution in Germany but also features several video interviews (hosted on its youtube channel) with collectors, experts and ex-employees of Companies selling or working with Super8. Joachim was invited by our research group to present on Super8 history in Germany for an undergraduate course at the Film and Mediadramaturgy Institute in Mainz.\nEivind Mork (and his wife Heidi) developed in 2016 the website Super8database.com, which is a database and repository of Super8 movies distributed internationally in the past. The data is, if not stated otherwise, licenced by CC-BY 4.0. That’s a Creative Commons licence that allows us to work with the data in a way that meets our academic needs as long as we name Eivind Mork. A real advantage is that you can download the data in different file formats like Excel table or JSON, so that you can decide which format suits better. In our teaching and research we profited from the data collected and shared on Super8database.\nWe have reported on our collaboration at the NECS (Network for Cinema and Media Studies) Conference in Oslo in June 2023. Joachim and Eivind have published a short report on our presentations on their website. You can read it here:\nFrom Off2.de (in German)\nFrom Super8database.com (in English)"
+  },
+  {
+    "objectID": "datensortieren.html",
+    "href": "datensortieren.html",
+    "title": "Daten sortieren und filtern mit Excel",
+    "section": "",
+    "text": "Diese Lecture-Einheit zielt darauf ab, unseren Übungsdatensatz und das csv-Format kennen zu lernen. Hierzu benutzen wir das Tabellenkalkulationsprogramm Excel. Wir schauen uns an, wie eine csv in Excel geöffnet und formatiert werden kann und zeigen grundlegende Excel-Funktion wie das Filtern und Sortieren von Daten."
+  },
+  {
+    "objectID": "datensortieren.html#was-ist-excel",
+    "href": "datensortieren.html#was-ist-excel",
+    "title": "Daten sortieren und filtern mit Excel",
+    "section": "Was ist Excel?",
+    "text": "Was ist Excel?\nExcel ist ein kostenpflichtiges Tabellenkalkulationsprogramm von Microsoft. Es dient vor allem der Datenanalyse und -visualisierung und gilt als weltweit verbreitetstes Programm seiner Art.\nExcel ist tabellarisch aufgebaut, in\n\ndurchnummerierte Zeilen:\n\n\n\nund durchalphabetisierte Spalten:\n\n\nBei einem einzelnen Feld spricht man von einer Zelle.\nZellen können mittels Formeln zueinander in Relation gesetzt werden, zum Beispiel aufsummiert. Eine beliebte Anwendung von Excel ist darum im Rechnungswesen.\nDa sich die Höhe und Breite von Zellen automatisch und manuell variieren lassen, gibt es allerdings auch Beispiele für die Zweckentfremdung des Programms zur Herstellung von Pixel Art."
+  },
+  {
+    "objectID": "datensortieren.html#installation",
+    "href": "datensortieren.html#installation",
+    "title": "Daten sortieren und filtern mit Excel",
+    "section": "Installation",
+    "text": "Installation\nAn den Unis Marburg, Mainz und Frankfurt gibt es jeweils Lizenzverträge, damit die Microsoft Office-Programme (inklusive Excel) von Universitätsangehörigen kostenlos genutzt werden können.\nDownloadanleitungen sollten jeweils unter folgenden Links zu finden sein:\nHochschulrechenzentrum der Uni Marburg:\nhttps://www.uni-marburg.de/de/hrz/dienste/software/microsoft_office\nZentrum für Datenverarbeitung der Uni Mainz:\nhttps://www.zdv.uni-mainz.de/jgu-signin-oidc/tag/lizenzen/\nHochschulrechenzentrum der Uni Frankfurt:\nhttps://www.rz.uni-frankfurt.de/73202101/Microsoft_Office_f%25C3%25BCr_Studierende\nAnsonsten kann auch eine kostenlose, aber zeitlich begrenzte Testversion verwendet werden: https://www.microsoft.com/de-de/microsoft-365/try?culture=de-de&country=de"
+  },
+  {
+    "objectID": "datensortieren.html#weitere-informationen-folgen-in-kürze",
+    "href": "datensortieren.html#weitere-informationen-folgen-in-kürze",
+    "title": "Daten sortieren und filtern mit Excel",
+    "section": "Weitere Informationen folgen in Kürze",
+    "text": "Weitere Informationen folgen in Kürze"
+  },
+  {
+    "objectID": "brunchlectures.html",
+    "href": "brunchlectures.html",
+    "title": "Brunch Lectures",
+    "section": "",
+    "text": "Diese dreiteilige Lecture-Reihe dient dazu, einen Einblick in das Arbeiten mit Datensätzen zu geben. Wir arbeiten über die drei Veranstaltungen an einem Datensatz, den wir zuvor bereitstellen. Die Veranstaltungen können unabhängig voneinander besucht werden.\nAnmeldung immer bis montags 14 Uhr unter dicihub@uni-marburg.de\n\n\n\n\n\n\n\n\nFür die Brunch-Lecture-Reihe wurde von uns ein Datensatz (zum Download anklicken) vorbereitet, der Daten zu einer Reihe von Filmen mit Angaben zu Regie, Genre, Sprache, Bewertungen und weiterem enthält. Der Originaldatensatz mit Hintergrundinformationen zu seiner Entstehung ist unter dem Namen Movie Lab auf der Online-Open-Source-Plattform Open Syllabus zu finden.\nBei dem Datensatz handelt es sich um eine CSV-Datei. CSV steht für Comma-Separated Values. Dieses Dateiformat hat den Vorteil, dass es sich mit einer Reihe unterschiedlicher Programme öffnen und bearbeiten lässt.\n\n\n\nFür jede Lecture-Einheit stellen wir begleitende Informationen zum Nachlesen und Nachnutzen an:\n- Daten sortieren und filtern mit Excel\n- Daten bereinigen und anreichern mit OpenRefine\n- Daten visualisieren mit RAWGraphs"
+  },
+  {
+    "objectID": "brunchlectures.html#online-brunch-lectures",
+    "href": "brunchlectures.html#online-brunch-lectures",
+    "title": "Brunch Lectures",
+    "section": "",
+    "text": "Diese dreiteilige Lecture-Reihe dient dazu, einen Einblick in das Arbeiten mit Datensätzen zu geben. Wir arbeiten über die drei Veranstaltungen an einem Datensatz, den wir zuvor bereitstellen. Die Veranstaltungen können unabhängig voneinander besucht werden.\nAnmeldung immer bis montags 14 Uhr unter dicihub@uni-marburg.de\n\n\n\n\n\n\n\n\nFür die Brunch-Lecture-Reihe wurde von uns ein Datensatz (zum Download anklicken) vorbereitet, der Daten zu einer Reihe von Filmen mit Angaben zu Regie, Genre, Sprache, Bewertungen und weiterem enthält. Der Originaldatensatz mit Hintergrundinformationen zu seiner Entstehung ist unter dem Namen Movie Lab auf der Online-Open-Source-Plattform Open Syllabus zu finden.\nBei dem Datensatz handelt es sich um eine CSV-Datei. CSV steht für Comma-Separated Values. Dieses Dateiformat hat den Vorteil, dass es sich mit einer Reihe unterschiedlicher Programme öffnen und bearbeiten lässt.\n\n\n\nFür jede Lecture-Einheit stellen wir begleitende Informationen zum Nachlesen und Nachnutzen an:\n- Daten sortieren und filtern mit Excel\n- Daten bereinigen und anreichern mit OpenRefine\n- Daten visualisieren mit RAWGraphs"
+  },
+  {
+    "objectID": "datenbereinigen.html",
+    "href": "datenbereinigen.html",
+    "title": "Daten bereinigen und anreichern mit OpenRefine",
+    "section": "",
+    "text": "Diese Lecture-Einheit zielt darauf ab, unseren Übungsdatensatz weiter zu explorieren, Unstimmigkeiten schnell zu erkennen und zu korrigieren. Hierzu stellen wir das freie Programm OpenRefine vor und zeigen anhand unseres Übungsdatensatzes die Grundfunktionen. Neben der Datenbereinigung gehen wir auf die Datenanreicherung mit OpenRefine aus externen Datenquellen wie WikiData ein."
+  },
+  {
+    "objectID": "datenbereinigen.html#was-ist-openrefine",
+    "href": "datenbereinigen.html#was-ist-openrefine",
+    "title": "Daten bereinigen und anreichern mit OpenRefine",
+    "section": "Was ist OpenRefine?",
+    "text": "Was ist OpenRefine?\n\nFunktion: OpenRefine ist ein Werkzeug, das unter anderem dazu geeignet ist, um einen Überblick über Datensätze zu erhalten, sie zu bereinigen, mit externen Daten anzureichern oder in andere Formate zu exportieren. Hierfür wird ein Datensatz in das Programm geladen.\nOpen Source Tool, kann kostenfrei genutzt werden, verfügbar für Windows, Linux und Mac OS\nkeine Programmierkenntnisse notwendig, jedoch sind für die fortgeschrittene Nutzung Kenntnisse einer Programmiersprache, regulärer Ausdrücke und zur Datenbankabfrage von Vorteil\nAlternativ zu Tools wie Excel und Programmiersprachen wie Python und R, mithilfe derer ebenfalls Daten bereinigt werden können."
+  },
+  {
+    "objectID": "datenbereinigen.html#installation",
+    "href": "datenbereinigen.html#installation",
+    "title": "Daten bereinigen und anreichern mit OpenRefine",
+    "section": "Installation",
+    "text": "Installation\nEs erfolgt keine Installation im klassischen Sinne. Das Programm kann für das eigene Betriebssystem von der Webseite heruntergeladen werden. Im Fall von Windows sollte geprüft werden, ob die Version mit oder ohne der Programmiersprache Java benötigt wird. Der Download besteht aus einem komprimierten Ordner. Dieser Ordner muss, damit OpenRefine ausgeführt werden kann, entpackt bzw. entzippt werden."
+  },
+  {
+    "objectID": "datenbereinigen.html#weitere-informationen-folgen-in-kürze",
+    "href": "datenbereinigen.html#weitere-informationen-folgen-in-kürze",
+    "title": "Daten bereinigen und anreichern mit OpenRefine",
+    "section": "Weitere Informationen folgen in Kürze",
+    "text": "Weitere Informationen folgen in Kürze"
+  },
+  {
+    "objectID": "datenvisualisieren.html",
+    "href": "datenvisualisieren.html",
+    "title": "Daten visualisieren mit RAWGraphs",
+    "section": "",
+    "text": "Diese Lecture-Einheit zielt darauf ab, die in unserem Übungsdatensatz zu findenden Daten in verschiedenen Typen von Diagrammen graphisch darzustellen. Hierzu werden wir uns zuerst mit der Frage beschäftigen, was eine gute graphische Darstellung ausmacht und worauf generell bei der Erstellung von Datenvisualisierungen geachtet werden sollte. Mithilfe des Web-Tools RAWGraphs, dessen Funktionalitäten wir an ein paar Beispielen erklären, werden wir dann bezogen auf unseren Datensatz verschiedene Diagramme erstellen."
+  },
+  {
+    "objectID": "datenvisualisieren.html#was-ist-rawgraphs",
+    "href": "datenvisualisieren.html#was-ist-rawgraphs",
+    "title": "Daten visualisieren mit RAWGraphs",
+    "section": "Was ist RAWGraphs?",
+    "text": "Was ist RAWGraphs?\n\nFunktion: Man kann eine Datentabelle hochladen, um aus den Daten Visualisierungen in Form von Diagrammen zu erstellen (Balkendiagramme, Kurvendiagramme, Tortendiagramme etc.)\nOpen Source Tool, kann kostenfrei genutzt werden\nkeine Installation notwendig, kann als Web-App im Browser benutzt werden\nkeine Programmierkenntnisse notwendig\nAlternative zu Tools wie Excel, Tableau und Programmiersprachen wie Python und R, mithilfe derer ebenfalls Visualisierungen hergestellt werden können"
+  },
+  {
+    "objectID": "datenvisualisieren.html#weitere-informationen-folgen-in-kürze",
+    "href": "datenvisualisieren.html#weitere-informationen-folgen-in-kürze",
+    "title": "Daten visualisieren mit RAWGraphs",
+    "section": "Weitere Informationen folgen in Kürze",
+    "text": "Weitere Informationen folgen in Kürze"
+  }
+]
