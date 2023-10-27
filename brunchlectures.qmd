@@ -16,7 +16,7 @@ Für die Brunch-Lecture-Reihe wurde von uns ein [Datensatz](datensaetze/DiCiHubB
 Bei dem Datensatz handelt es sich um eine CSV-Datei. CSV steht für Comma-Separated Values. Dieses Dateiformat hat den Vorteil, dass es sich mit einer Reihe unterschiedlicher Programme öffnen und bearbeiten lässt.
 
 ### Materialien zu den einzelnen Lectures
-Für jede Lecture-Einheit stellen wir begleitende Informationen zum Nachlesen und Nachnutzen an:  
-- [Daten sortieren und filtern mit Excel](datensortieren.qmd)  
-- [Daten bereinigen und anreichern mit OpenRefine](datenbereinigen.qmd)  
-- [Daten visualisieren mit RAWGraphs](datenvisualisieren.qmd)  
+Für jede Lecture-Einheit stellen wir begleitende Informationen zum Nachlesen und Nachnutzen zur Verfügung:  
+[Daten sortieren und filtern mit Excel](datensortieren.qmd)  
+[Daten bereinigen und anreichern mit OpenRefine](datenbereinigen.qmd)  
+[Daten visualisieren mit RAWGraphs](datenvisualisieren.qmd)  
