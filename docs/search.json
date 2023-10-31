@@ -18,7 +18,7 @@
     "href": "datenvisualisieren.html",
     "title": "Daten visualisieren mit RAWGraphs",
     "section": "",
-    "text": "Diese Lecture-Einheit zielt darauf ab, die in unserem Übungsdatensatz zu findenden Daten in verschiedenen Typen von Diagrammen graphisch darzustellen. Hierzu werden wir uns zuerst mit der Frage beschäftigen, was eine gute graphische Darstellung ausmacht und worauf generell bei der Erstellung von Datenvisualisierungen geachtet werden sollte. Mithilfe des Web-Tools RAWGraphs, dessen Funktionalitäten wir an ein paar Beispielen erklären, werden wir dann bezogen auf unseren Datensatz verschiedene Diagramme erstellen."
+    "text": "Diese Lecture-Einheit zielt darauf ab, die in unserem Übungsdatensatz enthaltenen Daten in verschiedenen Typen von Diagrammen graphisch darzustellen. Hierzu werden wir uns zuerst mit der Frage beschäftigen, was eine gute graphische Darstellung ausmacht und worauf generell bei der Erstellung von Datenvisualisierungen geachtet werden sollte. Mithilfe des Web-Tools RAWGraphs, dessen Funktionalitäten wir an ein paar Beispielen erklären, werden wir dann bezogen auf unseren Datensatz verschiedene Diagramme erstellen."
   },
   {
     "objectID": "datenvisualisieren.html#was-ist-rawgraphs",
@@ -32,49 +32,49 @@
     "href": "datenvisualisieren.html#weitere-informationen-folgen-in-kürze",
     "title": "Daten visualisieren mit RAWGraphs",
     "section": "Weitere Informationen folgen in Kürze",
-    "text": "Weitere Informationen folgen in Kürze"
+    "text": "Weitere Informationen folgen in Kürze\nDie Screenshots wurden von Theresa Blaschke und Lars Hadeler erstellt. Zuletzt bearbeitet am 31.10.2023"
   },
   {
     "objectID": "datenbereinigen.html",
     "href": "datenbereinigen.html",
     "title": "Daten bereinigen und anreichern mit OpenRefine",
     "section": "",
-    "text": "Diese Lecture-Einheit zielt darauf ab, unseren Übungsdatensatz weiter zu explorieren, Unstimmigkeiten schnell zu erkennen und zu korrigieren. Hierzu stellen wir das freie Programm OpenRefine vor und zeigen anhand unseres Übungsdatensatzes die Grundfunktionen. Neben der Datenbereinigung gehen wir auf die Datenanreicherung mit OpenRefine aus externen Datenquellen wie WikiData ein."
+    "text": "Diese Lecture-Einheit zielt darauf ab, unseren Übungsdatensatz weiter zu explorieren sowie Unregelmäßigkeiten schnell zu erkennen und zu vereinheitlichen. Hierzu stellen wir das freie Programm OpenRefine vor und zeigen anhand unseres Übungsdatensatzes die Grundfunktionen. Neben der Datenbereinigung gehen wir auf die Datenanreicherung mit OpenRefine aus externen Datenquellen wie WikiData ein."
   },
   {
     "objectID": "datenbereinigen.html#was-ist-openrefine",
     "href": "datenbereinigen.html#was-ist-openrefine",
     "title": "Daten bereinigen und anreichern mit OpenRefine",
     "section": "Was ist OpenRefine?",
-    "text": "Was ist OpenRefine?\n\nFunktion: OpenRefine ist ein Werkzeug, das unter anderem dazu geeignet ist, um einen Überblick über Datensätze zu erhalten, sie zu bereinigen, mit externen Daten anzureichern oder in andere Formate zu exportieren. Hierfür wird ein Datensatz in das Programm geladen.\nOpen Source Tool, kann kostenfrei genutzt werden, verfügbar für Windows, Linux und Mac OS\nkeine Programmierkenntnisse notwendig, jedoch sind für die fortgeschrittene Nutzung Kenntnisse einer Programmiersprache, regulärer Ausdrücke und zur Datenbankabfrage von Vorteil\nAlternativ zu Tools wie Excel und Programmiersprachen wie Python und R, mithilfe derer ebenfalls Daten bereinigt werden können."
+    "text": "Was ist OpenRefine?\n\nFunktion: OpenRefine ist ein Werkzeug, das unter anderem dazu geeignet ist, um einen Überblick über Datensätze zu erhalten, sie zu bereinigen, mit externen Daten anzureichern oder in andere Formate zu exportieren. Hierfür wird ein Datensatz in das Programm geladen.\nOpen Source Tool, kann kostenfrei genutzt werden, verfügbar für Windows, Linux und Mac OS\nEs sind keine Programmierkenntnisse notwendig, jedoch sind für die fortgeschrittene Nutzung Kenntnisse einer Programmiersprache, regulärer Ausdrücke und zur Datenbankabfrage von Vorteil.\nAlternative zu Tools wie Excel und Programmiersprachen wie Python und R, mithilfe derer ebenfalls Daten bereinigt werden können."
   },
   {
     "objectID": "datenbereinigen.html#installation",
     "href": "datenbereinigen.html#installation",
     "title": "Daten bereinigen und anreichern mit OpenRefine",
     "section": "Installation",
-    "text": "Installation\nEs erfolgt keine Installation im klassischen Sinne. Das Programm kann für das eigene Betriebssystem von der Webseite heruntergeladen werden. Im Fall von Windows sollte geprüft werden, ob die Version mit oder ohne der Programmiersprache Java benötigt wird. Der Download besteht aus einem komprimierten Ordner. Dieser Ordner muss, damit OpenRefine ausgeführt werden kann, entpackt bzw. entzippt werden."
+    "text": "Installation\nEs erfolgt keine Installation im klassischen Sinne. Das Programm kann für das eigene Betriebssystem von der Webseite heruntergeladen werden. Im Fall von Windows sollte geprüft werden, ob die Version mit oder ohne der Programmiersprache Java benötigt wird. Der Download besteht aus einem komprimierten Ordner. In komprimierten Ordnern können mehrere Dateien bereitgestellt oder verschickt werden und die Größe der einzelnen Dateien ist kleiner. Der heruntergeladene Ordner muss, damit OpenRefine ausgeführt werden kann, dekomprimiert werden. Das erfolgt in den meisten Fällen, dass man mit der rechten Maustaste auf den Ordner klickt und im Menü “entpacken” auswählt. Der Begriff “entzippen” ist ebenfalls gängig."
   },
   {
     "objectID": "datenbereinigen.html#weitere-informationen-folgen-in-kürze",
     "href": "datenbereinigen.html#weitere-informationen-folgen-in-kürze",
     "title": "Daten bereinigen und anreichern mit OpenRefine",
     "section": "Weitere Informationen folgen in Kürze",
-    "text": "Weitere Informationen folgen in Kürze"
+    "text": "Weitere Informationen folgen in Kürze\nAlle Screenshots wurden von Frauke Pirk erstellt. Zuletzt bearbeitet am 31.10.2023"
   },
   {
     "objectID": "brunchlectures.html",
     "href": "brunchlectures.html",
     "title": "Brunch Lectures",
     "section": "",
-    "text": "Diese dreiteilige Lecture-Reihe dient dazu, einen Einblick in das Arbeiten mit Datensätzen zu geben. Wir arbeiten über die drei Veranstaltungen an einem Datensatz, den wir zuvor bereitstellen. Die Veranstaltungen können unabhängig voneinander besucht werden.\nAnmeldung immer bis montags 14 Uhr unter dicihub@uni-marburg.de\n\n\n\n\n\n\n\n\nFür die Brunch-Lecture-Reihe wurde von uns ein Datensatz (zum Download anklicken) vorbereitet, der Daten zu einer Reihe von Filmen mit Angaben zu Regie, Genre, Sprache, Bewertungen und weiterem enthält. Der Originaldatensatz mit Hintergrundinformationen zu seiner Entstehung ist unter dem Namen Movie Lab auf der Online-Open-Source-Plattform Open Syllabus zu finden.\nBei dem Datensatz handelt es sich um eine CSV-Datei. CSV steht für Comma-Separated Values. Dieses Dateiformat hat den Vorteil, dass es sich mit einer Reihe unterschiedlicher Programme öffnen und bearbeiten lässt.\n\n\n\nFür jede Lecture-Einheit stellen wir begleitende Informationen zum Nachlesen und Nachnutzen zur Verfügung:\nDaten sortieren und filtern mit Excel\nDaten bereinigen und anreichern mit OpenRefine\nDaten visualisieren mit RAWGraphs"
+    "text": "Diese dreiteilige Lecture-Reihe dient dazu, einen Einblick in das Arbeiten mit Datensätzen zu geben. Wir arbeiten über die drei Veranstaltungen hinweg an einem Datensatz, den wir zuvor bereitstellen. Die Veranstaltungen können unabhängig voneinander besucht werden.\nAnmeldung immer bis montags 14 Uhr unter dicihub@uni-marburg.de\n\n\n\n\n\n\n\n\nFür die Brunch-Lecture-Reihe wurde von uns ein Datensatz (zum Download anklicken) vorbereitet, der Daten zu einer Reihe von Filmen mit Angaben zu Regie, Genre, Sprache, Bewertungen und weiterem enthält. Der Originaldatensatz mit Hintergrundinformationen zu seiner Entstehung ist unter dem Namen Movie Lab auf der Online-Open-Source-Plattform Open Syllabus zu finden.\nBei dem Datensatz handelt es sich um eine Datei im csv-Format. CSV steht für Comma-Separated Values. Dieses Dateiformat hat den Vorteil, dass es sich mit einer Reihe unterschiedlicher Programme öffnen und bearbeiten lässt.\n\n\n\nFür jede Lecture-Einheit stellen wir begleitende Informationen zum Nachlesen und Nachnutzen zur Verfügung:\nDaten sortieren und filtern mit Excel\nDaten bereinigen und anreichern mit OpenRefine\nDaten visualisieren mit RAWGraphs\nZuletzt bearbeitet am 31.10.2023"
   },
   {
     "objectID": "brunchlectures.html#online-brunch-lectures",
     "href": "brunchlectures.html#online-brunch-lectures",
     "title": "Brunch Lectures",
     "section": "",
-    "text": "Diese dreiteilige Lecture-Reihe dient dazu, einen Einblick in das Arbeiten mit Datensätzen zu geben. Wir arbeiten über die drei Veranstaltungen an einem Datensatz, den wir zuvor bereitstellen. Die Veranstaltungen können unabhängig voneinander besucht werden.\nAnmeldung immer bis montags 14 Uhr unter dicihub@uni-marburg.de\n\n\n\n\n\n\n\n\nFür die Brunch-Lecture-Reihe wurde von uns ein Datensatz (zum Download anklicken) vorbereitet, der Daten zu einer Reihe von Filmen mit Angaben zu Regie, Genre, Sprache, Bewertungen und weiterem enthält. Der Originaldatensatz mit Hintergrundinformationen zu seiner Entstehung ist unter dem Namen Movie Lab auf der Online-Open-Source-Plattform Open Syllabus zu finden.\nBei dem Datensatz handelt es sich um eine CSV-Datei. CSV steht für Comma-Separated Values. Dieses Dateiformat hat den Vorteil, dass es sich mit einer Reihe unterschiedlicher Programme öffnen und bearbeiten lässt.\n\n\n\nFür jede Lecture-Einheit stellen wir begleitende Informationen zum Nachlesen und Nachnutzen zur Verfügung:\nDaten sortieren und filtern mit Excel\nDaten bereinigen und anreichern mit OpenRefine\nDaten visualisieren mit RAWGraphs"
+    "text": "Diese dreiteilige Lecture-Reihe dient dazu, einen Einblick in das Arbeiten mit Datensätzen zu geben. Wir arbeiten über die drei Veranstaltungen hinweg an einem Datensatz, den wir zuvor bereitstellen. Die Veranstaltungen können unabhängig voneinander besucht werden.\nAnmeldung immer bis montags 14 Uhr unter dicihub@uni-marburg.de\n\n\n\n\n\n\n\n\nFür die Brunch-Lecture-Reihe wurde von uns ein Datensatz (zum Download anklicken) vorbereitet, der Daten zu einer Reihe von Filmen mit Angaben zu Regie, Genre, Sprache, Bewertungen und weiterem enthält. Der Originaldatensatz mit Hintergrundinformationen zu seiner Entstehung ist unter dem Namen Movie Lab auf der Online-Open-Source-Plattform Open Syllabus zu finden.\nBei dem Datensatz handelt es sich um eine Datei im csv-Format. CSV steht für Comma-Separated Values. Dieses Dateiformat hat den Vorteil, dass es sich mit einer Reihe unterschiedlicher Programme öffnen und bearbeiten lässt.\n\n\n\nFür jede Lecture-Einheit stellen wir begleitende Informationen zum Nachlesen und Nachnutzen zur Verfügung:\nDaten sortieren und filtern mit Excel\nDaten bereinigen und anreichern mit OpenRefine\nDaten visualisieren mit RAWGraphs\nZuletzt bearbeitet am 31.10.2023"
   },
   {
     "objectID": "datensortieren.html",
@@ -98,11 +98,25 @@
     "text": "Installation\nAn den Unis Marburg, Mainz und Frankfurt gibt es jeweils Lizenzverträge, damit die Microsoft Office-Programme (inklusive Excel) von Universitätsangehörigen kostenlos genutzt werden können.\nDownloadanleitungen sollten jeweils unter folgenden Links zu finden sein:\nHochschulrechenzentrum der Uni Marburg:\nhttps://www.uni-marburg.de/de/hrz/dienste/software/microsoft_office\nZentrum für Datenverarbeitung der Uni Mainz:\nhttps://www.zdv.uni-mainz.de/jgu-signin-oidc/tag/lizenzen/\nHochschulrechenzentrum der Uni Frankfurt:\nhttps://www.rz.uni-frankfurt.de/73202101/Microsoft_Office_f%25C3%25BCr_Studierende\nAnsonsten kann auch eine kostenlose, aber zeitlich begrenzte Testversion verwendet werden: https://www.microsoft.com/de-de/microsoft-365/try?culture=de-de&country=de"
   },
   {
-    "objectID": "datensortieren.html#weitere-informationen-folgen-in-kürze",
-    "href": "datensortieren.html#weitere-informationen-folgen-in-kürze",
+    "objectID": "datensortieren.html#download-des-beispieldatensatzes",
+    "href": "datensortieren.html#download-des-beispieldatensatzes",
     "title": "Daten sortieren und filtern mit Excel",
-    "section": "Weitere Informationen folgen in Kürze",
-    "text": "Weitere Informationen folgen in Kürze"
+    "section": "Download des Beispieldatensatzes",
+    "text": "Download des Beispieldatensatzes\nDer Beispieldatensatz, mit dem wir im Rahmen aller drei Veranstaltungen arbeiten, findet sich unter folgendem Link zum Download.\nBei dem Datensatz handelt es sich um eine csv-Datei. CSV steht dabei für Comma-Separated Values. Dieses Dateiformat hat den Vorteil, dass es sich mit einer Reihe unterschiedlicher Programme öffnen und bearbeiten lässt."
+  },
+  {
+    "objectID": "datensortieren.html#öffnen-einer-csv-datei-in-excel",
+    "href": "datensortieren.html#öffnen-einer-csv-datei-in-excel",
+    "title": "Daten sortieren und filtern mit Excel",
+    "section": "Öffnen einer csv-Datei in Excel",
+    "text": "Öffnen einer csv-Datei in Excel\nUm eine csv-Datei in Excel zu öffnen, kann man auf verschiedene Arten und Weisen vorgehen. Die hier vorgestellte Möglichkeit 1 wird allerdings gegenüber den anderen beiden empfohlen.\n\nMöglichkeit 1\n\nZuerst öffnet man Excel.\nDann wählt man oben den Reiter „Daten“ aus und klickt dort auf „Daten abrufen (Power Query)“.\n\n\n\nDaraufhin erscheint eine Übersicht an Optionen, von denen man „Text/CSV“ auswählt und anklickt.\n\n\n\nAnschließend durchsucht man seine Dateien nach dem gewünschten Datensatz (in diesem Fall unserem Beispieldatensatz).\n\n\n\nUnd klickt auf „Daten importieren“, um diesen in Excel zu öffnen.\n\n\n\nHat man die richtige Datei ausgewählt, klickt man unten auf „Weiter“.\n\n\n\nExcel präsentiert daraufhin eine Voransicht des Datensatzes.\n\n\n\nIst man mit den Einstellungen zufrieden, klickt man unten auf „Laden“.\nExcel importiert daraufhin die Daten aus der csv-Datei in Tabellenform, sodass direkt damit gearbeitet werden kann.\n\n\n\n\nMöglichkeit 2\n\nMan öffnet die CSV-Datei mit Excel im „.xlsx“-Format.\nDie Daten sind anschließend in Excel lesbar, allerdings noch nicht verarbeitbar, da sie nicht als Tabelle formatiert sind.\nUm die Daten als Tabelle zu formatieren klickt man unter dem Reiter „Start“ auf „Als Tabelle formatieren“.\nIn dem daraufhin erscheinenden Fenster überprüft man, ob der Datenbereich korrekt ist, und klickt anschließend auf „OK“.\n\n\n\nMöglichkeit 3\n\nPer Rechtsklick auf die CSV-Datei wählt man über die Option „Öffnen mit“ Excel aus.\n\n\n\nDie Daten werden hieraufhin in Excel importiert, allerdings werden dabei alle Daten in die erste Spalte gequetscht. Und es erscheint die Hinweisemeldung, dass eventuell nicht alle Daten korrekt importiert wurden.\n\n\n\nWer hier noch nicht aufgegeben hat, markiert per Klick auf Spalte A die gesamte Spalte und wählt anschließend unter dem Reiter „Daten“ die Funktion „Text in Spalten“ aus.\n\n\n\nIn dem auftauchenden Fenster wählt man die Option „Mit Trennzeichen versehen“ aus und klickt auf „Weiter“.\n\n\n\nDa es sich um eine CSV-Datei handelt, also um Comma-Separated Values, wählt man als Trennzeichen „Komma“ aus und klickt auf „Weiter“, wenn die Vorschau korrekt aussieht.\n\n\n\nIn einem zweiten Optionsfenster hat man anschließend die Möglichkeit einzelne Spalten speziell zu formatieren (zum Beispiel als Datum oder Zahl). Überspringt man diesen Schritt, werden die Daten eventuell fehlerhaft importiert, weil Excel ihnen ein falsches Format zuordnet.\n\n\n\nAnschließend klickt man auf „Fertig stellen“ und Excel trennt die Daten aus der ersten Spalte bei jedem Komma in eine neue Spalte ab. Ein mögliches Problem, was dabei auftreten kann, ist dass auch Spalten aufgeteilt werden, die eigentlich zusammen gehören.\n\n\n\nAuffällige Fehler sollten an dieser Stelle bereinigt werden (hier zum Beispiel, indem man „i, daniel blake“ wieder in Spalte A zusammenfügt und anschließend alle weiteren Werte aus der Zeile eine Spalte aufrücken lässt).\nWie in Möglichkeit 2 müssen die Werte außerdem unter dem Reiter „Start“ mit der Funktion „Als Tabelle formatieren“ noch in eine Tabelle umgewandelt werden, um weiter mit ihnen arbeiten zu können.\n\n\n\nIst der Datenbereich korrekt, klickt man in dem daraufhin auftauchenden Fenster auf „OK“.\n\n\n\nHat man beim Importieren der Daten allerdings nicht alle Spalten korrekt formatiert, lässt sich an diesem Punkt dennoch nicht verlässlich mit der Tabelle arbeiten: Hat Excel manchen Spalten von sich aus ein falsches Format zugeordnet (wie hier in Spalte L: aus dem Rating wird ein Datum), muss unter Umständen der gesamte Prozess wiederholt werden, um am Ende die richtigen Werte zu erhalten (da eine Nachkorrektur der Formatierung der Spalte nicht automatisch zum Ursprungswert führt)."
+  },
+  {
+    "objectID": "datensortieren.html#filtern-der-daten-in-excel",
+    "href": "datensortieren.html#filtern-der-daten-in-excel",
+    "title": "Daten sortieren und filtern mit Excel",
+    "section": "Filtern der Daten in Excel",
+    "text": "Filtern der Daten in Excel\nWenn man die csv-Datei erfolgreich in Excel geöffnet hat und die Daten in Tabellenform vorliegen, lassen sich diese anschließend einfach durchsuchen, filtern und weiterverarbeiten.\nEs kann zum Beispiel hilfreich sein die Filme im Datensatz nach ihrem Erscheinungsjahr zu sortieren.\n\nDazu klickt man auf das kleine Dreieck neben der Spaltenbeschriftung.\n\n\n\nDaraufhin öffnet sich ein Menüfenster, in dem man zum Beispiel nach einzelnen Jahren Filtern kann, oder sich durch das Klicken auf „Aufsteigend“ alle Titel in der Liste in chronologischer Reihenfolge nach ihrem Erscheinungsjahr anzeigen lassen kann.\n\n\nEntsprechend kann man sich zum Beispiel in der Spalte „Gender“ durch das Menüfenster ausschließlich die Filme männlicher oder weiblicher Regisseure anzeigen lassen:\n\nOder man ordnet die Filmtitel durch die Auswahl „Aufsteigend“ in alphabetischer Reihenfolge:\n\nWenn man wieder alle Daten sehen möchte, wählt man die Filter ab. Gefilterte Spalten sind an der Stelle des kleinen Dreiecks markiert und dadurch leicht zu finden.\nAlle Screenshots wurden von Katharina Kauth erstellt. Zuletzt bearbeitet am 31.10.2023"
   },
   {
     "objectID": "index.html",

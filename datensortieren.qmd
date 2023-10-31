@@ -36,4 +36,124 @@ Hochschulrechenzentrum der Uni Frankfurt:
 
 Ansonsten kann auch eine kostenlose, aber zeitlich begrenzte Testversion verwendet werden: [https://www.microsoft.com/de-de/microsoft-365/try?culture=de-de&country=de](https://www.microsoft.com/de-de/microsoft-365/try?culture=de-de&country=de)
 
-## Weitere Informationen folgen in Kürze
+## Download des Beispieldatensatzes
+
+Der Beispieldatensatz, mit dem wir im Rahmen aller drei Veranstaltungen arbeiten, findet sich unter folgendem [Link](datensaetze/DiCiHubBrunchLectures_Datensatz.csv) zum Download.
+
+Bei dem Datensatz handelt es sich um eine csv-Datei. CSV steht dabei für Comma-Separated Values. Dieses Dateiformat hat den Vorteil, dass es sich mit einer Reihe unterschiedlicher Programme öffnen und bearbeiten lässt.
+
+## Öffnen einer csv-Datei in Excel
+
+Um eine csv-Datei in Excel zu öffnen, kann man auf verschiedene Arten und Weisen vorgehen. Die hier vorgestellte Möglichkeit 1 wird allerdings gegenüber den anderen beiden empfohlen.
+
+### Möglichkeit 1
+
+1. Zuerst öffnet man Excel.
+2. Dann wählt man oben den Reiter „Daten“ aus und klickt dort auf „Daten abrufen (Power Query)“.
+
+![](img/Moglichkeit1_01_Daten_DatenAbrufen(PowerQuery).png)
+
+3. Daraufhin erscheint eine Übersicht an Optionen, von denen man „Text/CSV“ auswählt und anklickt.
+
+![](img/Moglichkeit1_02_DatenquelleAuswahlen.png)
+
+4. Anschließend durchsucht man seine Dateien nach dem gewünschten Datensatz (in diesem Fall unserem Beispieldatensatz).
+
+![](img/Moglichkeit1_03_Durchsuchen.png)
+
+5. Und klickt auf „Daten importieren“, um diesen in Excel zu öffnen.
+
+![](img/Moglichkeit1_04_DiCiHubDatensatzImportieren.png)
+
+6. Hat man die richtige Datei ausgewählt, klickt man unten auf „Weiter“.
+
+![](img/Moglichkeit1_05_Weiter.png)
+
+7. Excel präsentiert daraufhin eine Voransicht des Datensatzes.
+
+![](img/Moglichkeit1_06_Vorschau_Laden.png)
+
+8. Ist man mit den Einstellungen zufrieden, klickt man unten auf „Laden“.
+
+9. Excel importiert daraufhin die Daten aus der csv-Datei in Tabellenform, sodass direkt damit gearbeitet werden kann.
+
+![](img/Moglichkeit1_DatensatzAlsTabelleFormatiert.png)
+
+### Möglichkeit 2
+
+1. Man öffnet die CSV-Datei mit Excel im „.xlsx“-Format.
+2. Die Daten sind anschließend in Excel lesbar, allerdings noch nicht verarbeitbar, da sie nicht als Tabelle formatiert sind.
+3. Um die Daten als Tabelle zu formatieren klickt man unter dem Reiter „Start“ auf „Als Tabelle formatieren“.
+4. In dem daraufhin erscheinenden Fenster überprüft man, ob der Datenbereich korrekt ist, und klickt anschließend auf „OK“.
+
+### Möglichkeit 3
+
+1. Per Rechtsklick auf die CSV-Datei wählt man über die Option „Öffnen mit“ Excel aus.
+
+![](img/Moglichkeit3_01_OffnenMitExcel.png)
+
+2. Die Daten werden hieraufhin in Excel importiert, allerdings werden dabei alle Daten in die erste Spalte gequetscht. Und es erscheint die Hinweisemeldung, dass eventuell nicht alle Daten korrekt importiert wurden.
+
+![](img/Moglichkeit3_02_unformatiert.png)
+
+3. Wer hier noch nicht aufgegeben hat, markiert per Klick auf Spalte A die gesamte Spalte und wählt anschließend unter dem Reiter „Daten“ die Funktion „Text in Spalten“ aus.
+
+![](img/Moglichkeit3_03_Daten_TextInSpalten.png)
+
+4. In dem auftauchenden Fenster wählt man die Option „Mit Trennzeichen versehen“ aus und klickt auf „Weiter“.
+
+![](img/Moglichkeit3_04_MitTrennzeichenVersehen.png)
+
+5. Da es sich um eine CSV-Datei handelt, also um Comma-Separated Values, wählt man als Trennzeichen „Komma“ aus und klickt auf „Weiter“, wenn die Vorschau korrekt aussieht.
+
+![](img/Moglichkeit3_05_TrennzeichenKomma.png)
+
+6. In einem zweiten Optionsfenster hat man anschließend die Möglichkeit einzelne Spalten speziell zu formatieren (zum Beispiel als Datum oder Zahl). Überspringt man diesen Schritt, werden die Daten eventuell fehlerhaft importiert, weil Excel ihnen ein falsches Format zuordnet.
+
+![](img/Moglichkeit3_06_FertigStellen.png)
+
+7. Anschließend klickt man auf „Fertig stellen“ und Excel trennt die Daten aus der ersten Spalte bei jedem Komma in eine neue Spalte ab. Ein mögliches Problem, was dabei auftreten kann, ist dass auch Spalten aufgeteilt werden, die eigentlich zusammen gehören.
+
+![](img/Moglichkeit3_07_DatenInSpalten_Problem.png)
+
+8. Auffällige Fehler sollten an dieser Stelle bereinigt werden (hier zum Beispiel, indem man „i, daniel blake“ wieder in Spalte A zusammenfügt und anschließend alle weiteren Werte aus der Zeile eine Spalte aufrücken lässt).
+9. Wie in Möglichkeit 2 müssen die Werte außerdem unter dem Reiter „Start“ mit der Funktion „Als Tabelle formatieren“ noch in eine Tabelle umgewandelt werden, um weiter mit ihnen arbeiten zu können.
+
+![](img/Moglichkeit3_08_AlsTabelleFormatieren.png)
+
+10. Ist der Datenbereich korrekt, klickt man in dem daraufhin auftauchenden Fenster auf „OK“.
+
+![](img/Moglichkeit3_09_Tabellenbereich.png)
+
+11. Hat man beim Importieren der Daten allerdings nicht alle Spalten korrekt formatiert, lässt sich an diesem Punkt dennoch nicht verlässlich mit der Tabelle arbeiten:
+Hat Excel manchen Spalten von sich aus ein falsches Format zugeordnet (wie hier in Spalte L: aus dem Rating wird ein Datum), muss unter Umständen der gesamte Prozess wiederholt werden, um am Ende die richtigen Werte zu erhalten (da eine Nachkorrektur der Formatierung der Spalte nicht automatisch zum Ursprungswert führt).
+
+![](img/Moglichkeit3_10_DatenAlsTabelle.png)
+
+## Filtern der Daten in Excel
+
+Wenn man die csv-Datei erfolgreich in Excel geöffnet hat und die Daten in Tabellenform vorliegen, lassen sich diese anschließend einfach durchsuchen, filtern und weiterverarbeiten.
+
+Es kann zum Beispiel hilfreich sein die Filme im Datensatz nach ihrem Erscheinungsjahr zu sortieren.
+
+1. Dazu klickt man auf das kleine Dreieck neben der Spaltenbeschriftung.
+
+![](img/Excel_Filtern_01.png)
+
+2. Daraufhin öffnet sich ein Menüfenster, in dem man zum Beispiel nach einzelnen Jahren Filtern kann, oder sich durch das Klicken auf „Aufsteigend“ alle Titel in der Liste in chronologischer Reihenfolge nach ihrem Erscheinungsjahr anzeigen lassen kann.
+
+![](img/Excel_Filtern_02.png)
+
+Entsprechend kann man sich zum Beispiel in der Spalte „Gender“ durch das Menüfenster ausschließlich die Filme männlicher oder weiblicher Regisseure anzeigen lassen:
+
+![](img/Excel_Filtern_03.png)
+
+Oder man ordnet die Filmtitel durch die Auswahl „Aufsteigend“ in alphabetischer Reihenfolge:
+
+![](img/Excel_Filtern_04.png)
+
+Wenn man wieder alle Daten sehen möchte, wählt man die Filter ab. Gefilterte Spalten sind an der Stelle des kleinen Dreiecks markiert und dadurch leicht zu finden.
+
+
+*Alle Screenshots wurden von Katharina Kauth erstellt.*
+*Zuletzt bearbeitet am 31.10.2023*
