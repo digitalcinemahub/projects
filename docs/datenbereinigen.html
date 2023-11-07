@@ -168,7 +168,15 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#was-ist-openrefine" id="toc-was-ist-openrefine" class="nav-link active" data-scroll-target="#was-ist-openrefine">Was ist OpenRefine?</a></li>
   <li><a href="#installation" id="toc-installation" class="nav-link" data-scroll-target="#installation">Installation</a></li>
-  <li><a href="#weitere-informationen-folgen-in-kürze" id="toc-weitere-informationen-folgen-in-kürze" class="nav-link" data-scroll-target="#weitere-informationen-folgen-in-kürze">Weitere Informationen folgen in Kürze</a></li>
+  <li><a href="#openrefine---grundfunktionen" id="toc-openrefine---grundfunktionen" class="nav-link" data-scroll-target="#openrefine---grundfunktionen">OpenRefine - Grundfunktionen</a>
+  <ul class="collapse">
+  <li><a href="#ein-projekt-erstellen" id="toc-ein-projekt-erstellen" class="nav-link" data-scroll-target="#ein-projekt-erstellen">Ein Projekt erstellen</a></li>
+  <li><a href="#im-projekt-arbeiten" id="toc-im-projekt-arbeiten" class="nav-link" data-scroll-target="#im-projekt-arbeiten">Im Projekt arbeiten</a></li>
+  </ul></li>
+  <li><a href="#openrefine---daten-anreichern" id="toc-openrefine---daten-anreichern" class="nav-link" data-scroll-target="#openrefine---daten-anreichern">OpenRefine - Daten anreichern</a>
+  <ul class="collapse">
+  <li><a href="#hinweis-zum-abschluss" id="toc-hinweis-zum-abschluss" class="nav-link" data-scroll-target="#hinweis-zum-abschluss">Hinweis zum Abschluss</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -212,11 +220,49 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="installation">Installation</h2>
 <p>Es erfolgt keine Installation im klassischen Sinne. Das Programm kann für das eigene Betriebssystem von der <a href="https://openrefine.org/download">Webseite</a> heruntergeladen werden. Im Fall von Windows sollte geprüft werden, ob die Version mit oder ohne der Programmiersprache Java benötigt wird. Der Download besteht aus einem komprimierten Ordner. In komprimierten Ordnern können mehrere Dateien bereitgestellt oder verschickt werden und die Größe der einzelnen Dateien ist kleiner. Der heruntergeladene Ordner muss, damit OpenRefine ausgeführt werden kann, dekomprimiert werden. Das erfolgt in den meisten Fällen, dass man mit der rechten Maustaste auf den Ordner klickt und im Menü “entpacken” auswählt. Der Begriff “entzippen” ist ebenfalls gängig.</p>
 </section>
-<section id="weitere-informationen-folgen-in-kürze" class="level2">
-<h2 class="anchored" data-anchor-id="weitere-informationen-folgen-in-kürze">Weitere Informationen folgen in Kürze</h2>
-<p><em>Alle Screenshots wurden von Frauke Pirk erstellt.</em> <em>Zuletzt bearbeitet am 31.10.2023</em></p>
+<section id="openrefine---grundfunktionen" class="level2">
+<h2 class="anchored" data-anchor-id="openrefine---grundfunktionen">OpenRefine - Grundfunktionen</h2>
+<p>Wenn OpenRefine gestartet wird, öffnen sich zwei Fenster: ein Terminalfenster und ein neuer Tab im Standardbrowser. Beide Fenster werden benötigt, damit das Programm läuft, sie dürfen <strong>nicht</strong> geschlossen werden. Im Terminal werden die einzelnen Arbeitsschritte im Programm angezeigt. Im Browserfenster wird mit dem Programm interagiert.</p>
+<p><img src="img/OR_01_Start.PNG.png" class="img-fluid"></p>
+<section id="ein-projekt-erstellen" class="level3">
+<h3 class="anchored" data-anchor-id="ein-projekt-erstellen">Ein Projekt erstellen</h3>
+<p>Das Öffnen eines Datensatzes, der lokal vorliegt, erfolgt unter dem voreingestellten Menü “Create project” (linke Spalte). Der Datensatz kann mit “Durchsuchen” ausgewählt werden. Mit “Next” wird der Vorgang bestätigt.</p>
+<p><img src="img/OR_02_Upload.PNG" class="img-fluid"></p>
+<p>Es öffnet sich die Vorschau des Datensatzes. In dieser kann geprüft werden, ob die Daten korrekt eingelesen werden. Unter der Vorschau kann unter “CSV/TSV/seperator-based files” geprüft werden, ob das sogenannte “Character Encoding” korrekt ist (unter anderem relevant für die Darstellung von Umlauten) und Trennzeichen korrekt angegeben werden (in unserem Fall ein Komma). Außerdem können der Name des Projektes sowie Schlagwörter vergeben werden. Mit Schlagwörtern können Projekte bei Bedarf besser organisiert werden. Wenn alle Einstellungen korrekt sind, kann rechts oben “Create project” bestätigt werden.</p>
+<p><img src="img/OR_03_Upload_Einstellungen.PNG" class="img-fluid"></p>
+<p>Nachdem das Projekt gestartet wurde, werden euch nur 10 Zeilen angezeigt. Das entspricht der Standardeinstellung. Die Anzahl der angzeigten Zeilen kann über dem Datensatz angepasst werden:</p>
+<p><img src="img/OR_04_Funktionen.PNG" class="img-fluid"></p>
+</section>
+<section id="im-projekt-arbeiten" class="level3">
+<h3 class="anchored" data-anchor-id="im-projekt-arbeiten">Im Projekt arbeiten</h3>
+<p>Die Grundfunktionen werden in der Regel über das kleine Dreieck in jedem Spaltenkopf aufgerufen, da der Datensatz meist spaltenweise bearbeitet wird. Im Untermenü, das sich bei Anklicken öffnet, besteht eine Reihe an Aktionsmöglichkeiten. Der Verlauf der einzelnen Aktionsmöglichkeiten ist in der linken Seitenspalte des Programms aufgeführt, sodass jederzeit einzelne Aktionen rückgängig gemacht werden können. Außerdem öffnet sich in der Seitenspalte bei einigen Aktionen ein Fenster, über das weitere Optionen zur Verfügung stehen bzw. Ergebnisse angezeigt werden. Im Folgenden wird nur ein winziger Ausschnitt gezeigt.</p>
+<p><img src="img/OR_05_Uebersicht.PNG" class="img-fluid"></p>
+<p>Im Kontextmenü der Spalten kann beispielsweise unter “Edit column” die <em>Spalte_voller_Unsinn</em> gelöscht werden.</p>
+<p><img src="img/OR_06_loeschen.PNG" class="img-fluid"></p>
+<p>Außerdem können in diesem Menü auch Spalten mit mehreren Einträgen wie <em>OMDb_Actors</em> aufgesplittet werden, sodass jede<em>r Schauspieler</em>in in einer eigenen Spalte steht. Dazu müssen die Trennzeichen eingegeben werden:</p>
+<p><img src="img/OR_07_split.PNG" class="img-fluid"></p>
+<p>Eine praktische Funktion, um sich einen Überblick über die Einträge einer Spalte zu verschaffen, ist die Funktion “Facet”. Am Beispiel der Spalte <em>OMDb_Country</em> bietet sich “Text facet” an, da die Werte in der Spalte Text enthalten.</p>
+<p><img src="img/OR_08_facet.PNG" class="img-fluid"></p>
+<p>Die Spalte bleibt unverändert. In der linken Seitenspalte erscheint ein Fenster, in dem die Erbegnisse der Funktion angezeigt werden: Im Fenster wird angezeigt, dass es 58 verschiedenen Angaben zu den Ländern in der Spalte gibt. Die Zahl hinter den Ländern gibt an, wie oft sie eingtragen sind. Die Anzeige kann alphabetisch oder nach Häufigkeit sortiert werden. Um einen Überblick über ähnliche Einträge zu erhalten, kann die “Cluster”-Funktion ausgewählt werden. Diese ist insbesondere praktisch, wenn Rechtschreibfehler oder Inkonsistenzen im Datensatz sichtbar sind oder vermutet werden, da hier mit verschiedenen Algorithmen ebenjene geprüft werden. Es öffnet sich ein neues Fenster:</p>
+<p><img src="img/OR_10_cluster.PNG" class="img-fluid"></p>
+<p>Es wird angezeigt, welche Inkonsistenzen gefunden wurden. Hier handelt es sich um die Reihenfolge der Länder. Es wird angegeben wie viele ähnliche Einträge zu einem Cluster gehören, in wie vielen Zeilen sie gefunden wurden und es wird ein Vorschlag zur Vereinheitlichung angegeben, dem gefolgt werden kann, sofern kein eigener Vorschlag eingetragen werden soll. Die Einträge können gemerged werden, d.h. dass sie vereinheitlicht werden und dann entsprechend nur noch eine Variante der Reihenfolge im Datensatz angezeigt wird. Vor dem mergen sollte geprüft werden, ob es aus fachlicher Perspektive sinnvoll ist!</p>
+<p>Einzelne Fehler können auch direkt in den Zellen korrigiert werden. Wenn sich die Maus über einer Zelle befindet, wird die Option “Edit” eingeblendet.</p>
+</section>
+</section>
+<section id="openrefine---daten-anreichern" class="level2">
+<h2 class="anchored" data-anchor-id="openrefine---daten-anreichern">OpenRefine - Daten anreichern</h2>
+<p>Eine sehr mächtige Information von OpenRefine ist “Reconcile”. Mithilfe dieser Funktion kann der eigene Datensatz mit Daten aus externen Quellen angereichert werden. OpenRefine bietet integriert beispielsweise die automatisierte Anreicherung mit Daten von WikiData an, die im Folgenden gezeigt wird. Eine Anreicherung mit weiteren Daten kann sinnvoll sein, wenn Normdaten benötigt werden oder weitere Informationen, die noch nicht im Datensatz stehen. Wir arbeiten wieder an der Spalte <em>OMDb_Country</em> und wählen die letzte Option “Reconcile” und “Start Reconciling” aus. Es öffnet sich ein Fenster, in dem Wikidata als externe Quelle ausgewählt wird und können nun weitere Einstellungen vornehmen:</p>
+<p><img src="img/OR_11_reconcile.PNG" class="img-fluid"></p>
+<p>Anhand der Einträge in der Spalte wird ein Vorschlag gemacht, welche Entitäten von Wikidata passen. Da es sich um Länder handelt, wird <em>country</em> gewählt. Das Häckchen bei “Auto-match” candidates with high confidence” kann so bestehen bleiben, da sonst alle Einträge händisch bestätigt werden müssen. Mit “Start reconciling” beginnt die Anreicherung, die unterschiedlich lange Zeit in Anspruch nehmen kann. Das Ergebnis sieht wiefolgt aus:</p>
+<p><img src="img/OR_12_reconcile_Ergebnis.PNG" class="img-fluid"></p>
+<p>In der ersten Zeile ist eine Verbindung zum Eintrag “United States of America”, der direkt gematched wurde, weil die Entscheidung eindeutig war. In der zweiten und dritten Zeile sehen wir mehrere Optionen, aus denen wir auswählen können, da hier keine eindeutige Entscheidung möglich war. Die Vorschläge passen jedoch zum Ziel, Länder anzureichern, sondern beziehen sich in den Einträgen, in denen mehrere Länder stehen, auf Ereignisse, die beide Länder einbeziehen. D.h., an dieser Stelle ist ein Anwendungsfall für die Funktion “Undo”. Reconcile kann damit rückgängig gemacht werden, die Spalte gesplittet werden und die die einzelnen Spalten können dann angereichert werden. Hinweis: Bei der Auswahl der Entität von Wikidata, mit der angereichert werden soll, kann es erste Hinweise dafür geben, ob sich die Spalte für das eigene Anreicherungsziel eignet.</p>
+<section id="hinweis-zum-abschluss" class="level3">
+<h3 class="anchored" data-anchor-id="hinweis-zum-abschluss">Hinweis zum Abschluss</h3>
+<p>Hier wurde nur die Spitze des Eisberges vorgestellt. Es gibt eine Vielzahl von weiteren Funktionen und Möglichkeiten, die in der Dokumentation oder in Foren erklärt werden.</p>
+<p><em>Alle Screenshots wurden von Frauke Pirk erstellt.</em> <em>Zuletzt bearbeitet am 07.11.2023</em></p>
 
 
+</section>
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
