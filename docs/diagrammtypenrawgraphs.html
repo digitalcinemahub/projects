@@ -1,0 +1,1371 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Diagrammtypen in RAWGraphs</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-sidebar floating nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <img src="./img/DiCi_Hub_transparent.png" alt="" class="navbar-logo">
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html" rel="" target="">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./brunchlectures.html" rel="" target="">
+ <span class="menu-text">Brunch Lectures</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./researchingsuper8.html" rel="" target="">
+ <span class="menu-text">Researching Super 8</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://www.uni-marburg.de/en/fb09/institutes/media-studies/research/research-projects/dici-hub" rel="" target="_blank">
+ <span class="menu-text">About</span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools ms-auto">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Diagrammtypen in RAWGraphs</li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">Brunch Lectures</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./datensortieren.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Daten sortieren und filtern mit Excel</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./datenbereinigen.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Daten bereinigen und anreichern mit OpenRefine</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./datenvisualisieren.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Daten visualisieren mit RAWGraphs</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#hierarchien" id="toc-hierarchien" class="nav-link active" data-scroll-target="#hierarchien">Hierarchien</a>
+  <ul class="collapse">
+  <li><a href="#treemap" id="toc-treemap" class="nav-link" data-scroll-target="#treemap">Treemap</a></li>
+  <li><a href="#circle-packing" id="toc-circle-packing" class="nav-link" data-scroll-target="#circle-packing">Circle Packing</a></li>
+  <li><a href="#linear-dendrogram" id="toc-linear-dendrogram" class="nav-link" data-scroll-target="#linear-dendrogram">Linear dendrogram</a></li>
+  <li><a href="#circular-dendrogram" id="toc-circular-dendrogram" class="nav-link" data-scroll-target="#circular-dendrogram">Circular dendrogram</a></li>
+  <li><a href="#sunburst-diagram" id="toc-sunburst-diagram" class="nav-link" data-scroll-target="#sunburst-diagram">Sunburst diagram</a></li>
+  </ul></li>
+  <li><a href="#häufigkeiten" id="toc-häufigkeiten" class="nav-link" data-scroll-target="#häufigkeiten">Häufigkeiten</a>
+  <ul class="collapse">
+  <li><a href="#bar-chart" id="toc-bar-chart" class="nav-link" data-scroll-target="#bar-chart">Bar chart</a></li>
+  <li><a href="#multi-set-bar-chart" id="toc-multi-set-bar-chart" class="nav-link" data-scroll-target="#multi-set-bar-chart">Multi-set bar chart</a></li>
+  <li><a href="#stacked-bar-chart" id="toc-stacked-bar-chart" class="nav-link" data-scroll-target="#stacked-bar-chart">Stacked bar chart</a></li>
+  </ul></li>
+  <li><a href="#verteilungen" id="toc-verteilungen" class="nav-link" data-scroll-target="#verteilungen">Verteilungen</a>
+  <ul class="collapse">
+  <li><a href="#box-plot" id="toc-box-plot" class="nav-link" data-scroll-target="#box-plot">Box plot</a></li>
+  <li><a href="#violin-plot" id="toc-violin-plot" class="nav-link" data-scroll-target="#violin-plot">Violin plot</a></li>
+  <li><a href="#beeswarm-plot" id="toc-beeswarm-plot" class="nav-link" data-scroll-target="#beeswarm-plot">Beeswarm plot</a></li>
+  </ul></li>
+  <li><a href="#veränderungen-im-zeitverlauf" id="toc-veränderungen-im-zeitverlauf" class="nav-link" data-scroll-target="#veränderungen-im-zeitverlauf">Veränderungen im Zeitverlauf</a>
+  <ul class="collapse">
+  <li><a href="#line-chart" id="toc-line-chart" class="nav-link" data-scroll-target="#line-chart">Line chart</a></li>
+  <li><a href="#bumpchart" id="toc-bumpchart" class="nav-link" data-scroll-target="#bumpchart">Bumpchart</a></li>
+  <li><a href="#gantt-chart" id="toc-gantt-chart" class="nav-link" data-scroll-target="#gantt-chart">Gantt chart</a></li>
+  </ul></li>
+  <li><a href="#netzwerke" id="toc-netzwerke" class="nav-link" data-scroll-target="#netzwerke">Netzwerke</a>
+  <ul class="collapse">
+  <li><a href="#arc-diagram" id="toc-arc-diagram" class="nav-link" data-scroll-target="#arc-diagram">Arc Diagram</a></li>
+  </ul></li>
+  <li><a href="#zusammenhang-zweier-werte" id="toc-zusammenhang-zweier-werte" class="nav-link" data-scroll-target="#zusammenhang-zweier-werte">Zusammenhang zweier Werte</a>
+  <ul class="collapse">
+  <li><a href="#bubble-chart" id="toc-bubble-chart" class="nav-link" data-scroll-target="#bubble-chart">Bubble chart</a></li>
+  </ul></li>
+  <li><a href="#teilwerte-eines-ganzen" id="toc-teilwerte-eines-ganzen" class="nav-link" data-scroll-target="#teilwerte-eines-ganzen">Teilwerte eines Ganzen</a>
+  <ul class="collapse">
+  <li><a href="#pie-chart" id="toc-pie-chart" class="nav-link" data-scroll-target="#pie-chart">Pie chart</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Diagrammtypen in RAWGraphs</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<p><strong>Die auf dieser Unterseite versammelten Materialien stellen derzeit noch Work-in-progress dar. Wir bitten daher etwaige Rechtschreibfehler und Inkonsistenzen zu entschuldigen.</strong></p>
+<p>RAWGraphs stellt verschiedene Diagrammtypen zur Verfügung, mit denen Daten visualisiert werden können. Abhängig davon, welchen Aspekt der Daten man in den Vordergrund stellen möchte, kann ausgewählt werden, in welcher Diagrammform die Daten präsentiert werden sollen. Es gibt dabei nicht eine einzige Art und Weise, wie die Daten korrekt dargestellt werden können. Die Wahl eines Diagrammtyps hängt stark von der Darstellungsintention ab. Würde man beispielsweise mit Daten zu Flughäfen in verschiedenen Ländern arbeiten, könnte man zum einen durch ein Balkendiagramm (Bar chart) darstellen, wieviele Flughäfen pro Land vorhanden sind (<em>Häufigkeiten</em>). Möchte man nicht nur eine reine Anzahl darstellen, sondern die Namen der Flughäfen, ihre Lokalisierung in einem Land und die von dort operierenden Fluggesellschaften, würde sich die Darstellung als <em>Hierarchie</em> anbieten, wobei das Land die oberste Hierarchiebene, der Flughafenname die mittlere Hierarchiebene und die Fluggesellschaften die unterste Hierarchieebene darstellen würden. Eine weitere Möglichkeit wäre, die Entwicklung der Anzahl von Flughäfen eines Landes in einem Vergleich über 20 Jahre zu präsentieren (<em>Veränderungen im Zeitverlauf</em>). Inwiefern die Flughäfen miteinander vernetzt sind und von welchem Flughafen welche anderen Flughäfen erreichbar sind, ließe sich wiederum mit einem <em>Netzwerk</em> darstellen.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/diagrammtypen.jpg" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Diagrammtypen in RAWGraphs</figcaption>
+</figure>
+</div>
+<p>Die nachfolgende Beschreibung der jeweiligen Diagrammtypen basiert auf den in RAWGraphs zur Verfügung gestellten <a href="https://www.rawgraphs.io/learning#charts-and-templates">Tutorials</a>, der Webseite <a href="https://chartio.com/learn/charts/how-to-choose-data-visualization/">“How to Choose the Right Data Visualization”</a> sowie den eigenen im DiCi-Hub-Team gemachten Erfahrungen mit Visualisierungen. Es wird im Folgenden nicht jeder in RAWGraphs vorhandene Diagrammtyp vorgestellt, sondern die gängigsten Varianten, die man typischerweise in den Geisteswissenschaften nutzt.</p>
+<section id="hierarchien" class="level2">
+<h2 class="anchored" data-anchor-id="hierarchien">Hierarchien</h2>
+<p>Die in RAWGraphs vorhandenen Diagrammtypen für hierarchisch strukturierte Daten sind sich sehr ähnlich, was die Erstellung einer Visualisierung und die vorausgesetzte Grundstruktur der Daten angeht. Der einzige Unterschied zwischen den Diagrammtypen ist die räumliche Anordnung der einzelnen Elemente in der Darstellung.</p>
+<section id="treemap" class="level3">
+<h3 class="anchored" data-anchor-id="treemap">Treemap</h3>
+<p><strong>Alternative Namen</strong>: Kacheldiagramm</p>
+<p><img src="img/treemap.jpg" class="img-fluid"></p>
+<p><strong>Was stellt es dar</strong>: In einer Treemap können hierarchisch strukturierte Daten dargestellt werden. Die Daten sind nach Kategorien sortiert. Es existieren Oberkategorien, die in verschiedene Unterkategorien unterteilt werden. Die Unterkategorien können ebenfalls Unterkategorien enthalten. Für jede Kategorie wird eine Kachel eingefügt. Oberkategorien bestehen dementsprechend aus einer großen Kachel, in die kleinere Kacheln eingefügt werden. Die größe der Kacheln ist dabei abhängig von der Größe/Häufigkeit der Kategorie. Die Oberkategorien können farblich unterschieden werden.</p>
+<p>Beispiel hier: Dargestellt sind Städte mit den höchsten Einwohnerzahlen sortiert nach Kontinenten. Die Kontinente bilden die jeweilige Oberkategorie, die Städte sind als Kacheln den Kontinenten farblich zugeordnet. Die Größe der Kacheln ist abhängig von der Größe der Bevölkerung der Stadt.</p>
+<p><strong>Welche Fehler sollten allgemein in Bezug auf diesen Diagrammtyp vermieden werden</strong>: Theoretisch kann die Anzahl der Hierarchieebenen in den Daten beliebig groß sein. Das heißt Unterkategorien könnten Unterkategorien haben, die wiederum Unterkategorien haben etc. Dies macht das Diagramm jedoch schnell unübersichtlich und unlesbar. Es ist sinnvoll nicht mehr als drei Hierarchieebenen zu haben.</p>
+<p><strong>Was ist bei RAWGraphs zu diesem Diagrammtyp zu beachten</strong>: Da es in RAWGraphs keine umfassende Möglichkeit gibt, die Position von Beschriftungen zu verändern, passiert es in RAWGraphs bei diesem Diagrammtyp leicht, dass die Beschriftung der Kacheln abgeschnitten wird. Dieses Problem kann etwas behoben werden, indem die Gesamtgraphik größer gemacht und in die Breite gezogen wird. Dies ist jedoch nur begrenzt machbar ohne das Diagramm zu stark zu verzerren. Außerdem ist es möglich in der Rubrik “4. Customize” unter Chart die Form und Anordnung der Kacheln zu beeinflussen (Tiling Method). Auch der Abstand zwischen den Kacheln kann vergrößert oder verkleinert werden (Padding).</p>
+<p><strong>So könnte eine geeignete Datentabelle aufgebaut sein</strong>: Hierarchische Daten erfordern die Angabe von Kategorien, die jeweils in einer Spalte stehen. Zusätzlich kann eine Spalte vorliegen, die etwas über die Größe einer der Kategorien aussagt.</p>
+<p>Nachfolgend ist ein vereinfachter Auszug aus dem in RAWGraphs genutzten Beispieldatensatz <em>Most Populated cities per continent</em> gezeigt:</p>
+<table class="table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Oberkategorie / Continent</th>
+<th>Unterkategorie der Oberkategorie / Country</th>
+<th>Unterkategorie der Unterkategorie / City</th>
+<th>Größe der Unterkategorie der Unterkategorie / Population</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>South America</td>
+<td>Peru</td>
+<td>Lima</td>
+<td>8894412</td>
+</tr>
+<tr class="even">
+<td>South America</td>
+<td>Brazil</td>
+<td>Rio de Janeiro</td>
+<td>6476631</td>
+</tr>
+<tr class="odd">
+<td>Asia</td>
+<td>China</td>
+<td>Shanghai</td>
+<td>24256800</td>
+</tr>
+<tr class="even">
+<td>Africa</td>
+<td>Nigeria</td>
+<td>Lagos</td>
+<td>17578000</td>
+</tr>
+</tbody>
+</table>
+<p><strong>So wäre eine Datentabelle für eine Treemap in RAWGraphs ungeeignet</strong>: Die Daten müssen klaren Kategorien zugeordnet sein, ansonsten ist keine Hierarchisierung möglich.</p>
+<p><strong>Welche Variablen werden in RAWGraphs für diesen Diagrammtyp benötigt</strong>:</p>
+<p><a href="img/mapping_treemap.png"></a></p>
+<p>Hierarchy*: ist Pflichtfeld. Hier können beliebig viele Kategorien eingefügt werden. Jedes Datenformat ist hier möglich.</p>
+<p>Size: Bestimmt die Größe der Kacheln. Hier ist im Normfall die unterste Kategorie zu nutzen. Es muss sich dabei um Zahlenwerte handeln.</p>
+<p>Color: Hier kann einen Kategorie ausgewählt werden, die die Farbe der zugehörigen Kacheln bestimmt. Im Normalfall ist hier die Oberkategorie zu nutzen. Jedes Datenformat ist hier möglich.</p>
+<p>Label: Das Label sorgt für die Beschriftung der Einzelkacheln. Hier ist im Normfall die unterste Kategorie zu nutzen. Jedes Datenformat ist hier möglich.</p>
+</section>
+<section id="circle-packing" class="level3">
+<h3 class="anchored" data-anchor-id="circle-packing">Circle Packing</h3>
+<p><strong>Alternative Namen</strong>: Circular Treemap</p>
+<p><img src="img/circularpacking.jpg" class="img-fluid"></p>
+<p>Der Diagrammtyp Circle Packing funktioniert analog zum Diagrammtyp Treemap, siehe daher die Beschreibung dort. Der Unterschied zwischen den beiden Diagrammtypen ist, dass beim Circular Packing anstatt eckiger Kacheln Kreise zur Darstellung genutzt werden. In der Rubrik “4. Customize” unter Chart kann die Anordnung der Kreise im Diagramm verändert werden, indem sie absteigend oder aufsteigend nach ihrer Größe sortiert werden.</p>
+</section>
+<section id="linear-dendrogram" class="level3">
+<h3 class="anchored" data-anchor-id="linear-dendrogram">Linear dendrogram</h3>
+<p><strong>Alternative Namen</strong>: Clusterbaum, Baumdiagramm</p>
+<p><img src="img/lineardendrogram.jpg" class="img-fluid"></p>
+<p>Was die zugrundeliegende Datenstruktur und das Mapping angeht, funktioniert ein Linear dendogram prinzipiell wie eine Treemap, siehe daher die Beschreibung dort. Ein Linear dendogram ist so aufgebaut, dass die Oberkategorie als Punkt auf der linken Seite des Diagramms dargestellt ist, von diesem Oberkategorie-Punkt zweigen die Unterkategorien wie die Äste eine Baumes ab und bilden eigene Punkte aus, von denen weitere Unterkategorien abzweigen können. Die Größe der Punkte zeigt, wie es auch bei den Kacheln einer Treemap der Fall ist, die Größe der Kategorie an. In der Rubrik “4. Customize” unter Chart kann die maximale Größe eines Kreises definiert werden. Unter “Layout Algorithm” kann die Baumstruktur zudem angepasst werden. Die jeweiligen Unterkategorien können abhängig von ihrer Größe aufsteigend oder absteigen oder alphabetisch angeordnet werden (Sort nodes by).</p>
+</section>
+<section id="circular-dendrogram" class="level3">
+<h3 class="anchored" data-anchor-id="circular-dendrogram">Circular dendrogram</h3>
+<p><strong>Alternative Namen</strong>: Radial Tree</p>
+<p><img src="img/circulardendrogram.jpg" class="img-fluid"></p>
+<p>Was die zugrundeliegende Datenstruktur und das Mapping angeht, funktioniert ein Circular dendogram prinzipiell wie eine Treemap, siehe daher die Beschreibung dort. Des Weiteren besteht eine große Ähnlichkeit mit einem Linear dendrogram. Während das Linear dendrogram jedoch die Äste mit den abzweigenden Unterkategorien in eine Richtung erstreckt (im Normalfall von links nach rechts), sind bei einem Circular dendrogram alle abzweigenden Unterkategorien kreisförmig um die Oberkategorie angeordnet. Ansonsten gelten auch hier die für das Linear dendrogram gemachten Erklärungen.</p>
+</section>
+<section id="sunburst-diagram" class="level3">
+<h3 class="anchored" data-anchor-id="sunburst-diagram">Sunburst diagram</h3>
+<p><strong>Alternative Namen</strong>: Ring Chart, Radial Treemap</p>
+<p><img src="img/sunburst.jpg" class="img-fluid"></p>
+<p>Ein Sunburst diagram funktioniert prinzipiell wie eine Treemap, siehe daher die Beschreibung dort. Anders als in der Treemap mit ihren ineinander geschachtelten Kacheln, ist im Fall eines Sunburst diagrams jede Hierarchiebene durch einen Ring repräsentiert, der sich um die jeweilige übergeordnete Kategorie legt. Dies bedeutet, dass sich die Oberkategorie in der Mitte befindet, während die unterste Kategorieebene außen zu finden ist. Das Diagramm bildet keinen gleichförmigen Kreis, da unterschiedlich viele Unterkategorien zugeordnet sein können. Dies stellt einen Vorteil zu einer Treemap oder anderen hierarchischen Diagrammtypen dar, da in einem Sunburst Diagram mehr Unterkategorien dargestellt werden können, ohne das Diagramm sofort unlesbar zu machen. Aber auch hier sollte die Anzahl an Unterkategorien begrenzt werden, um nicht an Übersichtlichkeit einzubüßen.</p>
+</section>
+</section>
+<section id="häufigkeiten" class="level2">
+<h2 class="anchored" data-anchor-id="häufigkeiten">Häufigkeiten</h2>
+<section id="bar-chart" class="level3">
+<h3 class="anchored" data-anchor-id="bar-chart">Bar chart</h3>
+<p><strong>Alternative Namen</strong>: Balkendiagramm, Säulendiagramm</p>
+<p><img src="img/barchart.jpg" class="img-fluid"></p>
+<p><strong>Was stellt es dar</strong>: Ein Bar chart ist ein Diagramm mit zwei Achsen, in dem mehrere „Balken“ nebeneinander angeordnet sind. Eine Achse stellt dabei eine kategorische Einteilung dar, die andere den Wert der jeweiligen Kategorie.</p>
+<p>Beispiel hier: Die Beliebtheit (Durchschnitt des IMDB-Ratings) von verschiedenen Serien-Genres im Zeitraum von 2013-2017. Auf der Y-Achse des Bar chart findet sich die Kategorisierung (die einzelnen Genres) und auf der X-Achse die jeweiligen Werte (das durchschnittliche IMDB-Rating). Diese Visualisierung wird jeweils für die Jahre 2013-2017 (also als eine Serie) wiederholt.</p>
+<p><strong>Welche Fehler sollten allgemein in Bezug auf diesen Diagrammtyp vermieden werden</strong>: Mit einem Bar chart kann eine Verteilung von Datenpunkten oder auch ein Vergleich von Werten realisiert werden. Dafür sind einerseits eindeutige Kategorien (Genre, Länder, Jahre, etc.) notwendig, andererseits numerische Werte (Rating, Einwohnerzahl, Verkaufszahlen, etc.) Ein Bar Chart kann auf verschiedene Weise verfälscht werden:</p>
+<ul>
+<li><p>Die Werte-Achse sollte bei 0 beginnen und keine Lücken aufweisen.</p></li>
+<li><p>Es sollten keine Abrundungen oder 3d Effekte verwendet werden (diese schränken die Vergleichbarkeit der einzelnen Balken ein).</p></li>
+<li><p>Es sollten keine unnötigen Einfärbungen verwendet werden (dadurch könnten ungewollte, zusätzliche Bedeutungen wahrgenommen werden).</p></li>
+<li><p>Kategorien sollten nach der Größe ihrer Werte sortiert werden (dies macht einen Vergleich einfacher).</p></li>
+<li><p>Es sollten keine Bilder oder Icons als Balken verwendet werden (dies verzerrt oft Aussage der Graphik).</p></li>
+</ul>
+<p><strong>Was ist bei RAWGraphs zu diesem Diagrammtyp zu beachten</strong>: Es ist wichtig, dass die Spalte des Datensatzes mit den numerischen Werten auch tatsächlich nur Zahlen enthält.</p>
+<p>Nutzt man beim Mapping in RAWGraphs nur das Pflichtfeld “Bars” werden die einzelnen Balken nicht mit ihren zugehörigen Werten dargestellt, sondern die Balkengröße wird durch die Häufigkeit der Kategorie/des Balkennamens wiedergegeben, was in vielen Fällen einfach nur 1 sein wird. In der Rubrik “4. Customize” unter Chart kann eingestellt werden, ob die Balken des Diagramms horizontal oder vertikal angeordnet werden sollen (Bars orientation). Die Balken können ab- und aufsteigend nach Größe oder alphabetisch angeordnet werden (Sort bars by). Auch der Abstand zwischen den Balken kann verändert werde (Padding).</p>
+<p><strong>So könnte eine geeignete Datentabelle aufgebaut sein</strong>: Nachfolgend ist ein vereinfachter Auszug aus dem in RAWGraphs benutzten Beispieldatensatz <em>Netflix Original Series 2013/2017</em> gezeigt:</p>
+<table class="table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Mindestens eine Art von Kategorie (beispielsweise Genre)</th>
+<th>Eine weitere beliebige Art von Kategorie (beispielsweise Titel)</th>
+<th>Mindestens eine Art von numerischen Werten (beispielsweise Rating)</th>
+<th>Beliebig viele weitere Spalten mit Kategorien oder Werten</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Animation</td>
+<td>Star Wars: The Clone Wars (season 6)</td>
+<td>80</td>
+<td>…</td>
+</tr>
+<tr class="even">
+<td>Comedy</td>
+<td>Arrested Development (season 4)</td>
+<td>89</td>
+<td>…</td>
+</tr>
+</tbody>
+</table>
+<p><strong>So wäre eine Datentabelle für einen Bar chart in RAWGraphs ungeeignet</strong>:</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Genre</th>
+<th>Title</th>
+<th>Subgenre</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Comedy</td>
+<td>BoJack Horseman</td>
+<td>Adult Animation</td>
+</tr>
+<tr class="even">
+<td>Comedy</td>
+<td>Trailer Park Boys (seasons 8, 9, 10 and 11)</td>
+<td>Mockumentary</td>
+</tr>
+</tbody>
+</table>
+<p>Hier fehlt eine Spalte mit numerischen Werten für die einzelnen Kategorien. Sobald jedoch mindestens eine Spalte mit Kategorien und mindestens eine Spalte mit numerischen Werten vorhanden ist, kann ein Bar Chart erstellt werden – es ist deshalb auch wesentlich einfacher zu erstellen als andere, komplexere Visualisierungen.</p>
+<p><strong>Welche Variablen werden in RAWGraphs für diesen Diagrammtyp benötigt</strong>:</p>
+<p><img src="img/mapping_barchart.png" class="img-fluid"></p>
+<p>Bars*: ist Pflichtfeld. Hier werden die Kategorien eingefügt, die die jeweiligen Balken bilden. Es kann jedes Datenformat hier genutzt werden.</p>
+<p>Size: Hier wird der Wert eingefügt, der die Höhe des jeweiligen Balkens bestimmt. Es muss sich dabei um ein Zahlenformat handeln.</p>
+<p>Color: Die Balken können farbig markiert werden. Dies kann dann Sinn machen, wenn mehrere Balken einer gemeinsamen Oberkategorie vorliegen und die Einfärbung gemäß dieser Oberkategorie geschieht. Jedem einzelnen Balken eine unterschiedliche Farbe zu geben, führt nicht unbedingt zu einer besseren Übersichtlichkeit. Hier kann jedes Datenformat genutzt werden.</p>
+<p>Series: erlaubt eine Serie von Balkendiagrammen zu erstellen, wenn z.B. Daten für verschiedene Jahre oder beispielsweise für verschienden Länder vorliegen. Hier kann jedes Datenformat genutzt werden.</p>
+</section>
+<section id="multi-set-bar-chart" class="level3">
+<h3 class="anchored" data-anchor-id="multi-set-bar-chart">Multi-set bar chart</h3>
+<p><strong>Alternative Namen</strong>: Grouped Bar Chart, Gruppiertes Balken-/Säulendiagramm</p>
+<p><img src="img/multisetbar.png" class="img-fluid"></p>
+<p><strong>Was stellt es dar</strong>: Ein Multi-set bar chart erfüllt eine ähnliche Funktion wie ein Stacked bar chart: Es können zwei kategorische Dimensionen dargestellt werden. Die primären Kategorien werden auf der X-Achse angeordnet. Zu jeder dieser primären Kategorien existiert aber gleichzeitig ein jeweils identisches Set von Unterkategorien, die als farblich unterschiedene Balken jeder der primären Kategorien zugeordnet werden. Ein Multi-set bar chart ist nützlich, um die Veränderung von Unterkategorien im Kontext einer primären Kategorisierung zu untersuchen. Dabei können Vergleiche innerhalb einer Gruppe angestellt werden, indem die Werte der einzelnen Unterkategorien in einer primären Kategorie verglichen werden oder Vergleiche außerhalb einer Gruppe angestellt werden. Gleichzeitig können aber auch Werte der einzelnen Unterkategorien zwischen mehreren primären Kategorien verglichen werden.</p>
+<p>Beispiel hier: Die Länder mit den zehn größten Bruttoinlandsprodukten werden dargestellt. Jedes Land (primäre Kategorisierung) erhält eine Gruppe von Balken, welche die einzelnen Sektoren des Bruttoinlandsprodukt (sekundäre Kategorisierung) darstellen.</p>
+<p><strong>Welche Fehler sollten allgemein in Bezug auf diesen Diagrammtyp vermieden werden</strong>: Wichtig ist, welche Kategorie die primäre Dimension (X-Achse) ist und welche die sekundäre Dimension (die einzelnen Balken) darstellt. Zeitliche Daten (Jahreszahlen), numerische Hierarchien (Altersgruppen) sind meistens primär. Typen (Gender, Länder) sind meistens sekundär. Letztendlich ist dies aber je nach Visualisierung anders möglich. Der Multi-set bar chart ist nicht geeignet, um die Gesamtverteilung der primären Kategorien zu vergleichen. In diesem Fall ist ein Bar chart, ein Stacked bar chart oder ein Pie chart sinnvoller. Gleichzeitig ist zu bedenken, dass in einem Multi-set bar chart nur eine bestimmte Anzahl von Balken darstellbar ist, um eine Übersichtlichkeit zu gewährleisten. Die Anzahl der primären Kategorien muss daher, auch in Abhängigkeit von der Anzahl der Unterkategorien, begrenzt werden.</p>
+<p><strong>Was ist bei RAWGraphs zu diesem Diagrammtyp zu beachten</strong>: In der Rubrik “4. Customize” unter Chart besteht die Möglichkeit den Abstand zwischen den Gruppen und den einzelnen Balken einzustellen. Des Weiteren können die primären Kategorien auf der X-Achse ab- und aufsteigend nach ihren Werten oder alphabetisch nach ihren Namen sortiert werden (Sort X axis by).</p>
+<p><strong>So könnte eine geeignete Datentabelle aufgebaut sein</strong>: Nachfolgend ist ein vereinfachter Auszug aus dem in RAWGraphs benutzten Beispieldatensatz <a href="https://en.wikipedia.org/w/index.php?title=List_of_countries_by_GDP_sector_composition&amp;oldid=1022131842">GDP sector composition</a> dargestellt.</p>
+<p>Es müssen mindestens zwei Spalten mit Arten von numerischen Werten vorliegen, die die sekundären Kategorien des Multi-set bar chart bilden.</p>
+<table class="table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Eine Art von Kategorie (beispielsweise Land)</th>
+<th>Eine Art von numerischen Werten (beispielsweise Umsatz in Landwirtschaft)</th>
+<th>Eine weitere Art von numerischen Werten (beispielsweise Umsatz in Industrie)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>China</td>
+<td>1833590</td>
+<td>9400050</td>
+</tr>
+<tr class="even">
+<td>European Union</td>
+<td>333600</td>
+<td>5233350</td>
+</tr>
+</tbody>
+</table>
+<p><strong>So wäre eine Datentabelle für einen Multi-set bar chart in RAWGraphs ungeeignet</strong>: Es muss mindestens eine Art von primärer Kategorie und mindestens zwei Arten von numerischen Werten vorliegen, die die sekundären Kategorien bilden.</p>
+<p><strong>Welche Variablen werden in RAWGraphs für diesen Diagrammtyp benötigt</strong>:</p>
+<p><img src="img/mapping_multisetbar.png" class="img-fluid"></p>
+<p>X Axis*: ist Pflichtfeld. Hier werden die primären Kategorien angegeben, die auf der X-Achse angezeigt werden. Jedes Datenformat ist hier möglich.</p>
+<p>Size: Hier werden die sekundären Kategorien eingefügt, deren Werte die einzelnen Balken darstellen. Die Werte müssen im Zahlenformat vorliegen.</p>
+<p>Series: erlaubt eine Serie von Balkendiagrammen zu erstellen, wenn z.B. Daten für verschiedene Jahre oder beispielsweise für verschienden Länder vorliegen. Hier kann jedes Datenformat genutzt werden.</p>
+</section>
+<section id="stacked-bar-chart" class="level3">
+<h3 class="anchored" data-anchor-id="stacked-bar-chart">Stacked bar chart</h3>
+<p><strong>Alternative Namen</strong>: gestapeltes Balken-/Säulendiagramm</p>
+<p><img src="img/stackedbar.png" class="img-fluid"></p>
+<p><strong>Was stellt es dar</strong>: Ein Stacked bar chart weist viele Parallelen zur einem Bar chart und einem Multi-set bar chart auf. Gegenüber einem einfachen Bar chart kann, genau wie bei einem Multi-set bar chart, in einem Stacked bar chart eine weitere kategorische Dimension in der Visualisierung berücksichtigt werden. Jeder Balken einer primären Kategorie ist in mehrere Abschnitte aufgeteilt, wobei diese jeweils die Werte einer zusätzlichen, sekundären Kategorie anzeigen (siehe dazu auch die Beschreibung zum Multi-set bar chart).</p>
+<p>Beispiel hier: Die zehn Länder mit dem größten Bruttoinlandsprodukt und dessen Zusammensetzung. Auf der X-Achse findet sich die erste Kategorie-Dimension (Länder), auf der Y-Achse die jeweiligen Werte (die Größe des Bruttoinlandsprodukt). Die Unterteilung der Balken stellt die zweite Kategorie-Dimension dar (Sektoren des Bruttoinlandsprodukt).</p>
+<p><strong>Welche Fehler sollten allgemein in Bezug auf diesen Diagrammtyp vermieden werden</strong>: Eine große Herausforderung für die Lesbarkeit des Diagramms stellt dar, dass nur der Balken ganz links neben der Beschriftung der X-Achse steht. Je weiter rechts ein Balken steht, desto schwerer wird es, genaue Werte abzulesen. Daher sollte auf zu viele Balken verzichtet werden. Für weitere Anmerkungen siehe auch die Beschreibung zum Multi-set bar chart.</p>
+<p><strong>Was ist bei RAWGraphs zu diesem Diagrammtyp zu beachten</strong>: In der Rubrik “4. Customize” unter Chart kann zum einen der Abstand der Balken zueinander verändert werden (Padding). Zum anderen können die primären Kategorien auf der X-Achse ab- und aufsteigend nach ihren Werten oder alphabetisch nach ihren Namen sortiert werden (Sort X axis by). Des Weiteren kann die Reihenfolge der aufeinander gestapelten Balkenelemente ab- und aufsteigend nach Größe anpasst werden (Sort stacks by).</p>
+<p>Sowohl in Bezug auf den notwendigen Aufbau der Datentabelle als auch das Mapping siehe die Angaben zum Multi-set bar chart.</p>
+</section>
+</section>
+<section id="verteilungen" class="level2">
+<h2 class="anchored" data-anchor-id="verteilungen">Verteilungen</h2>
+<section id="box-plot" class="level3">
+<h3 class="anchored" data-anchor-id="box-plot">Box plot</h3>
+<p><strong>Alternative Namen</strong>: Box-Whisker-Plot, Kastendiagramm</p>
+<p><img src="img/boxplot.jpg" class="img-fluid"></p>
+<p><strong>Was stellt es dar</strong>: Der Diagrammtyp zeigt, in welchem Bereich die Daten liegen und wie sie sich über diesen Bereich verteilen. Es lässt sich dadurch erkennen, ob die Werte gleichmäßig verteilt sind oder eine „schiefe“ Verteilung vorliegt, wobei die Werte vermehrt in einem Bereich liegen. Ein Box plot ist dann von Vorteil, wenn man verschiedene Werte miteinander vergleichen will, also mehrere „Kästen“ (Boxes) nebeinander stellen kann, wie im oben gezeigten Beispiel. Ein Box plot ist dabei aus unterschiedlichen Werten zusammengesetzt:</p>
+<p>Werte innerhalb des „Kastens“<br>
+- der „Kasten“ an sich umfasst 50% der vorhandenen Daten<br>
+- unterste Begrenzung des Kastens = Unteres Quartil: 25% der Datenwerte sind gleich oder kleiner als dieser Wert<br>
+- Strich innerhalb des Kastens = Median: 50% der Datenwerte sind gleich oder kleiner als dieser Kennwert<br>
+- oberste Begrenzung des Kastens = Oberes Quartil: 75% der Datenwerte sind gleich oder kleiner als dieser Kennwert</p>
+<p>die beiden „Antennen“ (=Whisker)<br>
+- oberstes Ende des oberen Whiskers = der maximalste Datenwert<br>
+- unterstes Ende des unteren Whiskers = der minimalste Datenwert</p>
+<p>Beispiel hier: Wetter in New York 2012-2015. Hier werden die Höchsttemperaturen in New York in Zusammenhang mit der Wetterlage gesetzt (wie sind die Höchsttemperaturen während Sonnenschein, Regen, Nieselregen, Schnee oder Nebel). Betrachtet man die Höchsttemperaturen bei Regen, sieht man, dass sich die Temperaturwerte zwischen 2.8 und 37.2 Grad bewegen. Wie der „grüne Kasten“ zeigt, liegen 25% der gemessenen Werte unterhalb von 12.8 Grad und 75% der gemessenen Werte liegen unter 25.5 Grad. 50% der Datenwerte sind niedriger bzw. höher als 18.9 Grad.</p>
+<p><strong>Welche Fehler sollten allgemein in Bezug auf diesen Diagrammtyp vermieden werden</strong>: Was ein Box plot nicht zeigen kann, ist die exakte Häufigkeit, mit der ein Einzelwert auftritt. In dem oben genannten Beispiel können wir z.B. nicht ablesen, ob die niedrigste Temperatur von 2.8 Grad nur einmalig auftritt oder vielleicht sogar zweimal gemessen wurde. Um darzustellen, wie oft ein einzelner Temperaturwert gemessen wurde, muss auf einen anderen Diagrammtyp wie z.B. ein Histogramm zurückgegriffen werden. Histogramme als Diagrammtyp sind allerdings in RAWGraphs nicht verfügbar und müssten mit einem anderen Tool erstellt werden. Eine Alternative stellen noch Violin plots dar.</p>
+<p><strong>Was ist bei RAWGraphs zu diesem Diagrammtyp zu beachten</strong>: Mit anderen Tools lassen sich auch leicht abgewandelte Box plots erstellen, die etwas anders mit Maximal- und Minimalwerten umgehen. Mit RAWGraphs kann allerdings nur die oben dargestellte Form eines Box plots erstellt werden. Ein paar Erklärungen hierzu findet man auch in einem Wikipedia-Artikel zu <a href="https://de.wikipedia.org/wiki/Box-Plot">Box plots</a>.</p>
+<p>In der Rubrik “4. Customize” unter Chart lässt sich zum einen die Breite der einzelnen “Kästen” (Bars width), zum anderen der Durchmesser von Punkten (Dots diameter) verändern, die als Ausreißer-Daten in dem Diagrammtyp dargestellt werden können (im oben gezeigten Diagramm ist dies nicht der Fall, da die Datenbasis dies nicht hergibt). Unter Ausreißer-Daten versteht man Datenwerte, die deutlich höher oder niedriger als der Großteil der Werte insgesamt sind. Inwieweit man diese Ausreißer-Daten tatsächlich als Ausreißer verstehen möchte, lässt sich mit der Option “Interquartile range multiplier” regeln. Je höher der Wert hier ist, desto weniger werden Datenwerte als Ausreißer verstanden.</p>
+<p>In dem Fall, wo alle Datenwerte der Y-Achse deutlich höher als null liegen, beginnt RAWGraphs automatisiert die Skala der Achse nicht bei null, sondern bei einem anderen, höheren Wert. Möchte man trotzdem die Achse bei null beginnen lassen, kann dies durch die Option “Set Y origin to 0” eingestellt werden.</p>
+<p><strong>So könnte eine geeignete Datentabelle aufgebaut sein</strong>: Folgendes ist ein vereinfachter Auszug zu dem in RAWGraphs benutzten Datensatz zu <em>Weather in New York, 2012-2015</em>:</p>
+<table class="table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Einzelne Werte/Höchsttemperaturen</th>
+<th>Bezeichnung der einzelnen Gruppen, nach denen die jeweiligen „Kästen“ erstellt werden; dieser Part ist optional; enthält die Tabelle nur Werte zu einem einzelnen Objekt, kann auch nur ein einzelner “Kasten” erstellt werden; da die Verteilung von Werten jedoch oft erst im Vergleich interessant ist, bietet es sich an, verschiedene “Kästen” gegenüber zu stellen/Wetterlage</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>13.3</td>
+<td>rain</td>
+</tr>
+<tr class="even">
+<td>-2.2</td>
+<td>sun</td>
+</tr>
+<tr class="odd">
+<td>15.6</td>
+<td>fog</td>
+</tr>
+<tr class="even">
+<td>5</td>
+<td>snow</td>
+</tr>
+<tr class="odd">
+<td>30</td>
+<td>drizzle</td>
+</tr>
+<tr class="even">
+<td>4.4</td>
+<td>snow</td>
+</tr>
+<tr class="odd">
+<td>17.8</td>
+<td>fog</td>
+</tr>
+<tr class="even">
+<td>29.4</td>
+<td>drizzle</td>
+</tr>
+<tr class="odd">
+<td>9.4</td>
+<td>rain</td>
+</tr>
+<tr class="even">
+<td>16.1</td>
+<td>sun</td>
+</tr>
+</tbody>
+</table>
+<p><strong>So wäre eine Datentabelle für einen Box plot in RAWGraphs ungeeignet</strong>: Die Einzelwerte müssen untereinander in einer Spalte der Tabelle stehen. Sie dürfen nicht in einer Tabellenzeile stehen.</p>
+<p><strong>Welche Variablen werden in RAWGraphs für diesen Diagrammtyp benötigt</strong>:</p>
+<p><img src="img/mapping_boxplot.png" class="img-fluid"></p>
+<p>Y-Achse*: ist Pflichtfeld. Hier werden die Angaben zu den einzelnen Werten gemacht, dabei muss es sich immer um Zahlenwerte handeln.</p>
+<p>Groups und Color: sind optionale Variablen, wenn man verschiedene Objekte vergleichen möchte. Die Farbe muss sinnvollerweise den Gruppen entsprechen. Gruppen und davon abhängig die Farben können Zahlenwerte, Datumsangaben oder Wörter sein.</p>
+</section>
+<section id="violin-plot" class="level3">
+<h3 class="anchored" data-anchor-id="violin-plot">Violin plot</h3>
+<p><strong>Alternative Namen</strong>: Violindiagramm, Geigendiagramm</p>
+<p><img src="img/violinplot.jpg" class="img-fluid"></p>
+<p><strong>Was stellt es dar</strong>: Ein Violin plot zeigt ähnlich wie ein Box plot, in welchem Bereich die Daten liegen und wie sie sich über diesen Bereich verteilen. In einem Violin plot wird gleichzeitig dargestellt, wie häufig ein einzelner Wert auftritt, was durch die Breite der „Violine“ auf Höhe des jeweiligen Datenwertes dargestellt wird.</p>
+<p>Beispiel hier: Wetter in New York 2012-2015. Hier werden die Höchsttemperaturen in New York in Zusammenhang mit der Wetterlage gesetzt (wie sind die Höchsttemperaturen während Sonnenschein, Regen, Nieselregen, Schnee oder Nebel).</p>
+<p>Da viele Ähnlichkeiten zwischen Box plots und Violin plots vorliegen, gelten die für Box plots beschriebenen Erläuterungen zur Datenstruktur und der Nutzung von Variablen ebenso hier.</p>
+<p><strong>Was ist bei RAWGraphs zu beachten</strong>: Es gibt verschiedene Tools, die in der Lage sind, Box plots und Violin plots miteinander zu kombinieren. Dies ist in RAWGraphs aber nicht der Fall. In einem Violin plot können daher die für Box plots so relevanten Werte wie Median, oberstes und unterstes Quartil etc. nicht dargestellt werden. Da in RAWGraphs keine Histogramme erstellt werden können, kommt einem Violin plot die Darstellung einer Dichteverteilung der Werte am nächsten. Allerdings ist aus einem Violin plot in RAWGraphs die exakte Anzahl der Häufigkeit eines Wertes nicht ablesbar, da dies nicht auf der x-Achse dargestellt wird. Der Violin plot gibt eher einen groben Eindruck über die Häufigkeitsverteilung der Werte im Vergleich mit anderen Einzelwerten. Eine ähnliche Möglichkeit der Darstellung ist auch ein Beeswarm plot.</p>
+<p>In der Rubrik “4. Customize” unter Chart lassen sich verschiedene Einstellungen für einen Violin plot vornehmen. Um einen ungefähren Eindruck von der Häufigkeit der einzelnen Werte zu erhalten, kann für jeden Datenwert ein Punkt in den Violin plot eingefügt werden (Show dots on data values) sowie der Durchmesser dieser Punkte bestimmt werden (Dots diameter). Die Reihenfolge der angezeigten “Violinen” kann anhand der Werte ab- oder aufsteigend oder alphabetisch dargestellt werden (Sort violins by). Des Weiteren kann der Abstand zwischen den einzelnen “Violinen” reguliert werden (Padding) sowie die Form der Violin plots nach verschiedenen mathematischen Berechnungen angepasst werden (Curve type). Die Datenpunkte in einem Violin plot sind gleichmäßig auf verschiedene sogenannte “Bins” verteilt. In RAWGraphs besteht die Möglichkeit die Anzahl der Bins zu variieren (Number of bins), was die Darstellung verändert.</p>
+</section>
+<section id="beeswarm-plot" class="level3">
+<h3 class="anchored" data-anchor-id="beeswarm-plot">Beeswarm plot</h3>
+<p><strong>Alternative Namen</strong>: Dot Plot, Swarm Plot, Punktdiagramm</p>
+<p><img src="img/beeswarm.jpg" class="img-fluid"></p>
+<p><strong>Was stellt es dar</strong>: Ähnlich einem Violin plot wird die Verteilung von Werten zu verschiedenen Objekten/Sachverhalten im Vergleich dargestellt. Parallel zur x-Achse, auf der eine Reihe von ansteigenden oder abfallenden Wertegrößen angezeigt sind, werden Einzelwerte zu einem Thema entlang einer horizontalen Linie gemäß ihrer Größe ausgerichtet. Liegen mehrere identische Werte vor, werden sie rechts oder links der horizontalen Linie gestapelt angeordnet, um Überlappungen zu vermeiden, wodurch eine Ähnlichkeit mit einem Violin plot entstehen kann. Die Größe der einzelnen Punkte kann durch die Größe des entsprechenden Einzelwertes bestimmt werden.</p>
+<p>Beispiel hier: Durchschnittliches Gehalt in New York abhängig vom Beruf, wobei die einzelnen Berufe Oberkategorien wie Management, Gesundheitswesen etc. zugeordnet werden. In der dargestellten Graphik ist die Größe der Punkte abhängig von der Größe des Gehalts. Daher werden die Punkte immer größer, je weiter rechts man entlang der X-Achse wandert. Die Y-Achse zeigt die Oberkategorien der Berufe. Jeder Punkt stellt einen spezifischen Beruf dar, dessen Label theoretisch ebenfalls in diesem Diagramm dargestellt werden könnte, jedoch aufgrund von Platzgründen weggelassen wurde. Das Diagramm gibt einerseits einen Überblick darüber, wie viele Berufe einer Oberkategorie zugeordnet sind, und andererseits, in welcher Größenordnung sich die Gehälter in dieser Berufsgruppe bewegen. Beispielsweise sieht man, dass sich die Gehälter im Management-Bereich und bei den Practitioners und Technicians in einem hohen Bereich bewegen, während die Gehälter im Office and Administrative Support und auch in Construction and Extraction eher im niedrigeren Bereich gebündelt sind.</p>
+<p><strong>Welche Fehler sollten allgemein in Bezug auf diesen Diagrammtyp vermieden werden</strong>: Wenn zu viele einzelne Datenpunkte vorliegen, kann ein Beeswarm plot schnell unübersichtlich werden, da die einzelnen Punkte ineinander verschwimmen und nicht mehr erkennbar sind.</p>
+<p><strong>Was ist bei RAWGraphs zu diesem Diagrammtyp zu beachten</strong>: RAWGraphs ist für diesen Diagrammtyp ein sehr gutes Tool. Diese Art von Diagramm ist beispielsweise mit Libraries von Programmiersprachen wie Python deutlich schwerer zu erstellen.</p>
+<p>In der Rubrik “4. Customize” unter Chart kann die Minimal- und Maximalgröße der Punkte sowie der Abstand zwischen den Punkten (Padding) eingestellt werden.</p>
+<p><strong>So könnte eine geeignete Datentabelle aufgebaut sein</strong>: Nachfolgend ist ein vereinfachter Auszug aus dem in RAWGraphs benutzten Beispieldatensatz <a href="https://data.ny.gov/w/gkgz-nw24/caer-yrtv?cur=S3JXBWlXCbs&amp;from=SAa8_R9mOdD">New York mean wage per occupation</a> für diesen Diagrammtyp gezeigt.</p>
+<p>Eine geeignete Datentabelle für diesen Diagrammtyp enthält eine Spalte, in der die Einzelwerte gelistet sind. Diese Einzelwerte müssen jeweils mit einem Label versehen werden, das sie einer Gruppe zuordnet (in diesem Fall der Oberkategorie). Werden keine Gruppen angegeben, würden automatisch alle Werte einer einzigen Gruppen zugeordnet werden, so dass sich alle Datenpunkte entlang einer einzigen horizontalen Linie anordnen würden. Optional und zusätzlich zu der Gruppierung können den Einzelwerten auch spezifische Labels zugeordnet werden (in diesem Fall die Bezeichnungen für die einzelnen Datenpunkte).</p>
+<table class="table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Name eines einzelnen Datenpunktes/Occupation</th>
+<th>Einzelwerte/Mean Wage</th>
+<th>Oberkategorie, der ein einzelner Datenpunkt zugeordnet wird/Category</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Chief Executives</td>
+<td>219390</td>
+<td>Management</td>
+</tr>
+<tr class="even">
+<td>Funeral Home Managers</td>
+<td>111230</td>
+<td>Management</td>
+</tr>
+<tr class="odd">
+<td>Human Resources Specialists</td>
+<td>77550</td>
+<td>Business and Financial Operations</td>
+</tr>
+<tr class="even">
+<td>Logisticians</td>
+<td>77340</td>
+<td>Business and Financial Operations</td>
+</tr>
+<tr class="odd">
+<td>Genetic Counselors</td>
+<td>94930</td>
+<td>Healthcare Support</td>
+</tr>
+<tr class="even">
+<td>Physical Therapist Assistants</td>
+<td>56620</td>
+<td>Healthcare Support</td>
+</tr>
+</tbody>
+</table>
+<p><strong>So wäre eine Datentabelle für einen Beeswarm plot in RAWGraphs ungeeignet</strong>: Ähnlich wie bei einem Box plot und Violin plot müssen die Einzelwerte in einer Spalte untereinander gelistet werden und dürfen nicht als Tabellenzeile strukturiert sein. Die Werte müssen Gruppen zugeordnet werden. Liegen lediglich Einzelbezeichnungen für Datenpunkte ohne Gruppierung vor, ist es nicht möglich einen Beeswarm plot darzustellen.</p>
+<p><strong>Welche Variablen werden in RAWGraphs für diesen Diagrammtyp benötigt</strong>:</p>
+<p><img src="img/mapping_beeswarm.png" class="img-fluid"></p>
+<p>X Axis*: ist Pflichtfeld. Einfügen der Spalte mit den Einzelwerten. Dabei muss es sich immer um eine Zahl oder ein Datum handeln</p>
+<p>Size: Hier wird die Größe der Datenpunkte bestimmt. Dies basiert meist auf der Höhe der Einzelwerte, so dass diese Variable identisch mit der Variable der X-Achse ist.</p>
+<p>Color: Die Farbgebung orientiert sich nach der Gruppe (s.u. Groups), der die jeweiligen Einzelwerte zugeordnet werden.</p>
+<p>Label: Hier können die Namen der Einzelbezeichnungen der Datenwerte eingetragen werden. In diesem Fall wären es die Berufsbezeichnungen. Bei vielen Datenpunkten kann dies allerdings schnell unübersichtlich werden.</p>
+<p>Groups: Hier werden die Gruppen eingefügt, denen die Einzelwerte jeweils zugeordnet werden, in diesem Fall sind es Oberkategorien für die Berufsbezeichnungen.</p>
+</section>
+</section>
+<section id="veränderungen-im-zeitverlauf" class="level2">
+<h2 class="anchored" data-anchor-id="veränderungen-im-zeitverlauf">Veränderungen im Zeitverlauf</h2>
+<section id="line-chart" class="level3">
+<h3 class="anchored" data-anchor-id="line-chart">Line chart</h3>
+<p><strong>Alternative Namen</strong>: Liniendiagramm</p>
+<p><img src="img/linechart.jpg" class="img-fluid"></p>
+<p><strong>Was stellt es dar</strong>: In einem Diagramm mit zwei Achsen, bei dem die X-Achse einen Verlauf (meistens von Zeit) und die Y-Achse eine Skala von Werten anzeigt, werden einzelne Datenpunkte mit Linien verknüpft. So können (meist zeitliche) Veränderungen dieser Werte visualisiert werden. Ein Line chart dient dazu, Veränderungen von Werten im Kontext von kontinuierlichen anderen Werten zu zeigen.</p>
+<p>Beispiel hier: Die Gewinnmargen der Musikindustrie durch verschiedenen Medien in den Jahren 1970 bis 2000. Auf der X-Achse findet sich der zeitliche Verlauf in Jahren, auf der Y-Achse die Skala der Verkaufszahlen. Die einzelnen Datenpunkte der unterschiedlichen Medien sind durch Linien verbunden und zur Differenzierung eingefärbt.</p>
+<p><strong>Welche Fehler sollten allgemein in Bezug auf diesen Diagrammtyp vermieden werden</strong>: Es sollten nicht zu viele Linien gleichzeitig visualisiert werden (fünf sind meistens sinnvoll), da die Visualisierung sonst schnell unübersichtlich wird. Alternativ kann eine Serie mit mehreren Diagrammen hier Abhilfe schaffen.</p>
+<p><strong>Was ist bei RAWGraphs zu diesem Diagrammtyp zu beachten</strong>: In der Rubrik “4. Customize” unter Chart besteht die Möglichkeit, die einzelnen Datenwerte als Punkte darzustellen, die durch eine Linie verbunden werden oder eine Linie ohne einzelne Datenwertpunkte darzustellen (Show dots on data values). Der Durchmesser dieser Punkte kann ebenfalls definiert werden (Dots diameter). Die Form der Kurve kann nach verschiedenen mathematischen Berechnungen angepasst werden (Curve type).</p>
+<p>In dem Fall, wo alle Datenwerte der Y-Achse deutlich höher als null liegen, beginnt RAWGraphs automatisiert die Skala der Achse nicht bei null, sondern bei einem anderen, höheren Wert. Möchte man trotzdem die Achse bei null beginnen lassen, kann dies durch die Option “Set Y origin to 0” eingestellt werden.</p>
+<p>Unter “4. Customize” ist im Gegensatz zu anderen Diagrammtypen auch der Abschnitt Axes verfügbar, wo die Möglichkeit besteht, die Beschriftung der X-Achse zu verändern. Es können nicht nur Angaben zu jedem einzelnen Datenwert gemacht werden, sondern auch nur die Minimal- und Maximalwerte gezeigt werden oder eine ausgewählte Anzahl von Werten.</p>
+<p><strong>So könnte eine geeignete Datentabelle aufgebaut sein</strong>: Folgendes ist ein vereinfachter Auszug zu dem in RAWGraphs benutzten Datensatz zu <a href="https://www.riaa.com/u-s-sales-database/">Revenues per Music format</a>:</p>
+<table class="table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Eine kontinuierliche Werteskala/Year</th>
+<th>Einzelne Datenpunkte/Revenue</th>
+<th>Ggf. unterschiedliche Kategorien, falls mehrere Linien gezeichnet werden sollen/Format</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2019</td>
+<td>6.795945687</td>
+<td>Vinyl</td>
+</tr>
+<tr class="even">
+<td>2018</td>
+<td>5.290337079</td>
+<td>Vinyl</td>
+</tr>
+<tr class="odd">
+<td>2018</td>
+<td>8.605769716</td>
+<td>Download</td>
+</tr>
+</tbody>
+</table>
+<p><strong>So wäre eine Datentabelle für einen Line chart in RAWGraphs ungeeignet</strong>: Die Datentabelle darf keine Datenlücken entlang der Zeitachse aufweisen, da ansonsten der Linienverlauf nicht korrekt dargestellt wird. Es wird dann keine Lücke in der Linie erzeugt, sondern der fehlende Wert als null gerechnet. Von der Darstellung her entsteht somit der Eindruck einer abfallenden und wieder ansteigenden Kurve, obwohl der Wert letztlich einfach fehlt.</p>
+<p><strong>Welche Variablen werden in RAWGraphs für diesen Diagrammtyp benötigt</strong>:</p>
+<p><img src="img/mapping_linechart.png" class="img-fluid"></p>
+<p>X-Axis*: Hier wird der zeitliche Verlauf abgebildet. Meistens handelt es sich dabei um ein Datumsformat, es kann aber auch das Zahlenformat gewählt werden, falls die Zeitangabe nicht als Datum formatiert sein sollte.</p>
+<p>Y-Axis*: Hier können die Zahlenwerte oder auch Datumsangaben eingetragen werden, die den jeweiligen Angaben auf der X-Achse zugeordnet sind.</p>
+<p>Lines: Lassen sich die Werte der Y-Achse in verschiedene Kategorien einordnen, können diese als unterschiedliche Linien visualisiert werden. Jedes Datenformat ist hier möglich.</p>
+<p>Color: bezieht sich direkt auf die Variable “Lines” und ermöglicht ein Einfärben der verschienden Kategorien. Jedes Datenformat ist hier möglich.</p>
+<p>Series: kann dann benutzt werden, wenn mehrere Line charts nebeneinander erstellt werden müssen. Dies würde beispielsweise für verschiedene Länder oder auch andere Parameter gelten (diese Parameter können in jedem Datenformat vorliegen).</p>
+</section>
+<section id="bumpchart" class="level3">
+<h3 class="anchored" data-anchor-id="bumpchart">Bumpchart</h3>
+<p><strong>Alternative Namen</strong>: Ranking plot</p>
+<p><img src="img/bumpchart.jpg" class="img-fluid"></p>
+<p><strong>Was stellt es dar</strong>: Es ist eine spezielle Form eines Line chart. Dabei geht es vor allem darum, sichtbar zu machen, wie sich der Rang verschiedener Objekte im Laufe einer Zeitspanne verändert. Für jedes Objekt wird eine breite Linie (= „Stream“) angelegt. Eine farbliche Unterscheidung der einzelnen Streams ist möglich. Nicht sichtbar hierin werden die konkreten Zahlen, die den Rang eines Objekts bestimmen.</p>
+<p>Beispiel hier: Die Entwicklung der Zahl von Einwohner*innen in Mailand, die ursprünglich nicht aus Italien kommen, zwischen 1979-2015. Sichtbar ist, dass die Anzahl an Menschen, die von den Philippinen kommen, sich im Vergleich zu anderen Ländern in den 1980er Jahren im mittleren Bereich bewegt, dann aber ab Ende der 1980er Jahre kontinuierlich ansteigt und schließlich sogar den zweiten Rang einnimmt.</p>
+<p><strong>Welche Fehler sollten allgemein in Bezug auf diesen Diagrammtyp vermieden werden</strong>: Zu viele Streams machen das Diagramm unübersichtlich, es sollte nur eine überschaubare Anzahl an Vergleichsobjekten herangezogen werden.</p>
+<p><strong>Was ist bei RAWGraphs zu diesem Diagrammtyp zu beachten</strong>: Um das Diagramm übersichtlicher zu machen, kann es hilfreich sein, den Abstand zwischen den einzelnen Streams zu vergrößern. Dies ist in der Rubrik „4. Customize“ unter Charts möglich, indem das Padding erhöht wird. Ebenfalls kann es hilfreich sein, die Kontur/Form der Streams zu verändern (unter Curves Type).</p>
+<p>Bumpcharts finden sich in verschiedenen Layouts. Oft handelt es sich dabei einfach um schmale Linien. Das Layout in RAWGraphs ist nicht unbedingt das „klassische“ Layout für einen Bumpchart.</p>
+<p><strong>So könnte eine geeignete Datentabelle aufgebaut sein</strong>: Folgendes ist ein vereinfachter Auszug zu dem in RAWGraphs benutzten Datensatz zu <em>Foreign residents in Milan</em>:</p>
+<table class="table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Name des “Streams”/Country</th>
+<th>Zeitangaben für die Zeitachse/Date</th>
+<th>Größe des Streams/Residents</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Albania</td>
+<td>01/01/1979</td>
+<td>34</td>
+</tr>
+<tr class="even">
+<td>Albania</td>
+<td>01/01/1980</td>
+<td>30</td>
+</tr>
+<tr class="odd">
+<td>Albania</td>
+<td>01/01/1981</td>
+<td>28</td>
+</tr>
+<tr class="even">
+<td>China</td>
+<td>01/01/1979</td>
+<td>166</td>
+</tr>
+<tr class="odd">
+<td>China</td>
+<td>01/01/1980</td>
+<td>152</td>
+</tr>
+<tr class="even">
+<td>China</td>
+<td>01/01/1981</td>
+<td>194</td>
+</tr>
+<tr class="odd">
+<td>Chile</td>
+<td>01/01/1979</td>
+<td>99</td>
+</tr>
+<tr class="even">
+<td>Chile</td>
+<td>01/01/1981</td>
+<td>102</td>
+</tr>
+</tbody>
+</table>
+<p><strong>So wäre eine Datentabelle für einen Bumpchart in RAWGraphs ungeeignet</strong>: Die Datentabelle darf keine Datenlücken entlang der Zeitachse aufweisen, da ansonsten die Streams nicht korrekt dargestellt werden. Es wird dann keine Lücke in den Streams erzeugt, sondern der fehlende Wert als null gerechnet. Von der Darstellung her entsteht somit der Eindruck einer abfallenden und wieder ansteigenden Kurve, obwohl der Wert letztlich einfach fehlt.</p>
+<p>Im Mapping (s.u.) ist nur die Angabe der X-Achse, somit des Zeitverlaufs, verpflichtend. Um einen sinnvollen Bumpchart erstellen zu können, ist aber auch die Angabe der Streams und die Größe der Streams notwendig.</p>
+<p><strong>Welche Variablen werden in RAWGraphs für diesen Diagrammtyp benötigt</strong>:</p>
+<p><img src="img/mapping_bumpchart.png" class="img-fluid"></p>
+<p>X-Axis*: ist Pflichtfeld. Hier wird der zeitliche Verlauf abgebildet. Meistens handelt es sich dabei um ein Datumsformat, es kann aber auch das Zahlenformat gewählt werden, falls die Zeitangabe nicht als Datum formatiert sein sollte.</p>
+<p>Size: Bestimmt die Größe der einzelnen Streams und muss daher im Zahlenformat vorliegen.</p>
+<p>Ranking: (Bedeutung unklar)</p>
+<p>Streams: Hier kann die Spalte eingefügt werden, die die Namen der einzelnen Vergleichsobjekte und damit der einzelnen Streams enthält. Diese werden farblich unterschieden. Jedes Datenformat ist möglich.</p>
+<p>Series: Hier kann die Spalte eingefügt werden, die die Namen der einzelnen Vergleichsobjekte und damit der einzelnen Streams enthält. Es ist möglich, jedes einzelne Vergleichsobjekt und damit jeden einzelnen Stream in einem separaten Diagramm darzustellen. Die Diagramme werden nebeinander angeordnet, jedoch geht damit die Möglichkeit eines direkten Vergleichs zwischen den Streams verloren. Jedes Datenformat ist möglich.</p>
+</section>
+<section id="gantt-chart" class="level3">
+<h3 class="anchored" data-anchor-id="gantt-chart">Gantt chart</h3>
+<p><strong>Alternative Namen</strong>: Balkenplan</p>
+<p><img src="img/gantt.jpg" class="img-fluid"></p>
+<p><strong>Was stellt es dar</strong>: Ein Gantt chart zeigt eine zeitliche Abfolge von Ereignissen oder Terminen. Dabei wird der zeitliche Startpunkt und der Endpunkt des Ereignisses mittels eines horizontalen Balkens dargestellt sowie der Name des Ereignisses angegeben. Die Balkenlänge zeigt somit die Dauer des Ereignis an. Verschiedene Kategorien von Ereignissen können farblich unterschieden werden. Ein Gantt chart kann auch für Projektmanagement genutzt werden, wobei die „Ereignisse“ beispielsweise die Arbeitszeit von Mitarbeitenden repräsentieren.</p>
+<p>Beispiel hier: Das „Ereignis“ ist die Regierungszeit italienischer Präsident*innen und Ministerpräsident*innen.</p>
+<p><strong>Welche Fehler sollten allgemein in Bezug auf diesen Diagrammtyp vermieden werden</strong>: Die Nutzung dieses Diagrammtyps ist dann sinnvoll, wenn ein zeitlicher Vergleich von Ereignissen und ihrer Dauer dargestellt werden soll. Liegen alle Ereignisse in demselben Zeitraum und haben eine ähnliche Dauer, sagt das Diagramm letzlich nichts aus.</p>
+<p><strong>Was ist bei RAWGraphs zu diesem Diagrammtyp zu beachten</strong>: Das Start- und das Abschlussdatum müssen in einem Format vorliegen, das RAWGraphs als Datumsformat erkennt. Nach Hochladen der Datentabelle kann das Datumsformat noch nach Bedarf angepasst werden.</p>
+<p>In der Rubrik “4. Customize” unter Chart können die Balken ab- oder aufsteigend nach ihrem Startdatum angeordnet werden.</p>
+<p><strong>So könnte eine geeignete Datentabelle aufgebaut sein</strong>: Folgendes ist ein vereinfachter Auszug zu dem in RAWGraphs benutzten Datensatz zu <em>Italians Pms and Presidents</em>:</p>
+<table class="table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Startdatum des Ereignis / Start date</th>
+<th>Abschlussdatum des Ereignis / End date</th>
+<th>Name des Ereignis / Politician</th>
+<th>Kategorie des Ereignis / Rolle</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1946-07-14</td>
+<td>1947-02-02</td>
+<td>Alicide De Gasperi</td>
+<td>Prime minister</td>
+</tr>
+<tr class="even">
+<td>1953-08-17</td>
+<td>1954-01-18</td>
+<td>Guiseppe Pella</td>
+<td>Prime minister</td>
+</tr>
+<tr class="odd">
+<td>1992-05-28</td>
+<td>1999-05-15</td>
+<td>Oscar Luigi Scalfaro</td>
+<td>President</td>
+</tr>
+<tr class="even">
+<td>1962-05-11</td>
+<td>1964-12-06</td>
+<td>Antonio Segni</td>
+<td>President</td>
+</tr>
+<tr class="odd">
+<td>2006-05-15</td>
+<td>2015-01-14</td>
+<td>Giorgio Napolitano</td>
+<td>President</td>
+</tr>
+</tbody>
+</table>
+<p><strong>So wäre eine Datentabelle für einen Gantt Chart in RAWGraphs ungeeignet</strong>: Das Start- und das Enddatum muss dasselbe Datumsformat aufweisen. Sind die Daten unterschiedlich angegeben, ist es nicht möglich einen Zeitverlauf korrekt darzustellen.</p>
+<p><strong>Welche Variablen werden in RAWGraphs für diesen Diagrammtyp benötigt</strong>:</p>
+<p><img src="img/mapping_gantt.png" class="img-fluid"></p>
+<p>Start Date*: Das Startdatum des Ereignisses im Datumsformat.</p>
+<p>End Date*: Das Abschlussdatum des Ereignisses im Datumsformat.</p>
+<p>Groups: Der Name des Ereignis. Hier ist nur die Wortform möglich.</p>
+<p>Color: Kategorien der Ereignisse. Hier ist nur die Wortform möglich.</p>
+</section>
+</section>
+<section id="netzwerke" class="level2">
+<h2 class="anchored" data-anchor-id="netzwerke">Netzwerke</h2>
+<section id="arc-diagram" class="level3">
+<h3 class="anchored" data-anchor-id="arc-diagram">Arc Diagram</h3>
+<p><strong>Alternative Namen</strong>: Bogendiagramm</p>
+<p><img src="img/arcdiagram.jpg" class="img-fluid"></p>
+<p><strong>Was stellt es dar</strong>: Netzwerkbeziehungen zwischen Personen oder Objekten. Die beteiligten Personen/Objekte sind auf einer horizontalen Linie als Punkte aufgereiht. Die Größe der Punkte vermittelt einen Eindruck davon, wie oft die Person/das Objekt insgesamt mit anderen vernetzt ist. Die Vernetzung der einzelnen Personen/Objekte wird durch die grauen bogenförmigen Linien gezeigt. Je dicker diese Linie ist, desto stärker ist die Vernetzung zwischen diesen beiden Personen/Objekten.</p>
+<p>Beispiel hier: Game of Thrones Charaktere, Lannister vs.&nbsp;Starck (zu diesem Datensatz aus RAWGraphs liegen nicht viele Informationen vor, daher ist unklar, worin die „Stärke“ der Beziehung zwischen zwei Charakteren begründet liegt).</p>
+<p><strong>Welche Fehler sollten allgemein in Bezug auf diesen Diagrammtyp vermieden werden</strong>: Will man darstellen, wie eng oder stark die Beziehung zwischen zwei Personen ist, muss man vorher definieren, was die „Stärke“ der Beziehung darstellt. Dies kann z.B. sein, dass die Personen gemeinsam auftreten, Briefkontakt pflegen etc. Diese „Stärke“ sollte empirisch messbar sein und nicht nur geschätzt werden.</p>
+<p><strong>Was ist bei RAWGraphs zu diesem Diagrammtyp zu beachten</strong>: Die Beziehung zwischen zwei Personen oder Objekten wird in RAWGraphs immer aus einer bestimmten Richtung verstanden. Hat Person A eine Beziehung zu Person B, muss Person A in der ersten Tabellenspalte und Person B in der zweiten Tabellenspalte stehen. Wenn dann Person B auch in Beziehung mit einer Person C steht, ist es allerdings nicht möglich, Person B in die erste Tabellenspalte und Person C in die zweite Spalte zu stellen, da in der erstgenannten Beziehung Person B in der zweiten Spalte steht. Das heißt, eine Person kann immer nur in einer Spalte auftreten. Ansonsten erscheint diese Person mehrfach in der Visualisierung. Man erhält dann keinen guten Überblick über die verschiedenen Beziehungen, die diese Person pflegt.</p>
+<p>In der Rubrik “4. Customize” unter Chart kann die Minimal- und Maximalgröße der Punkte, die die Personen/Objekte darstellen, verändert werden (Min diameter, Max diameter). Gleichzeitig kann die Größe der Punkt anhand verschiedener Kriterien bestimmt werden (Nodes diameter). Sie können alle auf dieselbe Größe gesetzt werden, sie können aber auch nach verschiedenen Berechnungen aus der Netzwerkanalyse in der Größe reguliert werden. Eine Einführung zu Berechnungen dieser Art findet sich in <a href="https://doi.org/10.1007/978-3-476-05446-3_10">Jannidis, F. (2017). Netzwerke. In: Jannidis, F., Kohle, H., Rehbein, M. (eds) Digital Humanities. J.B. Metzler, Stuttgart.</a> Die Anordnung der Personen/Objekte kann durch verschiedene Parameter bestimmt werden: Name, Größe, Anzahl der Verbindungen und passend nach dem besten Platzverhältnis im Gesamtdiagramm (Sort nodes by). Die Farbintensität der Bögen ist unter Links opacity einstellbar. Zudem kann bestimmt werden, ob die Bögen nur oberhalb der Punkte verlaufen sollen (Arcs only on the top).</p>
+<p><strong>So könnte eine geeignete Datentabelle aufgebaut sein</strong>: Es müssen mindestens zwei Spalten vorliegen: Die beiden Personen, die miteinander in Beziehung stehen, müssen in je eine Spalte eingetragen werden. Zusätzlich kann eine dritte Zahlenspalte eingetragen werden, die beschreibt, wie eng die Beziehung zwischen den beiden Personen ist (dies kann bei einem Theaterstück oder Roman beispielsweise sein, wie oft die beiden Personen zusammen auftreten und miteinander sprechen, in einem Briefnetzwerk kann es beispielsweise beschreiben, wie oft diese beiden Personen Nachrichten austauschen etc.)</p>
+<p>Folgendes ist ein vereinfachter Auszug zu dem in RAWGraphs benutzten Datensatz zu <em>Lannister vs Starck relationships</em>:</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Person 1/Source</th>
+<th>Person 2/Target</th>
+<th>Stärke der Beziehung/Size</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Arya Stark</td>
+<td>Tyrion Lannister</td>
+<td>11</td>
+</tr>
+<tr class="even">
+<td>Arya Stark</td>
+<td>Tywin Lannister</td>
+<td>13</td>
+</tr>
+<tr class="odd">
+<td>Bran Stark</td>
+<td>Cersei Lannister</td>
+<td>6</td>
+</tr>
+<tr class="even">
+<td>Catelyn Stark</td>
+<td>Stafford Lannister</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<p><strong>So wäre eine Datentabelle für ein Arc Diagram in RAWGraphs ungeeignet</strong>: Es stellt ein Problem dar, wenn ein- und dieselbe Person mal in der Source-Spalte und mal in der Target-Spalte eingetragen ist. Die Darstellung wird dadurch verfälscht. Personen können immer nur in einer der beiden Spalten auftreten.</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Person 1/Source</th>
+<th>Person 2/Target</th>
+<th>Stärke der Beziehung/Size</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Arya Stark</td>
+<td>Tyrion Lannister</td>
+<td>11</td>
+</tr>
+<tr class="even">
+<td>Arya Stark</td>
+<td>Tywin Lannister</td>
+<td>13</td>
+</tr>
+<tr class="odd">
+<td>Bran Stark</td>
+<td>Cersei Lannister</td>
+<td>6</td>
+</tr>
+<tr class="even">
+<td>Catelyn Stark</td>
+<td>Stafford Lannister</td>
+<td>3</td>
+</tr>
+<tr class="odd">
+<td>Stafford Lannister</td>
+<td>Arya Stark</td>
+<td>12</td>
+</tr>
+<tr class="even">
+<td>Tyrion Lannister</td>
+<td>Catelyn Stark</td>
+<td>6</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Welche Variablen werden in RAWGraphs für diesen Diagrammtyp benötigt</strong>:</p>
+<p><img src="img/mapping_arcdiagram.png" class="img-fluid"></p>
+<p>Source Node* und Target Node*: ist Pflichtfeld. Da nicht nur Beziehungen zwischen Personen dargestellt werden können, sondern auch zwischen Objekten, müssen diese beiden Variablen nicht zwangsweise Namen/Wörter sein, sondern können auch Zahlen oder Datumsangaben sein.</p>
+<p>Size: ist optional. Sie kann eingesetzt werden, wenn Informationen zur Stärke der Beziehung vorliegen.</p>
+</section>
+</section>
+<section id="zusammenhang-zweier-werte" class="level2">
+<h2 class="anchored" data-anchor-id="zusammenhang-zweier-werte">Zusammenhang zweier Werte</h2>
+<section id="bubble-chart" class="level3">
+<h3 class="anchored" data-anchor-id="bubble-chart">Bubble chart</h3>
+<p><strong>Alternative Namen</strong>: Scatter Plot, Streudiagramm, Punktwolke</p>
+<p><img src="img/bubblechart.jpg" class="img-fluid"></p>
+<p><strong>Was stellt es dar</strong>: Die Abhängigkeit zweier Werte. Ein Wert wird auf der X-Achse des Diagramms, der andere Wert auf der Y-Achse des Diagramms definiert. Die Daten liegen als Wertepaare vor. Für jedes Wertepaar wird im Koordinatensystem ein Punkt gesetzt. Abhängig davon, ob die Wertepaare bestimmten Kategorien angehören, können die Punkte farbig markiert werden. Die Größe der Punkte kann abhängig von der Auswahl eines der Werte des Wertepaares festgelegt werden.</p>
+<p>Beispiel hier: Es wird der Zusammenhang zwischen den Kosten einer Filmproduktion und dem weltweiten Einspielergebnis dargestellt. Die Größe der Punkte wird durch das Einspielergebnis bestimmt. Die Farbe der Punkte ist durch das Genre des Films definiert. Betrachtet man beispielsweise die Action-Filme als blaue Punkte, sieht man, dass die Filmproduktion oft mit hohen Kosten verbunden ist, aber gleichzeitig auch das Einspielergebnis recht hoch ist.</p>
+<p><strong>Welche Fehler sollten allgemein in Bezug auf diesen Diagrammtyp vermieden werden</strong>: Generell muss man sich darüber im Klaren sein, welche Werte man in Zusammenhang setzen möchte und ob dieser Vergleich sinnvoll ist. Prinzipiell kann jede Form von Wertepaar verglichen werden. Beispielsweise könnte man auch den Durchschnittspreis von Bleistiftarten mit dem Durchschnittspreis verschiedener Apfelsorten in Beziehung setzen und würde einen korrekt aufgebauten Bubble chart erhalten und vielleicht sogar Auffälligkeiten in der Verteilung der Wertepaare erkennen. Da man aber davon ausgehen kann, dass hier kein direkter Zusammenhang besteht, ist eine Auswertung dieser Art wenig sinnvoll und hat das Potenzial, zu wilden Theorien zu führen.</p>
+<p>Diesen Diagrammtyp zu wählen, macht auch nur dann Sinn, wenn die Daten einigermaßen gleichmäßig über einen Wertebereich verteilt sind. Liegen beispielsweise viele niedrige Werte und viele hohe Werte vor, während kaum Werte im Mittelbereich vorhanden sind, häufen sich die Punkte an einigen Stellen, was das Diagramm unübersichtlich machen kann.</p>
+<p><strong>Was ist bei RAWGraphs zu diesem Diagrammtyp zu beachten</strong>: Prinzipiell bietet RAWGraphs die Möglichkeit, jeden einzelnen Datenpunkt mit einem Label zu versehen (in diesem Fall wäre dies der Name eines Films). Bei vielen Datenpunkten sind diese Labels aber letzten Endes kaum lesbar, da sie sich zu stark überlappen. Man muss daher abwägen, wie wichtig diese Beschriftung für die Diagrammdarstellung ist oder ob auf sie verzichtet werden kann.</p>
+<p>In der Rubrik “4. Customize” unter Chart lässt sich zum einen die Größe der einzelnen Datenpunkte (Max diameter), zum anderen das Layout der Datenpunkte (Show stroke, Show dots on data values) anpassen. In dem Fall, wo alle Datenwerte einer Achse deutlich höher als null liegen, beginnt RAWGraphs automatisiert die Skala der Achse nicht bei null, sondern bei einem anderen, höheren Wert. Möchte man trotzdem die Achse bei null beginnen lassen, kann dies durch die Option “Set X origin to 0” bzw. “Set Y origin to 0” eingestellt werden.</p>
+<p><strong>So könnte eine geeignete Datentabelle aufgebaut sein</strong>: Folgendes ist ein vereinfachter Auszug zu dem in RAWGraphs benutzten Datensatz zu <a href="https://en.wikipedia.org/w/index.php?title=List_of_highest-grossing_films&amp;oldid=1023491946">Highest grossing movies in history</a>:</p>
+<table class="table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 30%">
+<col style="width: 30%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Wertepaar-Datenwert 1</th>
+<th>Wertepaar-Datenwert2</th>
+<th>Zugehörigkeit zu einer Gruppe für farbige Markierung der Punkte</th>
+<th>“Name” des Datenpunkts</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>3.9</td>
+<td>402</td>
+<td>Drama</td>
+<td>Gone with the wind</td>
+</tr>
+<tr class="even">
+<td>237</td>
+<td>2790</td>
+<td>Action</td>
+<td>Avatar</td>
+</tr>
+<tr class="odd">
+<td>200</td>
+<td>2194</td>
+<td>Drama</td>
+<td>Titanic</td>
+</tr>
+<tr class="even">
+<td>356</td>
+<td>2798</td>
+<td>Action</td>
+<td>Avengers: Endgame</td>
+</tr>
+</tbody>
+</table>
+<p><strong>So wäre eine Datentabelle für einen Bubble chart in RAWGraphs ungeeignet</strong>: Es ist vor allem darauf zu achten, dass die Wertepaare im Zahlenformat vorliegen, andere Datenformate sind hier nicht möglich.</p>
+<p><strong>Welche Variablen werden in RAWGraphs für diesen Diagrammtyp benötigt</strong>:</p>
+<p><img src="img/mapping_bubble.png" class="img-fluid"></p>
+<p>X-Axis*: ist Pflichtfeld, erster Datenwert des Wertepaars. Es muss ein Zahlen- oder Datumsformat sein.</p>
+<p>Y-Axis*: ist Pflichtfeld, zweiter Datenwert des Wertepaars. Es muss ein Zahlen- oder Datumsformat sein.</p>
+<p>Size: Bestimmt die Größe der einzelnen Punkte und kann einer der Zahlenwerte des Wertepaares der X- oder Y-Achse sein. Liegen weitere Werte in der Datentabelle vor, kann die Größe der Punkte auch durch einen dritten Wert bestimmt werden. Der Wert muss im Zahlenformat vorliegen.</p>
+<p>Color: Die Punkte können farbig markiert werden. Dies ist dann sinnvoll, wenn die einzelnen Werte einer Gruppe zugeordnet werden können. Jedes Datenformat ist hier möglich.</p>
+<p>Connection By: (Bedeutung unklar)</p>
+<p>Label: Name des Datenpunkts. Jedes Datenformat ist hier möglich.</p>
+</section>
+</section>
+<section id="teilwerte-eines-ganzen" class="level2">
+<h2 class="anchored" data-anchor-id="teilwerte-eines-ganzen">Teilwerte eines Ganzen</h2>
+<section id="pie-chart" class="level3">
+<h3 class="anchored" data-anchor-id="pie-chart">Pie chart</h3>
+<p><strong>Alternative Namen</strong>: Kreisdiagramm, Kuchendiagramm, Tortendiagramm</p>
+<p><img src="img/piechart.jpg" class="img-fluid"></p>
+<p><strong>Was stellt es dar</strong>: Teilwerte (als Zahl oder Prozentanteil) eines Ganzen. Die Teilwerte werden als farbig unterschiedene „Kuchenstücke“ dargestellt. Im Fall einer Serie wird die Größe der einzelnen Kreise durch die Größe der Gesamtzahl bestimmt.</p>
+<p>Beispiel hier: Für jedes Land ist das Bruttoinlandsprodukt dargestellt, eingeteilt in die Sektoren Landwirtschaft, Industrie, Dienstleistung. Die Größe der Kreise zeigt beispielsweise, dass Deutschlands Bruttoinlandsprodukt niedriger ist als das Indiens.</p>
+<p><strong>Welche Fehler sollten allgemein in Bezug auf diesen Diagrammtyp vermieden werden</strong>: Die Kreisform ist dazu gedacht, ein gesamtes Phänomen zu zeigen, und einen Eindruck von Gesamtheit vermitteln. Wenn man im oben genannten Beispiel nur Landwirtschaft und Industrie als Kreis darstellen würde, dann würde die Darstellung verfälscht sein, da der Eindruck entsteht, dass ein Bruttoinlandsprodukt nur aus diesen beiden Teilaspekten besteht. Würde man zwei Teilaspekte eines Gesamtphänomens einem direkten Vergleich unterziehen, würde sich hierfür ein Multi-set bar chart besser eignen.</p>
+<p>Mehr als 7 oder 8 verschiedene „Kuchenstücke“ machen das Diagramm unübersichtlich. Liegen mehr Teilaspekte vor, sollte man auch hier alternativ auf andere Diagrammtypen ausweichen (z.B. die verschiedenen Arten von Balkendiagrammen).</p>
+<p><strong>Was ist bei RAWGraphs zu diesem Diagrammtyp zu beachten</strong>: Die Werte für die einzelnen “Kuchenstücke” müssen im Zahlenformat vorliegen und dürfen keine Wörter oder Datumsangaben sein. Für jedes einzelne “Kuchenstück” muss nicht bereits eine Gesamtzahl vorliegen. Wenn einzelne Werte einem “Kuchenstück” zugeordnet werden können, werde diese automatisch von RAWGraphs summiert.</p>
+<p>In der Rubrik “4. Customize” unter Chart lässt sich der Pie chart auch in einen “Donut chart” umwandeln, d.h. statt gefüllter “Kuchenstücke” liegt ein äußerer Ring vor, dessen Teilabschnitte farblich unterschieden werden.</p>
+<p><strong>So könnte eine geeignete Datentabelle aufgebaut sein</strong>: Siehe dazu beispielsweise den in RAWGraphs benutzten Beispieldatensatz <a href="https://en.wikipedia.org/w/index.php?title=List_of_countries_by_GDP_sector_composition&amp;oldid=1022131842">GDP sector composition</a>.</p>
+<table class="table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Teilwerte als Zahlen von „Kuchenstück“ 1</th>
+<th>Teilwerte als Zahlen von „Kuchenstück“ 2</th>
+<th>Teilwerte als Zahlen von “Kuchenstück 3”</th>
+<th>Hier könnten beispielsweise Ländernamen stehen oder andere Objekte. Diese werden in das Diagramm einbezogen, wenn man eine Serie erstellt</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>15.4</td>
+<td>23.0</td>
+<td>61.5</td>
+<td>India</td>
+</tr>
+<tr class="even">
+<td>1.1</td>
+<td>30.1</td>
+<td>68.7</td>
+<td>Japan</td>
+</tr>
+<tr class="odd">
+<td>0.7</td>
+<td>30.7</td>
+<td>68.6</td>
+<td>Germany</td>
+</tr>
+</tbody>
+</table>
+<p><strong>So wäre eine Datentabelle für einen Pie chart in RAWGraphs ungeeignet</strong>: Nicht jede Datentabelle ist für die Erstellung eines Pie chart geeignet, siehe dazu beispielsweise den in RAWGraphs zu findenden Datensatz zu <em>Netflix Original Series 2013/2017</em>. Hier ein Ausschnitt daraus:</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Genre</th>
+<th>Title</th>
+<th>Year</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Comedy</td>
+<td>Master of None</td>
+<td>2015</td>
+</tr>
+<tr class="even">
+<td>Drama</td>
+<td>Bloodline</td>
+<td>2015</td>
+</tr>
+<tr class="odd">
+<td>Drama</td>
+<td>Orange Is the New Black</td>
+<td>2013</td>
+</tr>
+<tr class="even">
+<td>Comedy</td>
+<td>Russell Peters vs.&nbsp;the World</td>
+<td>2013</td>
+</tr>
+<tr class="odd">
+<td>Docu-Series</td>
+<td>Making a Murderer</td>
+<td>2015</td>
+</tr>
+<tr class="even">
+<td>Comedy</td>
+<td>Easy</td>
+<td>2016</td>
+</tr>
+</tbody>
+</table>
+<p>Wenn man mit einem Pie chart darstellen möchte, wie viele Filme zu einem Genre gehören (ein „Kuchenstück“ stellt dann jeweils ein Genre dar) oder wie viele Filme pro Jahr entstanden sind (ein „Kuchenstück“ steht dann jeweils für ein Jahr), ist dies in RAWGraphs mit dieser Tabelle nicht möglich. Die Werte müssten dann eigenhändig oder mit einem anderen Tool ausgezählt werden und die Tabelle in eine andere Form gebracht werden:</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Comedy</th>
+<th>Drama</th>
+<th>Docu-Series</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>3</td>
+<td>2</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<table class="table">
+<thead>
+<tr class="header">
+<th>2013</th>
+<th>2015</th>
+<th>2016</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2</td>
+<td>3</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Welche Variablen werden in RAWGraphs für diesen Diagrammtyp benötigt</strong>:</p>
+<p><img src="img/mapping_piechart.png" class="img-fluid"></p>
+<p>Arcs*: ist Pflichtfeld. Hier werden die Werte für die einzelnen „Kuchenstücke“ eingefügt. Es müssen Zahlenwerte sein. Dabei können beliebig viele Dimensionen genutzt werden, jedoch wird das Diagramm schnell unübersichtlich, wenn zu viele “Kuchenstücke” vorhanden sind.</p>
+<p>Series: kann dann benutzt werden, wenn mehrere Pie charts nebeneinander erstellt werden müssen. Dies würde beispielsweise für verschiedene Länder oder verschiedene Jahre oder auch andere Parameter gelten. Hier ist jedes Datenformat möglich.</p>
+<p><em>Die Screenshots wurden von Theresa Blaschke und Lars Hadeler erstellt. Zuletzt bearbeitet am 14.11.2023</em></p>
+
+
+</section>
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          // default icon
+          link.classList.add("external");
+      }
+    }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">© 2023 <a href="https://www.uni-marburg.de/en/fb09/institutes/media-studies/research/research-projects/dici-hub">Digital Cinema Hub</a>, Marburg - Mainz - Frankfurt. <br> Für die Inhalte externer Seiten übernehmen wir trotz sorgfältiger Überprüfung keine Verantwortung.</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+</body></html>
