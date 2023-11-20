@@ -1,0 +1,5 @@
+---
+title: "How to: Computerbasierte Texterkennung"
+sidebar: false
+---
+###### Weitere Informationen folgen in Kürze
