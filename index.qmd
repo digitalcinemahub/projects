@@ -14,4 +14,6 @@ Nachfolgend möchten wir einige unserer Projekte vorstellen:
 
 ![[How to: Computerbasierte Texterkennung](texterkennung.qmd)](img/howtotexterkennung.png){width=200 height=200}
 
+![[Kooperation mit media/rep/](mediarep.qmd)](img/begriffsanalyse.png){height=200}
+
 :::

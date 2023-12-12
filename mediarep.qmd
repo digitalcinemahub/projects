@@ -1,0 +1,18 @@
+---
+title: "Datengestützte Analysen mit media/rep/"
+sidebar: false
+---
+## Die Vermessung der medienwissenschaftlichen Welt? Datengestützte Analysen mit media/rep/
+Das DiCi-Hub-Projekt hat sich für eine Analyse von medienwissenschaftlichen Daten mit dem Open Access-Repositorium für medienwissenschaftliche Publikationen [media/rep/](https://www.mediarep.org/home) zusammengetan. Wir haben uns der Frage gewidmet, wie sich bestehende Forschungsinfrastrukturen für datengestützte Analysen nutzen lassen. Konkret gesagt war unser Ziel, die in media/rep/ vorliegenden Publikationen mit ihren zugehörigen Metadaten mithilfe von digitalen Methoden auszuwerten und dadurch fachhistorische Perspektiven der deutschen Medienwissenschaft zu erkunden.
+
+Die ersten Ergebnisse der Analyse sind nun online in der [Zeitschrift für Medienwissenschaft](https://zfmedienwissenschaft.de/) erschienen: 
+
+[https://zfmedienwissenschaft.de/online/die-vermessung-der-medienwissenschaftlichen-welt](https://zfmedienwissenschaft.de/online/die-vermessung-der-medienwissenschaftlichen-welt)
+
+Wir beschreiben darin, wie wir uns ein Textkorpus aus den in media/rep/ vorliegenden Publikationen zusammengestellt und dies für eine Textanalyse vorbereitet haben. Exemplarisch wird die Häufung von medienwissenschaftlichen Fachbegriffen betrachtet und diese mithilfe einer Datenvisualisierung und Wortwolken präsentiert.
+
+Um unsere Analysen allgemein nachvollziehbar zu machen, haben wir zudem die von uns erarbeiteten Python-Skripte geteilt: 
+
+[https://mediarep.org/entities/dataset/5c425f93-ff08-4844-a36f-fdc912f143f2](https://mediarep.org/entities/dataset/5c425f93-ff08-4844-a36f-fdc912f143f2)
+
+Ein Skript ermöglicht den Download von Publikationen aus media/rep/ im txt-Format sowie der zugehörigen Metadaten als csv-Datei. Zudem wird ein Jupyter Notebook für die Analyse der Texte bereitgestellt.
