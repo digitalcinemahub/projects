@@ -1,0 +1,10 @@
+---
+title: "Tools und Tutorials"
+sidebar: false
+---
+::: {layout-ncol=2}
+
+![[How to: Computerbasierte Texterkennung](texterkennung.qmd)](img/howtotexterkennung.png){width=200 height=200}
+
+![[Daten explorieren (und visualisieren) mit Tableau Public](tableaupublic.qmd)](img/Button_Tableau.png){width=200 height=200}
+:::

@@ -20,7 +20,7 @@ Der Download besteht aus einem komprimierten Ordner. In komprimierten Ordnern k�
 
 Wenn OpenRefine gestartet wird, öffnen sich zwei Fenster: ein Terminalfenster und ein neuer Tab im Standardbrowser. Beide Fenster werden benötigt, damit das Programm läuft, sie dürfen **nicht** geschlossen werden. Im Terminal werden die einzelnen Arbeitsschritte im Programm angezeigt. Im Browserfenster wird mit dem Programm interagiert.
 
-![](img/OR_01_Start.PNG.png)
+![](img/OR_01_Start.PNG)
 
 ### Ein Projekt erstellen
 

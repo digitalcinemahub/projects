@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Brunch Lectures</title>
+<title>Daten explorieren (und visualisieren) mit Tableau Public</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -63,7 +63,7 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-sidebar floating nav-fixed">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -85,7 +85,7 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./brunchlectures.html" rel="" target="" aria-current="page">
+    <a class="nav-link" href="./brunchlectures.html" rel="" target="">
  <span class="menu-text">Brunch Lectures</span></a>
   </li>  
   <li class="nav-item">
@@ -110,76 +110,25 @@ ul.task-list li input[type="checkbox"] {
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-        <i class="bi bi-layout-text-sidebar-reverse"></i>
-      </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Brunch Lectures</li></ol></nav>
-      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-      </a>
-      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
-        <i class="bi bi-search"></i>
-      </button>
-    </div>
-  </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
-        <div class="mt-2 flex-shrink-0 align-items-center">
-        <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
-        </div>
-        </div>
-    <div class="sidebar-menu-container"> 
-    <ul class="list-unstyled mt-1">
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
- <span class="menu-text">Brunch Lectures</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./datensortieren.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Daten sortieren und filtern mit Excel</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./datenbereinigen.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Daten bereinigen und anreichern mit OpenRefine</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./datenvisualisieren.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Daten visualisieren mit RAWGraphs</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-    </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#online-brunch-lectures" id="toc-online-brunch-lectures" class="nav-link active" data-scroll-target="#online-brunch-lectures">Online Brunch Lectures</a>
-  <ul class="collapse">
-  <li><a href="#filmwissenschaftliche-daten-explorativ-erschließen" id="toc-filmwissenschaftliche-daten-explorativ-erschließen" class="nav-link" data-scroll-target="#filmwissenschaftliche-daten-explorativ-erschließen">Filmwissenschaftliche Daten explorativ erschließen</a></li>
-  <li><a href="#datensatz" id="toc-datensatz" class="nav-link" data-scroll-target="#datensatz">Datensatz</a></li>
-  <li><a href="#materialien-zu-den-einzelnen-lectures" id="toc-materialien-zu-den-einzelnen-lectures" class="nav-link" data-scroll-target="#materialien-zu-den-einzelnen-lectures">Materialien zu den einzelnen Lectures</a></li>
-  </ul></li>
+  <li><a href="#was-ist-tableau" id="toc-was-ist-tableau" class="nav-link active" data-scroll-target="#was-ist-tableau">Was ist Tableau?</a></li>
+  <li><a href="#wie-funktioniert-tableau-public" id="toc-wie-funktioniert-tableau-public" class="nav-link" data-scroll-target="#wie-funktioniert-tableau-public">Wie funktioniert Tableau Public?</a></li>
+  <li><a href="#hochladen-von-datensätzen" id="toc-hochladen-von-datensätzen" class="nav-link" data-scroll-target="#hochladen-von-datensätzen">Hochladen von Datensätzen</a></li>
+  <li><a href="#bearbeiten-des-datenformats" id="toc-bearbeiten-des-datenformats" class="nav-link" data-scroll-target="#bearbeiten-des-datenformats">Bearbeiten des Datenformats</a></li>
+  <li><a href="#werte-wählen-die-analysiert-und-visualisiert-werden-sollen" id="toc-werte-wählen-die-analysiert-und-visualisiert-werden-sollen" class="nav-link" data-scroll-target="#werte-wählen-die-analysiert-und-visualisiert-werden-sollen">Werte wählen, die analysiert und visualisiert werden sollen</a></li>
+  <li><a href="#erstellen-anderer-diagrammtypen-in-sekundenschnelle" id="toc-erstellen-anderer-diagrammtypen-in-sekundenschnelle" class="nav-link" data-scroll-target="#erstellen-anderer-diagrammtypen-in-sekundenschnelle">Erstellen anderer Diagrammtypen in Sekundenschnelle</a></li>
+  <li><a href="#verfeinern-der-visualisierung-und-exportieren-der-diagramme-oder-dashboards" id="toc-verfeinern-der-visualisierung-und-exportieren-der-diagramme-oder-dashboards" class="nav-link" data-scroll-target="#verfeinern-der-visualisierung-und-exportieren-der-diagramme-oder-dashboards">Verfeinern der Visualisierung und Exportieren der Diagramme oder Dashboards</a></li>
+  <li><a href="#erstellen-des-balkendiagramms-aus-open-syllabus-movie-rank" id="toc-erstellen-des-balkendiagramms-aus-open-syllabus-movie-rank" class="nav-link" data-scroll-target="#erstellen-des-balkendiagramms-aus-open-syllabus-movie-rank">Erstellen des Balkendiagramms aus Open Syllabus Movie Rank</a></li>
+  <li><a href="#was-ist-allgemein-bei-der-benutzung-von-tableau-public-zu-beachten" id="toc-was-ist-allgemein-bei-der-benutzung-von-tableau-public-zu-beachten" class="nav-link" data-scroll-target="#was-ist-allgemein-bei-der-benutzung-von-tableau-public-zu-beachten">Was ist allgemein bei der Benutzung von Tableau Public zu beachten?</a></li>
   </ul>
 </nav>
     </div>
@@ -188,7 +137,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Brunch Lectures</h1>
+<h1 class="title">Daten explorieren (und visualisieren) mit Tableau Public</h1>
 </div>
 
 
@@ -203,33 +152,150 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="online-brunch-lectures" class="level2">
-<h2 class="anchored" data-anchor-id="online-brunch-lectures">Online Brunch Lectures</h2>
-<section id="filmwissenschaftliche-daten-explorativ-erschließen" class="level3">
-<h3 class="anchored" data-anchor-id="filmwissenschaftliche-daten-explorativ-erschließen">Filmwissenschaftliche Daten explorativ erschließen</h3>
-<p>Diese dreiteilige Lecture-Reihe dient dazu, einen Einblick in das Arbeiten mit Datensätzen zu geben. Wir arbeiten über die drei Veranstaltungen hinweg an einem Datensatz, den wir zuvor bereitstellen. Die Veranstaltungen können unabhängig voneinander besucht werden.</p>
-<p>Anmeldung immer bis montags 14 Uhr unter <a href="mailto:%20dicihub@uni-marburg.de">dicihub@uni-marburg.de</a></p>
+<p>In diesem Tutorial möchten wir das Tool Tableau Public für Datenanalyse und Datenvisualisierung vorstellen. Hierzu geben wir einen kurzen Überblick über die Möglichkeiten dieses Tools und wie es bei der Arbeit mit Daten helfen kann.</p>
+<section id="was-ist-tableau" class="level2">
+<h2 class="anchored" data-anchor-id="was-ist-tableau">Was ist Tableau?</h2>
+<ul>
+<li>Funktion: Es handelt sich um die browserbasierte kostenlose Version des BI-Tools Tableau. Diese öffentliche Version ermöglicht, Datensätze hochzuladen, sie zu analysieren, zu visualisieren, Dashboards zu erstellen und sie auf einer persönlichen Seite zu veröffentlichen oder in verschiedenen Formaten herunterzuladen.<br>
+</li>
+<li>Kostenlose Version, Registrierung erforderlich<br>
+</li>
+<li>Keine Installation erforderlich, für Studierende und Lehrende kann eine einjährige Pro-Lizenz kostenlos erworben werden<br>
+</li>
+<li>Kein Programmierwissen erforderlich<br>
+</li>
+<li>Besonders interessant für die Datenexploration: Im Vergleich zu anderen Visualisierungstools wie RAWGraphs oder DataWrapper ermöglicht das Tool, Datenanalysen direkt durchzuführen, ohne schon im Voraus perfekte Pivot-Tabellen mit den Werten erstellt haben zu müssen.</li>
+</ul>
+</section>
+<section id="wie-funktioniert-tableau-public" class="level2">
+<h2 class="anchored" data-anchor-id="wie-funktioniert-tableau-public">Wie funktioniert Tableau Public?</h2>
+<p>Tableau bietet verschiedene Tutorials, abhängig von Kenntnisstand, und bietet auch ein Forum an, in dem man Fragen stellen und überprüfen kann.</p>
+<p><a href="https://www.youtube.com/watch?v=iT1iHLGawIM">Tableau Einführung</a></p>
+</section>
+<section id="hochladen-von-datensätzen" class="level2">
+<h2 class="anchored" data-anchor-id="hochladen-von-datensätzen">Hochladen von Datensätzen</h2>
+<p>Nachdem wir unser <a href="https://public.tableau.com/app/discover">Profil auf Tableau Public</a> erstellt haben, müssen wir auf unser Profil zugreifen und die Kachel “Visualisierung erstellen” wählen, um zur Benutzeroberfläche zu gelangen, die es uns ermöglicht, Daten hochzuladen:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/DiCiHub_Brunch_Lectures.png" style="width:30.0%;height:30.0%" class="figure-img"></p>
+<p><img src="img/01_Tableau_Datensatz_Herunterladen.png" style="width:90.0%;height:90.0%" class="figure-img"></p>
+</figure>
+</div>
+<p>Wir fangen an mit einem einfachen “Drag and drop” des <a href="https://docs.google.com/spreadsheets/d/1myzhRzh7jTaC9k8Mvjkq57xvJpe1YOBz9-apFkRSPmA/edit?usp=sharing">Datensatzes</a> nach dem Herunterladen.</p>
+<p>Wir werden mit dem Datensatz Open Syllabus Movie Ranks arbeiten. In Bezug auf diesen Datensatz wurden bereits einige Visualisierungen mit Tableau produziert, wir werden in diesem Tutorial auch versuchen, eine <a href="https://blog.opensyllabus.org/movie-lab/">Visualisierung</a> nachzubilden.</p>
+</section>
+<section id="bearbeiten-des-datenformats" class="level2">
+<h2 class="anchored" data-anchor-id="bearbeiten-des-datenformats">Bearbeiten des Datenformats</h2>
+<p>Tableau zeigt eine Vorschau unseres Datensatzes an, wir möchten möglicherweise den Datentyp jeder Spalte anpassen. Dies ist möglich, indem wir auf die angezeigten Spalten klicken und einen neuen Datentyp auswählen. Normalerweise erkennt Tableau die Datentypen ohne Probleme. Wir fahren dann fort, indem wir auf die untere Leiste auf “Sheet” klicken.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/02_Tableau_Datensatz_Bearbeiten.png" style="width:90.0%;height:90.0%" class="figure-img"></p>
 </figure>
 </div>
 </section>
-<section id="datensatz" class="level3">
-<h3 class="anchored" data-anchor-id="datensatz">Datensatz</h3>
-<p>Für die Brunch-Lecture-Reihe wurde von uns ein <a href="datensaetze/DiCiHubBrunchLectures_Datensatz.csv">Datensatz</a> (zum Download anklicken) vorbereitet, der Daten zu einer Reihe von Filmen mit Angaben zu Regie, Genre, Sprache, Bewertungen und weiterem enthält. Der Originaldatensatz mit Hintergrundinformationen zu seiner Entstehung ist unter dem Namen <a href="https://blog.opensyllabus.org/movie-lab">Movie Lab</a> auf der Online-Open-Source-Plattform Open Syllabus zu finden.</p>
-<p>Bei dem Datensatz handelt es sich um eine Datei im csv-Format. CSV steht für Comma-Separated Values. Dieses Dateiformat hat den Vorteil, dass es sich mit einer Reihe unterschiedlicher Programme öffnen und bearbeiten lässt.</p>
+<section id="werte-wählen-die-analysiert-und-visualisiert-werden-sollen" class="level2">
+<h2 class="anchored" data-anchor-id="werte-wählen-die-analysiert-und-visualisiert-werden-sollen">Werte wählen, die analysiert und visualisiert werden sollen</h2>
+<p>Zunächst möchten wir erkunden, wie viele Filme in unserem Datensatz in einem bestimmten Jahr veröffentlicht wurden. Wir möchten ein Liniendiagramm erstellen. Wir können unsere Werte von der linken Ecke auf die Balken für Zeilen und Spalten unserer Visualisierung ziehen und ablegen. Zuerst wählen wir Jahr und legen es auf Spalten, als nächstes wählen wir Titel für die Zeilenleiste. Weil wir eine bestimmte Menge sehen wollen, klicken wir mit der rechten Maustaste auf Jahr und wählen Kennzahl &gt; Anzahl.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/03_Tableau_WerteAuswaehlen_01.png" style="width:90.0%;height:90.0%" class="figure-img"></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/04_Tableau_WerteAuswaehlen_02.png" style="width:30.0%;height:30.0%" class="figure-img"></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/05_Tableau_WerteAuswaehlen_03.png" style="width:50.0%;height:50.0%" class="figure-img"></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/06_Tableau_Liniendiagramm.png" style="width:90.0%;height:90.0%" class="figure-img"></p>
+</figure>
+</div>
+<p>Das Liniendiagramm kann auch gefiltert werden, falls wir nach bestimmten Filmen in unseren Datensätzen suchen möchten, wie z.B. nach dem Herkunftsland. Der Wert wird per “Drag and Drop” direkt auf das Filterfeld gezogen.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/07_Tableau_Liniendiagramm_02.png" style="width:90.0%;height:90.0%" class="figure-img"></p>
+</figure>
+</div>
 </section>
-<section id="materialien-zu-den-einzelnen-lectures" class="level3">
-<h3 class="anchored" data-anchor-id="materialien-zu-den-einzelnen-lectures">Materialien zu den einzelnen Lectures</h3>
-<p>Für jede Lecture-Einheit stellen wir begleitende Informationen zum Nachlesen und Nachnutzen zur Verfügung:<br>
-<a href="./datensortieren.html">Daten sortieren und filtern mit Excel</a><br>
-<a href="./datenbereinigen.html">Daten bereinigen und anreichern mit OpenRefine</a><br>
-<a href="./datenvisualisieren.html">Daten visualisieren mit RAWGraphs</a></p>
-<p><em>Zuletzt bearbeitet am 31.10.2023</em></p>
+<section id="erstellen-anderer-diagrammtypen-in-sekundenschnelle" class="level2">
+<h2 class="anchored" data-anchor-id="erstellen-anderer-diagrammtypen-in-sekundenschnelle">Erstellen anderer Diagrammtypen in Sekundenschnelle</h2>
+<p>Wir möchten unsere Daten möglicherweise auch auf einer Karte anzeigen. Um dies sehr schnell zu tun, haben wir eine Menüleiste auf der rechten Seite, die bereits Vorschläge für andere Diagrammtypen enthält:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/08_Tableau_Visualisierungsarten.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/09_Tableau_Weltkarte.png" style="width:90.0%;height:90.0%" class="figure-img"></p>
+</figure>
+</div>
+<p>Bei Auswahl der Karte gibt uns die Software bereits eine Farbskala für unsere Werte auf einer Weltkarte. Die gleiche Operation können wir wiederholen, indem wir ein Blasendiagramm erstellen, um die verschiedenen Werte für jedes Herkunftsland anzuzeigen:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/10_Tableau_Bubbles.png" style="width:90.0%;height:90.0%" class="figure-img"></p>
+</figure>
+</div>
+<p>Wenn wir Werte auf einen der anderen “Marker” (zweite Menüleiste rechts) ziehen und ablegen (wie Farbe, Detail, Größe usw.), können wir die einzelnen Werte mit verschiedenen Codes anzeigen: wenn wir beispielsweise Land auf die Farbmarke ziehen, zeigt unsere Visualisierung ein farbcodiertes Blasendiagramm an.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/11_Tableau_Bubbles_bunt.png" style="width:60.0%;height:60.0%" class="figure-img"></p>
+</figure>
+</div>
+</section>
+<section id="verfeinern-der-visualisierung-und-exportieren-der-diagramme-oder-dashboards" class="level2">
+<h2 class="anchored" data-anchor-id="verfeinern-der-visualisierung-und-exportieren-der-diagramme-oder-dashboards">Verfeinern der Visualisierung und Exportieren der Diagramme oder Dashboards</h2>
+<p>Jede Visualisierung kann durch Hinzufügen eines Titels und weiterer zusätzlicher Informationen oder durch Hervorheben oder Markieren bestimmter Werte usw. vervollständigt werden. Verschiedene Diagramme können innerhalb eines Dashboards gesammelt werden, indem neue Blätter auf der unteren Leiste erstellt werden und die Visualisierung unserem Dashboard hinzugefügt wird. Jede Visualisierung oder jedes Dashboard kann später als PNG oder PowerPoint heruntergeladen werden. Wir können es auch auf unserem Tableau Public-Profil veröffentlichen, um später darauf zuzugreifen und daran zu arbeiten.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/12_Tableau_Bubbles_Formatierung.png" style="width:60.0%;height:60.0%" class="figure-img"></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/13_Tableau_Bubbles_Dashboard.png" style="width:90.0%;height:90.0%" class="figure-img"></p>
+</figure>
+</div>
+</section>
+<section id="erstellen-des-balkendiagramms-aus-open-syllabus-movie-rank" class="level2">
+<h2 class="anchored" data-anchor-id="erstellen-des-balkendiagramms-aus-open-syllabus-movie-rank">Erstellen des Balkendiagramms aus Open Syllabus Movie Rank</h2>
+<p>Um die Balkendiagrammvisualisierung des Open Syllabus Movie Rank neu zu erstellen, können wir die Werte “Rang” und “Regisseur” verwenden. Für jeden Regisseur möchten wir die Anzahl der Titel zusammenzählen. Nachdem wir den Wert gezogen und abgelegt haben, klicken wir auf den Regisseur und wählen Summe. Anschließend, um auf dem Balkendiagramm jedes Regisseurs Filme mit einer anderen Farbe anzuzeigen, ziehen wir den Titel per “Drag and Drop” auf die Farbmarke.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/14_Tableau_Balkendiagramm_01.png" style="width:90.0%;height:90.0%" class="figure-img"></p>
+</figure>
+</div>
+<p>Um die Größe des Diagramms anzupassen, können wir die Visualisierung in ein Dashboard importieren, indem wir den Cursor an den Rand des Diagramms bewegen und es in die Richtung bewegen, in die wir es vergrößern oder enger machen möchten.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/15_Tableau_Balkendiagramm_02.png" style="width:90.0%;height:90.0%" class="figure-img"></p>
+</figure>
+</div>
+</section>
+<section id="was-ist-allgemein-bei-der-benutzung-von-tableau-public-zu-beachten" class="level2">
+<h2 class="anchored" data-anchor-id="was-ist-allgemein-bei-der-benutzung-von-tableau-public-zu-beachten">Was ist allgemein bei der Benutzung von Tableau Public zu beachten?</h2>
+<ul>
+<li>Die Daten sollten im CSV- oder Excel-Format vorliegen, damit die Software sie lesen kann. Wir müssen nicht alle Werte im Voraus erstellen, sondern können unsere Analyse direkt im Tool durchführen.<br>
+</li>
+<li>Leere Werte werden als Nullwerte erkannt, man kann sie während der Analyse direkt filtern.<br>
+</li>
+<li>Mehr als ein Wert in einer Zelle kann nicht gezählt werden.<br>
+</li>
+<li>Es ist nicht immer klar, wie vorzugehen ist, um dem Diagramm mehr als einen Wert hinzuzufügen, aber normalerweise hilft es, zusätzliche Werte auf die Balken zu ziehen und abzulegen oder direkt auf das Diagramm zu ziehen und abzulegen. Ein Plus ist, dass man mehrere Werte gleichzeitig darstellen kann.<br>
+</li>
+<li>Auf der linken Seite gibt es zusätzliche statistische Methoden im Analysemenü. Es ist beispielsweise möglich, eine Linie hinzuzufügen, die den Durchschnittswert zählt.</li>
+</ul>
+<p>Wir empfehlen diese zusätzlichen Tutorials anzusehen, um mehr über die Möglichkeiten der Arbeit mit Tableau Public zu erfahren und einen Überblick über bewährte Verfahren zu erhalten:</p>
+<p><a href="https://public.tableau.com/views/TheTableauChartCatalog/TableauChartExamples?:showVizHome=no#1">Charts-Katalog</a><br>
+<a href="https://www.tableau.com/de-de/support/public">Best Practices</a></p>
+<p><em>Die Screenshots wurden von Nicole Braida erstellt. Zuletzt bearbeitet am 09.02.2024</em></p>
 
 
-</section>
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->

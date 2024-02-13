@@ -1,10 +1,80 @@
 [
   {
-    "objectID": "texterkennung.html",
-    "href": "texterkennung.html",
-    "title": "How to: Computerbasierte Texterkennung",
+    "objectID": "toolstutorials.html",
+    "href": "toolstutorials.html",
+    "title": "Tools und Tutorials",
     "section": "",
-    "text": "Weitere Informationen folgen in Kürze\n\n\n\n\n Back to top"
+    "text": "How to: Computerbasierte Texterkennung\n\n\n\n\n\n\n\nDaten explorieren (und visualisieren) mit Tableau Public\n\n\n\n\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "tableaupublic.html",
+    "href": "tableaupublic.html",
+    "title": "Daten explorieren (und visualisieren) mit Tableau Public",
+    "section": "",
+    "text": "In diesem Tutorial möchten wir das Tool Tableau Public für Datenanalyse und Datenvisualisierung vorstellen. Hierzu geben wir einen kurzen Überblick über die Möglichkeiten dieses Tools und wie es bei der Arbeit mit Daten helfen kann."
+  },
+  {
+    "objectID": "tableaupublic.html#was-ist-tableau",
+    "href": "tableaupublic.html#was-ist-tableau",
+    "title": "Daten explorieren (und visualisieren) mit Tableau Public",
+    "section": "Was ist Tableau?",
+    "text": "Was ist Tableau?\n\nFunktion: Es handelt sich um die browserbasierte kostenlose Version des BI-Tools Tableau. Diese öffentliche Version ermöglicht, Datensätze hochzuladen, sie zu analysieren, zu visualisieren, Dashboards zu erstellen und sie auf einer persönlichen Seite zu veröffentlichen oder in verschiedenen Formaten herunterzuladen.\n\nKostenlose Version, Registrierung erforderlich\n\nKeine Installation erforderlich, für Studierende und Lehrende kann eine einjährige Pro-Lizenz kostenlos erworben werden\n\nKein Programmierwissen erforderlich\n\nBesonders interessant für die Datenexploration: Im Vergleich zu anderen Visualisierungstools wie RAWGraphs oder DataWrapper ermöglicht das Tool, Datenanalysen direkt durchzuführen, ohne schon im Voraus perfekte Pivot-Tabellen mit den Werten erstellt haben zu müssen."
+  },
+  {
+    "objectID": "tableaupublic.html#wie-funktioniert-tableau-public",
+    "href": "tableaupublic.html#wie-funktioniert-tableau-public",
+    "title": "Daten explorieren (und visualisieren) mit Tableau Public",
+    "section": "Wie funktioniert Tableau Public?",
+    "text": "Wie funktioniert Tableau Public?\nTableau bietet verschiedene Tutorials, abhängig von Kenntnisstand, und bietet auch ein Forum an, in dem man Fragen stellen und überprüfen kann.\nTableau Einführung"
+  },
+  {
+    "objectID": "tableaupublic.html#hochladen-von-datensätzen",
+    "href": "tableaupublic.html#hochladen-von-datensätzen",
+    "title": "Daten explorieren (und visualisieren) mit Tableau Public",
+    "section": "Hochladen von Datensätzen",
+    "text": "Hochladen von Datensätzen\nNachdem wir unser Profil auf Tableau Public erstellt haben, müssen wir auf unser Profil zugreifen und die Kachel “Visualisierung erstellen” wählen, um zur Benutzeroberfläche zu gelangen, die es uns ermöglicht, Daten hochzuladen:\n\n\n\n\n\nWir fangen an mit einem einfachen “Drag and drop” des Datensatzes nach dem Herunterladen.\nWir werden mit dem Datensatz Open Syllabus Movie Ranks arbeiten. In Bezug auf diesen Datensatz wurden bereits einige Visualisierungen mit Tableau produziert, wir werden in diesem Tutorial auch versuchen, eine Visualisierung nachzubilden."
+  },
+  {
+    "objectID": "tableaupublic.html#bearbeiten-des-datenformats",
+    "href": "tableaupublic.html#bearbeiten-des-datenformats",
+    "title": "Daten explorieren (und visualisieren) mit Tableau Public",
+    "section": "Bearbeiten des Datenformats",
+    "text": "Bearbeiten des Datenformats\nTableau zeigt eine Vorschau unseres Datensatzes an, wir möchten möglicherweise den Datentyp jeder Spalte anpassen. Dies ist möglich, indem wir auf die angezeigten Spalten klicken und einen neuen Datentyp auswählen. Normalerweise erkennt Tableau die Datentypen ohne Probleme. Wir fahren dann fort, indem wir auf die untere Leiste auf “Sheet” klicken."
+  },
+  {
+    "objectID": "tableaupublic.html#werte-wählen-die-analysiert-und-visualisiert-werden-sollen",
+    "href": "tableaupublic.html#werte-wählen-die-analysiert-und-visualisiert-werden-sollen",
+    "title": "Daten explorieren (und visualisieren) mit Tableau Public",
+    "section": "Werte wählen, die analysiert und visualisiert werden sollen",
+    "text": "Werte wählen, die analysiert und visualisiert werden sollen\nZunächst möchten wir erkunden, wie viele Filme in unserem Datensatz in einem bestimmten Jahr veröffentlicht wurden. Wir möchten ein Liniendiagramm erstellen. Wir können unsere Werte von der linken Ecke auf die Balken für Zeilen und Spalten unserer Visualisierung ziehen und ablegen. Zuerst wählen wir Jahr und legen es auf Spalten, als nächstes wählen wir Titel für die Zeilenleiste. Weil wir eine bestimmte Menge sehen wollen, klicken wir mit der rechten Maustaste auf Jahr und wählen Kennzahl &gt; Anzahl.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDas Liniendiagramm kann auch gefiltert werden, falls wir nach bestimmten Filmen in unseren Datensätzen suchen möchten, wie z.B. nach dem Herkunftsland. Der Wert wird per “Drag and Drop” direkt auf das Filterfeld gezogen."
+  },
+  {
+    "objectID": "tableaupublic.html#erstellen-anderer-diagrammtypen-in-sekundenschnelle",
+    "href": "tableaupublic.html#erstellen-anderer-diagrammtypen-in-sekundenschnelle",
+    "title": "Daten explorieren (und visualisieren) mit Tableau Public",
+    "section": "Erstellen anderer Diagrammtypen in Sekundenschnelle",
+    "text": "Erstellen anderer Diagrammtypen in Sekundenschnelle\nWir möchten unsere Daten möglicherweise auch auf einer Karte anzeigen. Um dies sehr schnell zu tun, haben wir eine Menüleiste auf der rechten Seite, die bereits Vorschläge für andere Diagrammtypen enthält:\n\n\n\n\n\n\n\n\n\n\nBei Auswahl der Karte gibt uns die Software bereits eine Farbskala für unsere Werte auf einer Weltkarte. Die gleiche Operation können wir wiederholen, indem wir ein Blasendiagramm erstellen, um die verschiedenen Werte für jedes Herkunftsland anzuzeigen:\n\n\n\n\n\nWenn wir Werte auf einen der anderen “Marker” (zweite Menüleiste rechts) ziehen und ablegen (wie Farbe, Detail, Größe usw.), können wir die einzelnen Werte mit verschiedenen Codes anzeigen: wenn wir beispielsweise Land auf die Farbmarke ziehen, zeigt unsere Visualisierung ein farbcodiertes Blasendiagramm an."
+  },
+  {
+    "objectID": "tableaupublic.html#verfeinern-der-visualisierung-und-exportieren-der-diagramme-oder-dashboards",
+    "href": "tableaupublic.html#verfeinern-der-visualisierung-und-exportieren-der-diagramme-oder-dashboards",
+    "title": "Daten explorieren (und visualisieren) mit Tableau Public",
+    "section": "Verfeinern der Visualisierung und Exportieren der Diagramme oder Dashboards",
+    "text": "Verfeinern der Visualisierung und Exportieren der Diagramme oder Dashboards\nJede Visualisierung kann durch Hinzufügen eines Titels und weiterer zusätzlicher Informationen oder durch Hervorheben oder Markieren bestimmter Werte usw. vervollständigt werden. Verschiedene Diagramme können innerhalb eines Dashboards gesammelt werden, indem neue Blätter auf der unteren Leiste erstellt werden und die Visualisierung unserem Dashboard hinzugefügt wird. Jede Visualisierung oder jedes Dashboard kann später als PNG oder PowerPoint heruntergeladen werden. Wir können es auch auf unserem Tableau Public-Profil veröffentlichen, um später darauf zuzugreifen und daran zu arbeiten."
+  },
+  {
+    "objectID": "tableaupublic.html#erstellen-des-balkendiagramms-aus-open-syllabus-movie-rank",
+    "href": "tableaupublic.html#erstellen-des-balkendiagramms-aus-open-syllabus-movie-rank",
+    "title": "Daten explorieren (und visualisieren) mit Tableau Public",
+    "section": "Erstellen des Balkendiagramms aus Open Syllabus Movie Rank",
+    "text": "Erstellen des Balkendiagramms aus Open Syllabus Movie Rank\nUm die Balkendiagrammvisualisierung des Open Syllabus Movie Rank neu zu erstellen, können wir die Werte “Rang” und “Regisseur” verwenden. Für jeden Regisseur möchten wir die Anzahl der Titel zusammenzählen. Nachdem wir den Wert gezogen und abgelegt haben, klicken wir auf den Regisseur und wählen Summe. Anschließend, um auf dem Balkendiagramm jedes Regisseurs Filme mit einer anderen Farbe anzuzeigen, ziehen wir den Titel per “Drag and Drop” auf die Farbmarke.\n\n\n\n\n\nUm die Größe des Diagramms anzupassen, können wir die Visualisierung in ein Dashboard importieren, indem wir den Cursor an den Rand des Diagramms bewegen und es in die Richtung bewegen, in die wir es vergrößern oder enger machen möchten."
+  },
+  {
+    "objectID": "tableaupublic.html#was-ist-allgemein-bei-der-benutzung-von-tableau-public-zu-beachten",
+    "href": "tableaupublic.html#was-ist-allgemein-bei-der-benutzung-von-tableau-public-zu-beachten",
+    "title": "Daten explorieren (und visualisieren) mit Tableau Public",
+    "section": "Was ist allgemein bei der Benutzung von Tableau Public zu beachten?",
+    "text": "Was ist allgemein bei der Benutzung von Tableau Public zu beachten?\n\nDie Daten sollten im CSV- oder Excel-Format vorliegen, damit die Software sie lesen kann. Wir müssen nicht alle Werte im Voraus erstellen, sondern können unsere Analyse direkt im Tool durchführen.\n\nLeere Werte werden als Nullwerte erkannt, man kann sie während der Analyse direkt filtern.\n\nMehr als ein Wert in einer Zelle kann nicht gezählt werden.\n\nEs ist nicht immer klar, wie vorzugehen ist, um dem Diagramm mehr als einen Wert hinzuzufügen, aber normalerweise hilft es, zusätzliche Werte auf die Balken zu ziehen und abzulegen oder direkt auf das Diagramm zu ziehen und abzulegen. Ein Plus ist, dass man mehrere Werte gleichzeitig darstellen kann.\n\nAuf der linken Seite gibt es zusätzliche statistische Methoden im Analysemenü. Es ist beispielsweise möglich, eine Linie hinzuzufügen, die den Durchschnittswert zählt.\n\nWir empfehlen diese zusätzlichen Tutorials anzusehen, um mehr über die Möglichkeiten der Arbeit mit Tableau Public zu erfahren und einen Überblick über bewährte Verfahren zu erhalten:\nCharts-Katalog\nBest Practices\nDie Screenshots wurden von Nicole Braida erstellt. Zuletzt bearbeitet am 09.02.2024"
   },
   {
     "objectID": "mediarep.html",
@@ -242,14 +312,14 @@
     "href": "index.html",
     "title": "DiCiHub",
     "section": "",
-    "text": "Das Verbundprojekt DiCi-Hub, gefördert von der VW-Stiftung im Rahmen der Förderinitiative „Weltwissen – Strukturelle Stärkung kleiner Fächer“, stellt sich den Herausforderung von digitalen Tools und Methoden in der Film- und Medienwissenschaft. Das Projekt bringt drei Forschungsuniversitäten zusammen, um neue konzeptuelle Grundlagen und Methoden für das Fach zu entwickeln. Nachfolgend möchten wir einige unserer Projekte vorstellen:\n\n\n\n\n\n\nBrunch Lectures\n\n\n\n\n\n\n\nResearching Super 8\n\n\n\n\n\n\n\n\n\nHow to: Computerbasierte Texterkennung\n\n\n\n\n\n\n\nKooperation mit media/rep/"
+    "text": "Das Verbundprojekt DiCi-Hub, gefördert von der VW-Stiftung im Rahmen der Förderinitiative „Weltwissen – Strukturelle Stärkung kleiner Fächer“, stellt sich den Herausforderung von digitalen Tools und Methoden in der Film- und Medienwissenschaft. Das Projekt bringt drei Forschungsuniversitäten zusammen, um neue konzeptuelle Grundlagen und Methoden für das Fach zu entwickeln. Nachfolgend möchten wir einige unserer Projekte vorstellen:\n\n\n\n\n\n\nBrunch Lectures\n\n\n\n\n\n\n\nResearching Super 8\n\n\n\n\n\n\n\n\n\nTools und Tutorials\n\n\n\n\n\n\n\nKooperation mit media/rep/"
   },
   {
     "objectID": "index.html#dici-hub-digital-cinema-hub-a-research-hub-for-digital-film-studies",
     "href": "index.html#dici-hub-digital-cinema-hub-a-research-hub-for-digital-film-studies",
     "title": "DiCiHub",
     "section": "",
-    "text": "Das Verbundprojekt DiCi-Hub, gefördert von der VW-Stiftung im Rahmen der Förderinitiative „Weltwissen – Strukturelle Stärkung kleiner Fächer“, stellt sich den Herausforderung von digitalen Tools und Methoden in der Film- und Medienwissenschaft. Das Projekt bringt drei Forschungsuniversitäten zusammen, um neue konzeptuelle Grundlagen und Methoden für das Fach zu entwickeln. Nachfolgend möchten wir einige unserer Projekte vorstellen:\n\n\n\n\n\n\nBrunch Lectures\n\n\n\n\n\n\n\nResearching Super 8\n\n\n\n\n\n\n\n\n\nHow to: Computerbasierte Texterkennung\n\n\n\n\n\n\n\nKooperation mit media/rep/"
+    "text": "Das Verbundprojekt DiCi-Hub, gefördert von der VW-Stiftung im Rahmen der Förderinitiative „Weltwissen – Strukturelle Stärkung kleiner Fächer“, stellt sich den Herausforderung von digitalen Tools und Methoden in der Film- und Medienwissenschaft. Das Projekt bringt drei Forschungsuniversitäten zusammen, um neue konzeptuelle Grundlagen und Methoden für das Fach zu entwickeln. Nachfolgend möchten wir einige unserer Projekte vorstellen:\n\n\n\n\n\n\nBrunch Lectures\n\n\n\n\n\n\n\nResearching Super 8\n\n\n\n\n\n\n\n\n\nTools und Tutorials\n\n\n\n\n\n\n\nKooperation mit media/rep/"
   },
   {
     "objectID": "researchingsuper8.html",
@@ -264,5 +334,12 @@
     "title": "Researching Super 8",
     "section": "",
     "text": "In Mainz, our research group is collaborating since 2021 with a group of collectors of Super 8 film material and related paratexts such as catalogs, magazines etc. Following a citizen-science principle we want to acknowledge how their experience, expertise and generosity has contributed to our own research.\nAndreas Chmielewski is a German collector of small-gauge films and in particular of Super8 format. He curates the website Super8rezensionen. This exists since 2000 and was first developed by Robert Weidemann. Main aim of the project is to describe and rate Super8 movies, to discuss the quality of the edit or of the color-copy of. Andreas has kindly borrowed us all his Super8 catalogs and allowed us to digitize them for further research.\nJoachim Schmidt is a German collector and the owner and curator of the website Off2.de a website dedicated to the history of Super8, which collects not only historical material and information about Super8 distribution in Germany but also features several video interviews (hosted on its youtube channel) with collectors, experts and ex-employees of Companies selling or working with Super8. Joachim was invited by our research group to present on Super8 history in Germany for an undergraduate course at the Film and Mediadramaturgy Institute in Mainz.\nEivind Mork (and his wife Heidi) developed in 2016 the website Super8database.com, which is a database and repository of Super8 movies distributed internationally in the past. The data is, if not stated otherwise, licenced by CC-BY 4.0. That’s a Creative Commons licence that allows us to work with the data in a way that meets our academic needs as long as we name Eivind Mork. A real advantage is that you can download the data in different file formats like Excel table or JSON, so that you can decide which format suits better. In our teaching and research we profited from the data collected and shared on Super8database.\nWe have reported on our collaboration at the NECS (Network for Cinema and Media Studies) Conference in Oslo in June 2023. Joachim and Eivind have published a short report on our presentations on their website. You can read it here:\nFrom Off2.de (in German)\nFrom Super8database.com (in English)"
+  },
+  {
+    "objectID": "texterkennung.html",
+    "href": "texterkennung.html",
+    "title": "How to: Computerbasierte Texterkennung",
+    "section": "",
+    "text": "Weitere Informationen folgen in Kürze\n\n\n\n\n Back to top"
   }
 ]

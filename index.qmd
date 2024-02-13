@@ -12,8 +12,7 @@ Nachfolgend möchten wir einige unserer Projekte vorstellen:
 
 ![[Researching Super 8](researchingsuper8.qmd)](img/Button_Researching_Super8.png){width=200 height=200}
 
-![[How to: Computerbasierte Texterkennung](texterkennung.qmd)](img/howtotexterkennung.png){width=200 height=200}
+![[Tools und Tutorials](toolstutorials.qmd)](img/Button_ToolsTutorials.png){width=200 height=200}
 
-![[Kooperation mit media/rep/](mediarep.qmd)](img/begriffsanalyse.png){height=200}
-
+![[Kooperation mit media/rep/](mediarep.qmd)](img/Button_mediarep.png){width=200 height=200}
 :::

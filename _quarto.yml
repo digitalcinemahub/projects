@@ -12,6 +12,10 @@ website:
         text: Brunch Lectures
       - href: researchingsuper8.qmd
         text: Researching Super 8
+      - href: toolstutorials.qmd
+        text: Tools und Tutorials
+      - href: mediarep.qmd
+        text: Kooperation media/rep/
       - href: https://www.uni-marburg.de/en/fb09/institutes/media-studies/research/research-projects/dici-hub
         text: About
         target: _blank
