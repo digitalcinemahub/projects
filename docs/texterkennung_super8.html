@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Projekt-Dokumentation: Workflows zur Texterkennung mit Tesseract und OCR4all am Beispiel von Super-8-Filmkatalogen des Anbieters UFA</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <img src="./img/DiCi_Hub_transparent.png" alt="" class="navbar-logo">
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html" rel="" target="">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./brunchlectures.html" rel="" target="">
+ <span class="menu-text">Brunch Lectures</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./toolstutorials.html" rel="" target="">
+ <span class="menu-text">Tools und Tutorials</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./researchingsuper8.html" rel="" target="">
+ <span class="menu-text">Researching Super 8</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./mediarep.html" rel="" target="">
+ <span class="menu-text">Kooperation media/rep/</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://www.uni-marburg.de/en/fb09/institutes/media-studies/research/research-projects/dici-hub" rel="" target="_blank">
+ <span class="menu-text">About</span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools ms-auto">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#teil-i-tesseract-standardmodell-bild-vorbearbeitung" id="toc-teil-i-tesseract-standardmodell-bild-vorbearbeitung" class="nav-link active" data-scroll-target="#teil-i-tesseract-standardmodell-bild-vorbearbeitung">Teil I: Tesseract Standardmodell &amp; Bild-Vorbearbeitung</a>
+  <ul class="collapse">
+  <li><a href="#about-textdigitalisierung-ocr-und-tesseract" id="toc-about-textdigitalisierung-ocr-und-tesseract" class="nav-link" data-scroll-target="#about-textdigitalisierung-ocr-und-tesseract">About: Textdigitalisierung, OCR und Tesseract</a></li>
+  <li><a href="#vergleich-parameter-stichprobe" id="toc-vergleich-parameter-stichprobe" class="nav-link" data-scroll-target="#vergleich-parameter-stichprobe">1. Vergleich: Parameter (Stichprobe)</a></li>
+  <li><a href="#vergleich-bildvorverarbeitung-ufa-.tif-komplett" id="toc-vergleich-bildvorverarbeitung-ufa-.tif-komplett" class="nav-link" data-scroll-target="#vergleich-bildvorverarbeitung-ufa-.tif-komplett">2. Vergleich: Bildvorverarbeitung (UFA .tif komplett)</a></li>
+  <li><a href="#vorverarbeitung-auswahl" id="toc-vorverarbeitung-auswahl" class="nav-link" data-scroll-target="#vorverarbeitung-auswahl">3. Vorverarbeitung (Auswahl)</a></li>
+  <li><a href="#threshold-red-80" id="toc-threshold-red-80" class="nav-link" data-scroll-target="#threshold-red-80">4. Threshold Red 80%</a></li>
+  <li><a href="#workflow-magick-tesseract" id="toc-workflow-magick-tesseract" class="nav-link" data-scroll-target="#workflow-magick-tesseract">5. Workflow: Magick &amp; Tesseract</a></li>
+  <li><a href="#extras-weitere-verbesserungen" id="toc-extras-weitere-verbesserungen" class="nav-link" data-scroll-target="#extras-weitere-verbesserungen">Extras: Weitere Verbesserungen?</a></li>
+  </ul></li>
+  <li><a href="#teil-ii-training" id="toc-teil-ii-training" class="nav-link" data-scroll-target="#teil-ii-training">Teil II: Training</a>
+  <ul class="collapse">
+  <li><a href="#about-tesseract-training" id="toc-about-tesseract-training" class="nav-link" data-scroll-target="#about-tesseract-training">About: Tesseract Training</a></li>
+  <li><a href="#optionen" id="toc-optionen" class="nav-link" data-scroll-target="#optionen">1. Optionen</a></li>
+  <li><a href="#training-mit-tesseract-v5.2" id="toc-training-mit-tesseract-v5.2" class="nav-link" data-scroll-target="#training-mit-tesseract-v5.2">2. Training mit tesseract v5.2:</a></li>
+  <li><a href="#building-tesseract-5-from-source" id="toc-building-tesseract-5-from-source" class="nav-link" data-scroll-target="#building-tesseract-5-from-source">3. Building Tesseract 5 from Source</a></li>
+  <li><a href="#training-tesseract-5-for-a-new-font" id="toc-training-tesseract-5-for-a-new-font" class="nav-link" data-scroll-target="#training-tesseract-5-for-a-new-font">4. Training Tesseract 5 for a new Font</a></li>
+  <li><a href="#training-what-else" id="toc-training-what-else" class="nav-link" data-scroll-target="#training-what-else">5. Training, what else?</a></li>
+  </ul></li>
+  <li><a href="#teil-iii-vergleich-nachbearbeitung-datenbank" id="toc-teil-iii-vergleich-nachbearbeitung-datenbank" class="nav-link" data-scroll-target="#teil-iii-vergleich-nachbearbeitung-datenbank">Teil III: Vergleich, Nachbearbeitung &amp; Datenbank</a>
+  <ul class="collapse">
+  <li><a href="#ergebnisse-und-vergleich" id="toc-ergebnisse-und-vergleich" class="nav-link" data-scroll-target="#ergebnisse-und-vergleich">1. Ergebnisse und Vergleich</a></li>
+  </ul></li>
+  <li><a href="#könnte-nützlich-sein" id="toc-könnte-nützlich-sein" class="nav-link" data-scroll-target="#könnte-nützlich-sein">Könnte nützlich sein</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Projekt-Dokumentation: Workflows zur Texterkennung mit Tesseract und OCR4all am Beispiel von Super-8-Filmkatalogen des Anbieters UFA</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="teil-i-tesseract-standardmodell-bild-vorbearbeitung" class="level2">
+<h2 class="anchored" data-anchor-id="teil-i-tesseract-standardmodell-bild-vorbearbeitung">Teil I: Tesseract Standardmodell &amp; Bild-Vorbearbeitung</h2>
+<section id="about-textdigitalisierung-ocr-und-tesseract" class="level3">
+<h3 class="anchored" data-anchor-id="about-textdigitalisierung-ocr-und-tesseract">About: Textdigitalisierung, OCR und Tesseract</h3>
+<ol type="1">
+<li>Einstieg: <a href="https://fortext.net/routinen/methoden/moeglichkeiten-der-textdigitalisierung">Möglichkeiten der Textdigitalisierung (ForText)</a></li>
+<li>Einstieg: <a href="https://nanonets.com/blog/ocr-with-tesseract/">OCR und Tesseract</a></li>
+<li>Überblick: <a href="https://wiki.ubuntuusers.de/tesseract-ocr/">Tesseract Wiki</a></li>
+</ol>
+</section>
+<section id="vergleich-parameter-stichprobe" class="level3">
+<h3 class="anchored" data-anchor-id="vergleich-parameter-stichprobe">1. Vergleich: Parameter (Stichprobe)</h3>
+<section id="pagesegmentation-engine-beispiel-kauf_77_2_0006" class="level4">
+<h4 class="anchored" data-anchor-id="pagesegmentation-engine-beispiel-kauf_77_2_0006">Pagesegmentation &amp; Engine: Beispiel KaUf_77_2_0006</h4>
+<p><code>%Tesseract%/tesseract KaUf_77_2_0006.jpg KaUf_77_2_0006-out -l deu [psm][oem] get.images</code></p>
+<p><img src="https://s3.hedgedoc.org/demo/uploads/786ce81d-3b2f-4f83-be6a-5d8141d56c9f.png" class="img-fluid"></p>
+</section>
+<section id="page-segmentation-psm" class="level4">
+<h4 class="anchored" data-anchor-id="page-segmentation-psm">Page Segmentation (– psm):</h4>
+<p>Quelle: <a href="https://pyimagesearch.com/2021/11/15/tesseract-page-segmentation-modes-psms-explained-how-to-improve-your-ocr-accuracy/">Tesseract Page Segmentation</a></p>
+<p><strong>0</strong> Nur Ausrichtung und Skript-Erkennung: Metainformationen (Rotation, Schrift, etc.) <strong>1</strong> <strong>Automatische Seitensegmentierung mit OSD</strong> <strong>2</strong> Automatische Seitensegmentierung, aber keine OSD, oder Texterkennung (OCR) <strong>3</strong> <strong>Vollständige automatische Seitensegmentierung, aber keine OSD (Default)</strong> <strong>4</strong> Behandelt die Vorlage als eine einzelne Textspalte mit unterschiedlichen Zeichengrößen <strong>5</strong> Behandelt die Vorlage als einzelnen einheitlichen Textblock im Blocksatz <strong>6</strong> Behandelt die Vorlage als einheitlichen Textblock <strong>7</strong> Behandelt das Bild als einzelne Textzeile <strong>8</strong> Behandelt das Bild als einzelnes Wort <strong>9</strong> Behandelt das Bild als einzelnes, im Kreis geschriebenes Wort <strong>10</strong> Behandelt das Bild als einzelnes Zeichen <strong>11</strong> Reiner Text, findet so viel Text wie irgend möglich, ohne spezielle Richtung oder Reihenfolge <strong>12</strong> Reiner Text, mit OSD (siehe Option 0) <strong>13</strong> "Raw line" - behandelt das Bild als einzelen Textzeile, ohne weitere tesseract-spezifische Verarbeitungen anzuwenden</p>
+</section>
+<section id="ocr-engine-mode-oem" class="level4">
+<h4 class="anchored" data-anchor-id="ocr-engine-mode-oem">OCR engine mode (– oem):</h4>
+<p>0 nur Legacy Engine 1 nur Neural Nets LSTM Engine <strong>2 Legacy + LSTM Engines</strong> <strong>3 Default, nach Verfügbarkeit</strong></p>
+</section>
+<section id="configuration-variables---c" class="level4">
+<h4 class="anchored" data-anchor-id="configuration-variables---c">Configuration Variables (- c)</h4>
+<p><code>%Tesseract%/tesseract --print-parameters &amp;gt; paramters.txt</code></p>
+<hr>
+</section>
+</section>
+<section id="vergleich-bildvorverarbeitung-ufa-.tif-komplett" class="level3">
+<h3 class="anchored" data-anchor-id="vergleich-bildvorverarbeitung-ufa-.tif-komplett">2. Vergleich: Bildvorverarbeitung (UFA .tif komplett)</h3>
+<p><code>for %i in (D:\UFA_SDF\KaUf_*\TIFF\*.tif) do tesseract.exe &amp;#34;%i&amp;#34; &amp;#34;%i-out&amp;#34; -l deu get.images</code></p>
+<p><code>move *.processed.tif C:\[*]\Tesseract-OCR\processed_images</code></p>
+<section id="read" class="level4">
+<h4 class="anchored" data-anchor-id="read">Read</h4>
+<ol type="1">
+<li><a href="https://tesseract-ocr.github.io/tessdoc/ImproveQuality#image-processing">Tesseract Doku Bildvorverarbeitung</a></li>
+<li><a href="https://learnopencv.com/otsu-thresholding-with-opencv/">Otsu's Treshholding Technique</a></li>
+<li><a href="https://www.statworx.com/content-hub/blog/finetuning-von-tesseract-ocr-fuer-deutsche-rechnungen/">Tesseract Finetuning</a></li>
+</ol>
+</section>
+<section id="problematik-vorverarbeitung-beispiel-kauf_77_2_0040" class="level4">
+<h4 class="anchored" data-anchor-id="problematik-vorverarbeitung-beispiel-kauf_77_2_0040">Problematik Vorverarbeitung: Beispiel KaUf_77_2_0040</h4>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://s3.hedgedoc.org/demo/uploads/e90c89aa-97da-4ccd-9979-5dd763fcefdf.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">KaUf_77_2_0040</figcaption>
+</figure>
+</div>
+</section>
+<section id="zusammengefasst" class="level4">
+<h4 class="anchored" data-anchor-id="zusammengefasst">Zusammengefasst</h4>
+<p>Grundsätzlich muss je nach Eingabebild der zu verwendende Schwellenwertalgorithmus ausgewählt werden. <strong>Tesseract verwendet die Otsu-Methode für die <a href="https://de.wikipedia.org/wiki/Schwellenwertverfahren">Schwellenwertberechnung</a></strong>, da die Eingabe in Tesseract für die Textextraktion im Allgemeinen homogene Bilder aufweist.</p>
+<p>Die <strong>globale Schwellenwertmethode</strong> ist sinnvoll, wenn der Hintergrund keine lokalen Schwankungen im Verhältnis zur Intensität des Vordergrunds aufweist. Ein <strong>lokaler Schwellenwert ist hingegen notwendig</strong>, wenn die Intensitätsunterschiede zwischen Hintergrund und Ziel lokal variieren.</p>
+<p>Obwohl Tesseract die Otsu-Methode (globale Schwellenwertbildung) für die Binarisierung verwendet, kann man Bilder mit lokalen Schwellenwertmethoden vorverarbeiten, um ein besseres Ergebnis von Tesseract zu erhalten.</p>
+</section>
+<section id="andere-optionen" class="level4">
+<h4 class="anchored" data-anchor-id="andere-optionen">Andere Optionen</h4>
+<p>Seit Tesseract 5.0.0 zwei neue <a href="http://leptonica.org/local-sources.html">Leptonica</a>-basierte Binarisierungsmethoden: <em>Adaptive Otsu</em> und <em>Sauvola</em>.</p>
+<p><code>tesseract --print-parameters | grep thresholding_</code></p>
+<p><strong>relevante konfigurierbare Parameter:</strong></p>
+<table class="table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>parameter</th>
+<th>default</th>
+<th>modification</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>thresholding_method</td>
+<td>0</td>
+<td>0=Otsu, 1=LeptonicaOtsu, 2=Sauvola</td>
+</tr>
+<tr class="even">
+<td>invert_threshold</td>
+<td>0.7</td>
+<td>For lines with a mean confidence below this value, OCR is also tried with an inverted image</td>
+</tr>
+<tr class="odd">
+<td>thresholding_debug</td>
+<td>0</td>
+<td>Debug the thresholding process</td>
+</tr>
+<tr class="even">
+<td>thresholding_window_size</td>
+<td>0.33</td>
+<td>Window size for measuring local statistics (to be multiplied by image DPI). This parameter is used by the Sauvola thresholding method</td>
+</tr>
+</tbody>
+</table>
+<p><strong>weitere:</strong> <code>thresholding_kfactor</code> 0.34 | Factor for reducing threshold due to variance. This parameter is used by the Sauvola thresholding method. Normal range: 0.2-0.5</p>
+<p><code>thresholding_tile_size</code> 0.33 | Desired tile size (to be multiplied by image DPI). This parameter is used by the LeptonicaOtsu thresholding method</p>
+<p><code>thresholding_smooth_kernel_size</code> 0 | Size of convolution kernel applied to threshold array (to be multiplied by image DPI). Use 0 for no smoothing. This parameter is used by the LeptonicaOtsu thresholding method</p>
+<p><code>thresholding_score_fraction</code> 0.1 | Fraction of the max Otsu score. This parameter is used by the LeptonicaOtsu thresholding method. For standard Otsu use 0.0, otherwise 0.1 is recommended</p>
+<p><strong>außerdem möglich:</strong></p>
+<ul>
+<li>ImageJ Auto Threshold (java)</li>
+<li>OpenCV Image Thresholding (python)</li>
+<li>scikit-image Thresholding Dokumentation (python)</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="vorverarbeitung-auswahl" class="level3">
+<h3 class="anchored" data-anchor-id="vorverarbeitung-auswahl">3. Vorverarbeitung (Auswahl)</h3>
+<section id="worst-of-tesseract-preprocessing" class="level4">
+<h4 class="anchored" data-anchor-id="worst-of-tesseract-preprocessing">Worst of: Tesseract Preprocessing</h4>
+<p><img src="https://s3.hedgedoc.org/demo/uploads/55d1c8b1-d66c-40b7-8bc1-43681c36cf11.jfif" class="img-fluid"></p>
+<p><img src="https://s3.hedgedoc.org/demo/uploads/fc6365bd-cd89-40b0-98ef-bb3585a8e0b2.png" class="img-fluid"></p>
+</section>
+<section id="read-1" class="level4">
+<h4 class="anchored" data-anchor-id="read-1">Read</h4>
+<ol type="1">
+<li><a href="https://imagemagick.org/">ImageMagick</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Grayscale">Grayscale</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Colorfulness">Saturation</a></li>
+</ol>
+</section>
+<section id="grayscaling" class="level4">
+<h4 class="anchored" data-anchor-id="grayscaling">Grayscaling</h4>
+<p><a href="https://imagemagick.org/script/command-line-options.php#grayscale">Grayscale Method</a> <code>for %i in () do magick &amp;#34;%i&amp;#34; -colorspace Gray &amp;#34;%i-grayscale&amp;#34;</code> <img src="https://s3.hedgedoc.org/demo/uploads/455fc728-d2b3-4dea-89c9-99ee594b6e62.png" class="img-fluid"></p>
+</section>
+<section id="saturation" class="level4">
+<h4 class="anchored" data-anchor-id="saturation">Saturation</h4>
+<p><a href="https://imagemagick.org/script/command-line-options.php#modulate">Brightness Modulation</a> <code>for %i in () do magick &amp;#34;%i&amp;#34; -modulate 100,0 &amp;#34;%i-sat0&amp;#34;</code> <img src="https://s3.hedgedoc.org/demo/uploads/fabe4a48-3ffe-46e2-b5a3-8f2daa322caf.png" class="img-fluid"></p>
+<hr>
+</section>
+</section>
+<section id="threshold-red-80" class="level3">
+<h3 class="anchored" data-anchor-id="threshold-red-80">4. Threshold Red 80%</h3>
+<section id="threshold" class="level4">
+<h4 class="anchored" data-anchor-id="threshold">Threshold</h4>
+<p><a href="https://imagemagick.org/script/command-line-options.php#threshold">Threshold Value</a></p>
+</section>
+<section id="stichprobe-kauf_76_2_0038" class="level4">
+<h4 class="anchored" data-anchor-id="stichprobe-kauf_76_2_0038">Stichprobe KaUf_76_2_0038</h4>
+<p><code>magick KaUf_76_2_0038.tif -channel red -threshold 80% KaUf_76_2_0038-out.tif</code> <code>magick KaUf_76_2_0038-out.tif -modulate 100,0 KaUf_76_2_0038-outfinal.tif</code> <code>%Tesseract%/tesseract KaUf_76_2_0038-outfinal.tif final.tif -l deu get.images</code></p>
+<p><img src="https://s3.hedgedoc.org/demo/uploads/6fe78f90-b8e9-4936-babe-853a8dd9968d.png" class="img-fluid"></p>
+</section>
+<section id="auswahl" class="level4">
+<h4 class="anchored" data-anchor-id="auswahl">Auswahl</h4>
+<p><code>for %i in (C:\Users\[*]\Desktop\tess_test_config\*.tif) do magick &amp;#34;%i&amp;#34; -channel red -threshold 80% &amp;#34;%i-thresh.tif&amp;#34;</code> <code>for %i in (C:\Users\[*]\Desktop\tess_test_config\threshold\*-thresh.tif) do magick &amp;#34;%i&amp;#34; -modulate 100,0 &amp;#34;%i-out.tif&amp;#34;</code> <code>for %i in (C:\Users\[*]\Desktop\tess_test_config\threshold\*-out.tif) do %Tesseract%\tesseract &amp;#34;%i&amp;#34; &amp;#34;%i-threshR80&amp;#34; -l deu get.images</code></p>
+<hr>
+</section>
+</section>
+<section id="workflow-magick-tesseract" class="level3">
+<h3 class="anchored" data-anchor-id="workflow-magick-tesseract">5. Workflow: Magick &amp; Tesseract</h3>
+<p><strong>1. Threshold Red 80%</strong> &gt;Allen Pixelwerten (genauer gesagt, die mit -channel eingestellten Kanäle), die den angegebenen Schwellenwert überschreiten, wird der maximale Kanalwert zugewiesen, während alle anderen Werte den minimalen Wert erhalten.</p>
+<p><strong>Weniger Verluste ohne Farb-Threshold Parameter?</strong></p>
+<p><strong>2. Saturation 0%</strong> &gt;Die Sättigung bestimmt die Menge an Farbe in einem Bild. Ein Wert von 0 ergibt beispielsweise ein Graustufenbild, während ein hoher Wert wie 200 eine sehr bunte, "cartoonhafte" Farbe erzeugt.</p>
+<p><strong>3. Tesseract</strong> &gt;Die Standardeinstellungen von Tesseract mit dem <a href="https://github.com/tesseract-ocr/tessdata_best">besten Sprachmodell</a> Deutsch (im LSTM Engine Mode) liefern eine sehr genaue Ausgabe.</p>
+</section>
+<section id="extras-weitere-verbesserungen" class="level3">
+<h3 class="anchored" data-anchor-id="extras-weitere-verbesserungen">Extras: Weitere Verbesserungen?</h3>
+<section id="read-2" class="level4">
+<h4 class="anchored" data-anchor-id="read-2">Read</h4>
+<p><a href="https://zenodo.org/record/4361896#.YzLJddjP1PY">Improving the Recognition Accuracy of Tesseract-OCR Engine on Nepali Text Images via Preprocessing</a></p>
+</section>
+<section id="genauigkeit-bestimmen" class="level4">
+<h4 class="anchored" data-anchor-id="genauigkeit-bestimmen">Genauigkeit bestimmen</h4>
+<p><strong>Funktionen Tesseract?</strong> <a href="https://github.com/tesseract-ocr/tesseract/blob/main/doc/tesseract.1.asc">Recap Tesseract</a></p>
+<p><a href="https://pypi.org/project/pytesseract/">PyTesseract</a> &gt;<strong>image_to_data</strong> Returns result containing box boundaries, confidences, and other information. Requires Tesseract 3.05+. For more information, please check the Tesseract TSV documentation</p>
+<p><a href="https://stackoverflow.com/questions/20831612/getting-the-bounding-box-of-the-recognized-words-using-python-tesseract">Image Processing</a> &gt; Among the data returned by pytesseract.image_to_data(): left is the distance from the upper-left corner of the bounding box, to the left border of the image. &gt; top is the distance from the upper-left corner of the bounding box, to the top border of the image. width and height are the width and height of the bounding box. &gt; conf is the model's confidence for the prediction for the word within that bounding box. If conf is -1, that means that the corresponding bounding box contains a block of text, rather than just a single word. &gt; The bounding boxes returned by pytesseract.image_to_boxes() enclose letters so I believe pytesseract.image_to_data() is what you're looking for.</p>
+<hr>
+</section>
+</section>
+</section>
+<section id="teil-ii-training" class="level2">
+<h2 class="anchored" data-anchor-id="teil-ii-training">Teil II: Training</h2>
+<section id="about-tesseract-training" class="level3">
+<h3 class="anchored" data-anchor-id="about-tesseract-training">About: Tesseract Training</h3>
+<ol type="1">
+<li><a href="https://tesseract-ocr.github.io/tessapi/5.x/index.html">Tesseract Development Documentation</a></li>
+<li><a href="https://nanonets.com/blog/ocr-with-tesseract/#training-tesseract-on-custom-data">Training Tesseract on Custom Data</a></li>
+<li><a href="http://colah.github.io/posts/2015-08-Understanding-LSTMs/">Understanding LSTM</a></li>
+<li><a href="https://www.endpointdev.com/blog/2018/07/training-tesseract-models-from-scratch/">Train Tesseract Model from Scratch</a></li>
+<li><a href="https://www.projectpro.io/article/how-to-train-tesseract-ocr-python/561">Train Tesseract OCR in Python</a></li>
+<li><a href="https://pretius.com/blog/ocr-tesseract-training-data/">OCR Tesseract Training Data</a></li>
+<li><a href="https://towardsdatascience.com/train-a-custom-tesseract-ocr-model-as-an-alternative-to-google-vision-ocr-for-reading-childrens-db8ba41571c8">Train Tesseract HTR</a></li>
+<li><a href="https://tesseract-ocr.github.io/tessdoc/tess4/TrainingTesseract-4.00.html9">How to train Tesseract</a></li>
+</ol>
+<section id="zusammengefasst-1" class="level4">
+<h4 class="anchored" data-anchor-id="zusammengefasst-1">Zusammengefasst</h4>
+<p>&gt; Neural networks require significantly more training data and train a lot slower than base Tesseract. For Latin-based languages, the existing model data provided has been trained on about 400000 textlines spanning about 4500 fonts. For other scripts, not so many fonts are available, but they have still been trained on a similar number of textlines. Instead of taking a few minutes to a couple of hours to train, Tesseract 4.00 takes a few days to a couple of weeks. Even with all this new training data, you might find it inadequate for your particular problem, and therefore you are here wanting to retrain it.</p>
+<p>Quelle: <a href="https://tesseract-ocr.github.io/tessdoc/tess4/TrainingTesseract-4.00.html">How to train Tesseract</a></p>
+<hr>
+</section>
+</section>
+<section id="optionen" class="level3">
+<h3 class="anchored" data-anchor-id="optionen">1. Optionen</h3>
+<p>&gt; <strong>Fine tune.</strong> Starting with an existing trained language, train on your specific additional data. This may work for problems that are close to the existing training data, but different in some subtle way, like a particularly unusual font. May work with even a small amount of training data. &gt; <strong>Cut off the top layer (or some arbitrary number of layers) from the network and retrain a new top layer using the new data.</strong> If fine tuning doesn’t work, this is most likely the next best option. Cutting off the top layer could still work for training a completely new language or script, if you start with the most similar looking script. &gt; <strong>Retrain from scratch.</strong> This is a daunting task, unless you have a very representative and sufficiently large training set for your problem. If not, you are likely to end up with an over-fitted network that does really well on the training data, but not on the actual data.</p>
+<p>Quelle: <a href="https://tesseract-ocr.github.io/tessdoc/tess4/TrainingTesseract-4.00.html">How to train Tesseract</a></p>
+<hr>
+</section>
+<section id="training-mit-tesseract-v5.2" class="level3">
+<h3 class="anchored" data-anchor-id="training-mit-tesseract-v5.2">2. Training mit tesseract v5.2:</h3>
+<p>&gt; Training with tesstrain.sh bash scripts is unsupported/abandoned for Tesseract 5. Please use python scripts from tesstrain repo for training.</p>
+<p>Quelle: <a href="https://tesseract-ocr.github.io/tessdoc/tess5/TrainingTesseract-5.html">How to train LSTM/neural networks</a></p>
+<section id="read-3" class="level4">
+<h4 class="anchored" data-anchor-id="read-3">Read</h4>
+<ol type="1">
+<li><a href="https://github.com/tesseract-ocr/tesstrain/wiki/GT4HistOCR#ocr-results">Training <span class="citation" data-cites="UB">@UB</span> Mannheim</a></li>
+<li><a href="https://github.com/tesseract-ocr/tesstrain">Train Tesseract Repository</a></li>
+</ol>
+</section>
+<section id="lessons-learned" class="level4">
+<h4 class="anchored" data-anchor-id="lessons-learned">Lessons Learned</h4>
+<p><strong>Tesseract limitations summed in the list.</strong> 1. The OCR is not as accurate as some commercial solutions available to us. 2. Doesn't do well with images affected by artifacts including partial occlusion, distorted perspective, and complex background. 3. It is not capable of recognizing handwriting. 4. <strong>It may find gibberish and report this as OCR output.</strong> 5. If a document contains languages outside of those given in the -l LANG arguments, results may be poor. 6. <strong>It is not always good at analyzing the natural reading order of documents. For example, it may fail to recognize that a document contains two columns, and may try to join text across columns.</strong> 7. Poor quality scans may produce poor quality OCR. 8. It does not expose information about what font family text belongs to.</p>
+<p>Quelle: <a href="https://nanonets.com/blog/ocr-with-tesseract/#training-tesseract-on-custom-data">Tesseract OCR</a></p>
+<hr>
+</section>
+</section>
+<section id="building-tesseract-5-from-source" class="level3">
+<h3 class="anchored" data-anchor-id="building-tesseract-5-from-source">3. <a href="https://www.youtube.com/watch?v=veJt3U44yqc">Building Tesseract 5 from Source</a></h3>
+<p><strong>Vorteile:</strong> Versionskontrolle, Funktionen modifizieren <strong>Achtung:</strong> <em>These are the instructions for installing Tesseract from the git repository. You should be ready to face unexpected problems.</em></p>
+<ol type="1">
+<li>Tesseract <a href="https://github.com/tesseract-ocr/tesseract">GitHub-Repository</a> öffnen</li>
+<li>Über die Table of Contents zu <a href="https://github.com/tesseract-ocr/tesseract#installing-tesseract">Installing Tesseract</a> navigieren</li>
+<li>Über <a href="https://tesseract-ocr.github.io/tessdoc/Compiling.html">Build Tesseract from Source</a> in die Dokumentation navigieren</li>
+<li>Tesseract <a href="https://github.com/tesseract-ocr/tesseract">GitHub-Repository</a> klonen (<a href="https://github.com/git-guides/install-git">Git installieren</a>, falls nötig <a href="https://www.onlogic.com/company/io-hub/de/linux-bash-in-windows-10-aktivieren-so-geht-es/">Linux Bash für Windows aktivieren</a>)</li>
+<li>Installation-Guide folgen (Dependencies, Ubuntu, Leptonica)</li>
+<li>Zu <a href="https://tesseract-ocr.github.io/tessdoc/Compiling-%E2%80%93-GitInstallation.md">Installing Tesseract from Git</a> wechseln, um Trainingtools zu installieren</li>
+<li>Befehle ab <em>To build Tesseract with training tools, run the following</em> durchführen</li>
+</ol>
+<section id="fehlermeldungen" class="level4">
+<h4 class="anchored" data-anchor-id="fehlermeldungen">Fehlermeldungen:</h4>
+<ul>
+<li><em>Unable to find a valid copy of libtoolize or glibtoolize in your PATH</em> (<a href="https://github.com/OCR-D/ocrd_all/issues/259">Issue #259</a>) beheben</li>
+<li><em>Failed to retrieve available kernel versions</em> (<a href="https://askubuntu.com/questions/1404129/ubuntu-22-04-lts-on-wsl-failed-to-retrieve-available-kernel-versions-failed">askubuntu</a>) beheben</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="training-tesseract-5-for-a-new-font" class="level3">
+<h3 class="anchored" data-anchor-id="training-tesseract-5-for-a-new-font">4. <a href="https://www.youtube.com/watch?v=KE4xEzFGSU8">Training Tesseract 5 for a new Font</a></h3>
+<p>(<a href="https://github.com/astutejoe/tesseract_tutorial">Github-Repository</a> zum Tutorial)</p>
+<ol type="1">
+<li><a href="https://github.com/tesseract-ocr/tesstrain/blob/main/README.md">README</a> zum Tesseract Training aufrufen</li>
+<li>Zum Abschnitt <em>Provide Ground Truth</em> navigieren</li>
+<li>Mithilfe des Python Skriptes <a href="https://github.com/astutejoe/tesseract_tutorial/blob/main/split_training_text.py">split_training_text.py</a> mit text2image notwendige Dateien generieren und abspeichern</li>
+<li>Dabei anzupassen: Sprache, Schriftart (.otf), sowie die Parameter: ysize (Höhe) und char_spacing (Abstand)</li>
+<li>Ordner langdata mit deu.training_text befüllen</li>
+<li><code>TESSDATA_PREFIX=../tesseract/tessdata make training MODEL_NAME=[insert model name] START_MODEL=[insert lang] TESSDATA=../tesseract/tessdata MAX_ITERATIONS=2000</code> anpassen, um Training auszuführen</li>
+<li>Mit Anzahl der Wiederholung experimentieren (<a href="https://www.ibm.com/cloud/learn/overfitting">Overfit</a> vermeiden, Errorrate verringern)</li>
+<li>Model evaluieren: <code>tesseract data/[insert ground truth folder]/[*].tif stdout --tessdata-dir/[*]/tesstrain/data --psm [insert psm] -l [insert model name] --loglevel ALL</code> (notwendige Parameter anpassen)</li>
+</ol>
+<section id="auswahl-der-schriftarten" class="level4">
+<h4 class="anchored" data-anchor-id="auswahl-der-schriftarten">Auswahl der Schriftart(en)</h4>
+<p><strong>1. Welche Schriftarten führen (möglicherweise) zu schlechterem Ouput?</strong> <img src="https://s3.hedgedoc.org/demo/uploads/2529a3a4-106a-4ba8-afe8-78d0f332464d.PNG" class="img-fluid"></p>
+<p>Mögliche Schriftarten: <strong>1. Placard Next Round Bold by Monotype</strong> <strong>2. Placard Next Round Compressed Bold by Monotype</strong> <strong>3. Gill Sans Nova Condensed Ultra Bold by Monotype</strong> <strong>4. Aachen SH Bold by Scangraphic Digital Type Collection</strong> 5. Dance Lesson JNL by Jeff Levine 6. Pudgy Puss NF by Nick's Fonts 7. Typewriter Serial Extra Light by SoftMaker 8. Dirty Sundae Bold by Fenotype</p>
+<p><strong>2. Welche verfügbaren Schriftart(en) repräsentieren Gemeinsamkeiten o.g. Schriftarten?</strong></p>
+<p>Möglichkeit 1: Placard Next Round (Compression) Bold by <a href="https://www.monotype.com/de">Monotype</a> &gt; aus <a href="https://github.com/tesseract-ocr/langdata_lstm/blob/main/deu/okfonts.txt">Fonts for Tesseract Training</a>: […] PistolShot LT Std Bold Placard MT Std Bold Placard MT Std Medium Plantin Head MT Std Bold […]</p>
+<p>Zu MyFonts by Monotype: <a href="https://www.myfonts.com/collections/placard-next-font-monotype-imaging">Placard Next</a></p>
+<p>Möglichkeit 2: Aachen SH Bold by <a href="https://www.myfonts.com/collections/scangraphic-digital-type-collection-foundry">Scangraphic</a> &gt; aus <a href="https://github.com/tesseract-ocr/langdata_lstm/blob/main/deu/okfonts.txt">Fonts for Tesseract Training</a>: Aachen Std Bold Aachen Std Medium Abadi MT Std Bold […]</p>
+<p>Möglichkeit 3: Gill Sans Nova Cond Bold &gt; aus <a href="https://github.com/tesseract-ocr/langdata_lstm/blob/main/deu/okfonts.txt">Fonts for Tesseract Training</a>: Gill Sans MT Std Medium Italic Gill Sans Shadowed MT Std Light Gill Sans WGL Bold Gill Sans WGL Bold Italic […]</p>
+<p><strong>3. Welche Schriftart für Training geeignet (=notwendiges Material gegeben)?</strong> Gill Sans Nova Cond Bold - Microsoft Font</p>
+</section>
+<section id="notwendiges-trainingsmaterial" class="level4">
+<h4 class="anchored" data-anchor-id="notwendiges-trainingsmaterial">Notwendiges Trainingsmaterial</h4>
+<ol type="1">
+<li>Font als <a href="https://fileinfo.com/extension/otf">.otf</a> Datei</li>
+<li>Python Skript <a href="https://github.com/astutejoe/tesseract_tutorial/blob/main/split_training_text.py">split_training_text.py</a> zur zeilenweisen Separation und Anwendung von <a href="https://github.com/tesseract-ocr/tesseract/blob/main/doc/text2image.1.asc">text2image</a></li>
+<li>Ordner MODEL_NAME-ground-truth: .tiff, .box, .txt Dateien</li>
+<li>Ordner tessdata: default Inhalt + <a href="https://github.com/tesseract-ocr/tessdata_best/blob/main/deu.traineddata">deu.traineddata</a></li>
+<li>Ordner langdata_lstm: <a href="https://github.com/tesseract-ocr/langdata_lstm/tree/main/deu">deu</a></li>
+</ol>
+</section>
+<section id="read-4" class="level4">
+<h4 class="anchored" data-anchor-id="read-4">Read</h4>
+<ol type="1">
+<li><a href="https://tesseract-ocr.github.io/tessdoc/Fonts.html">Tesseract Doku: Fonts</a></li>
+<li><a href="https://github.com/tesseract-ocr/langdata_lstm/blob/main/deu/okfonts.txt">GitHub: Fonts for Tesseract Training</a></li>
+<li><a href="https://github.com/tesseract-ocr/tessdata_best">GitHub: Best Trained Data Models (lang, script)</a></li>
+</ol>
+<p><a href="https://tesseract-ocr.github.io/tessdoc/tess4/NeuralNetsInTesseract4.00.html">Einführung in die Implementierung</a></p>
+</section>
+<section id="lstm-neural-networks" class="level4">
+<h4 class="anchored" data-anchor-id="lstm-neural-networks">LSTM Neural Networks:</h4>
+<p>Da die Programme gängiger Texterkennungssoftware häufig auf dem Konzept des LSTM (<a href="https://de.wikipedia.org/wiki/Long_short-term_memory">Long Short Term Memory</a>) aufbauen, ist es sinnvoll, dieses zumindest im Ansatz nachvollziehen zu können. Im Kontext des <a href="https://de.wikipedia.org/wiki/%C3%9Cberwachtes_Lernen">überwachten maschinellen Lernen</a> macht sich das <em>lange Kurzzeitgedächtnis</em> darum die Technik der <a href="https://de.wikipedia.org/wiki/Backpropagation">Backpropagation</a> zunutze. Auf diese Weise <em>vergessen</em> die künstlichen neuronalen Einheiten (<a href="https://en.wikipedia.org/wiki/Artificial_neural_network#Artificial_neurons">Units</a>) Informationen nicht, wie bei herkömmlichen RNN, sondern können aufgrund eines kodierten und gewichteten <em>Erinnerungsvermögens</em> auf zurückliegende Informationen zugreifen und somit Lernfähigkeit und Resultate maßgeblich verbessern.</p>
+</section>
+<section id="read-5" class="level4">
+<h4 class="anchored" data-anchor-id="read-5">Read</h4>
+<ul>
+<li><a href="https://medium.com/@humble_bee/rnn-recurrent-neural-networks-lstm-842ba7205bbf">Einführung in RNN &amp; LSTM</a></li>
+<li><a href="http://colah.github.io/posts/2015-08-Understanding-LSTMs/">Grundlagen LSTM</a></li>
+<li><a href="https://towardsdatascience.com/the-fall-of-rnn-lstm-2d1594c74ce0">Weiterführend: Transformer-Modelle</a></li>
+</ul>
+</section>
+</section>
+<section id="training-what-else" class="level3">
+<h3 class="anchored" data-anchor-id="training-what-else">5. Training, what else?</h3>
+<ol type="1">
+<li><strong>Workflow</strong>: Blacklist mit Sonderzeichen &amp;rarr; @, ©, ®, $ etc. blacklisten, damit Gesamtoutput verbessern? (Encoding Error)</li>
+<li><strong>Workflow</strong>: Coverbild-Retusche &amp;rarr; Coverbilder ausblenden, damit Gesamtoutput verbessern?</li>
+<li><strong>Workflow</strong>: Finetune-Training für Cover-Bild Schriftarten &amp;rarr; Output für Coverbilder, damit Gesamtoutput verbessern?</li>
+<li><strong>Workflow</strong>: Text Detektion &amp;rarr; Segmentierung mit GUI (z.B. <a href="https://tesseract-ocr.github.io/tessdoc/User-Projects-%E2%80%93-3rdParty.html">von diesen</a>) oder mit anderer Software (z.B.: <a href="https://medium.com/technovators/scene-text-detection-in-python-with-east-and-craft-cbe03dda35d5">vielleicht so?</a> oder <a href="https://arxiv.org/abs/1601.07140v2">hiermit?</a>) verbessern</li>
+<li><strong>Workflow</strong>: OCR mit OCR4all</li>
+</ol>
+<section id="blacklist-mit-sonderzeichen" class="level4">
+<h4 class="anchored" data-anchor-id="blacklist-mit-sonderzeichen"><a href="https://pyimagesearch.com/2021/09/06/whitelisting-and-blacklisting-characters-with-tesseract-and-python/">Blacklist</a> mit Sonderzeichen</h4>
+<p>tesseract: <code>-l deu+Fraktur -c tessedit_char_blacklist=&amp;#34;*,@,©,®,$&amp;#34;</code></p>
+<p>Fehlermeldungen: 1. <a href="https://stackoverflow.com/questions/70044328/what-does-encoding-latin-1-do-when-reading-a-file">utf-8-codec-cant-decode-byte-0xed</a>: change <code>encoding=&amp;#39;utf8&amp;#39;</code> to <code>encoding=&amp;#39;latin1&amp;#39;</code> 2. <a href="https://stackoverflow.com/questions/65172293/how-to-solve-iopub-data-rate-exceeded-in-jupyter-notebook">IOPub data rate exceeded</a>: run notebook by <code>jupyter notebook --allow-root --NotebookApp.iopub_data_rate_limit=1.0e10</code></p>
+</section>
+<section id="tesseract-guis" class="level4">
+<h4 class="anchored" data-anchor-id="tesseract-guis"><a href="https://tesseract-ocr.github.io/tessdoc/User-Projects-%E2%80%93-3rdParty.html">Tesseract GUIs</a></h4>
+<ol type="1">
+<li><a href="https://rescribe.xyz/rescribe/">Rescribe</a>: absolut user-unfreundlich</li>
+<li><a href="https://github.com/dynobo/normcap">Normcap</a>: screen capture tool</li>
+<li><a href="https://vietocr.sourceforge.net/">VietOCR</a>: see rescribe</li>
+<li><a href="https://github.com/writecrow/ocr2text">OCR2Text</a>: PDF Input</li>
+<li><a href="https://github.com/tesseract4java/tesseract4java">Tesseract4java</a>: Fraktur</li>
+<li><a href="https://www.basiccat.org/imagetrans/">ImageTrans</a>: Comics</li>
+</ol>
+</section>
+<section id="ocr4all" class="level4">
+<h4 class="anchored" data-anchor-id="ocr4all"><a href="https://www.ocr4all.org/">OCR4all</a></h4>
+<ol type="1">
+<li><a href="https://docs.docker.com/desktop/install/windows-install/">Docker installieren</a></li>
+<li><a href="https://www.ocr4all.org/guide/setup-guide/windows">OCR4all installieren</a></li>
+<li>Bilddateien intern konvertieren lassen (tif &amp;rarr; png)</li>
+<li>Workflow für Stichprobe festlegen und ausführen</li>
+<li>Ground Truth Production (<a href="https://www.uni-wuerzburg.de/fileadmin/10030600/Mitarbeiter/Reul_Christian/Projects/Layout_Analysis/LAREX_Quick_Guide.pdf">LAREX</a>)</li>
+<li>optional: Training durchführen</li>
+</ol>
+<p><strong>Workflow</strong> 1. Preprocessing 2. Noise Removal 3. Segmentation 4. Line Segmentation 5. Recognition (geeignetes <a href="https://github.com/OCR4all/ocr4all_models">Model</a>) 6. Ground-Truth Production 7. Training (optional)</p>
+<p><strong>LAREX-Editor Oberfläche</strong> <img src="https://s3.hedgedoc.org/demo/uploads/03a3e06b-b36e-4502-9f95-1d9fe021b8e7.png" class="img-fluid"></p>
+<p><strong>Problem bei der Durchführung</strong> Einige der Seiten (Problemfälle: p16, p19, p29, p32, p37, p42, p54, p57) sorgen bei der Seiten- und Zeilensegmentierung für problematischen Output, da die Reihenfolge (auch manuell) nicht korrekt zugeordnet werden kann.</p>
+<p><img src="https://s3.hedgedoc.org/demo/uploads/0192e5a1-c3e6-484d-920a-a29afd6a8df2.png" class="img-fluid"></p>
+<p><strong>Read</strong> - <a href="https://fortext.net/tools/tools/ocr4all">OCR4all bei ForText</a> - <a href="https://www.ocr4all.org/guide/user-guide/introduction">OCR Introduction</a> - <a href="https://docs.docker.com/desktop/install/windows-install/">Systemanforderungen</a> - <a href="https://learn.microsoft.com/en-us/windows/wsl/install">WSL2 installieren</a> - <a href="https://github.com/Calamari-OCR/calamari">Calamari-OCR Modelle</a></p>
+<hr>
+</section>
+</section>
+</section>
+<section id="teil-iii-vergleich-nachbearbeitung-datenbank" class="level2">
+<h2 class="anchored" data-anchor-id="teil-iii-vergleich-nachbearbeitung-datenbank">Teil III: Vergleich, Nachbearbeitung &amp; Datenbank</h2>
+<hr>
+<section id="ergebnisse-und-vergleich" class="level3">
+<h3 class="anchored" data-anchor-id="ergebnisse-und-vergleich">1. Ergebnisse und Vergleich</h3>
+<section id="stichprobe" class="level4">
+<h4 class="anchored" data-anchor-id="stichprobe">Stichprobe</h4>
+<ul>
+<li>ca. 10% (2 bis 4 x16)</li>
+<li>Auswahlkriterien: 4 (-Deckblatt/ Inhalt)</li>
+<li>Vergleich: <em>-gt.txt vs.&nbsp;</em>-out.txt</li>
+<li>Problem: Reihenfolge?</li>
+<li>Was ist das Minimum?
+<ol type="1">
+<li>Titel</li>
+<li>Handlung</li>
+<li>Bestellinformationen</li>
+<li>extra: Creditangaben, Genre (wenn gegeben)</li>
+<li>extra: UFA Serie Information</li>
+<li>keine Bilder und Zusatzinformationen</li>
+</ol></li>
+</ul>
+<p><strong>Fragen</strong> - Enthält Tesseract-Output die projektspezifisch notwendigen Zeilen? - Besteht die Möglichkeit, die Reihenfolge der Zeilen miteinzubeziehen? - Mit welchem Algorithmus lässt sich die Genauigkeit bestimmen? - Wie lassen sich Line Matches aus GT Liste herausnehmen? - Anderer Ansatz: <a href="https://www.python-forum.de/viewtopic.php?t=55371">Müll-Abgleich</a>?</p>
+<p>&amp;rarr; <strong>pragmatisch:</strong> keine Reihenfolge, SequenceMatcher als Vergleichswert</p>
+</section>
+<section id="skript" class="level4">
+<h4 class="anchored" data-anchor-id="skript">Skript</h4>
+<p>Das Python Skripte sowie Dokumentation und Datensätze zu finden unter: <a href="https://github.com/gitmthoma/super8_project">GitHub super8_project</a></p>
+<p><strong>SequenceMatcher-Funktion (difflib Modul)</strong> Quelle: <a href="https://towardsdatascience.com/sequencematcher-in-python-6b1e6f3915fc">SequenceMatcher in Python</a></p>
+<p>&gt; Given two input strings a and b, &gt; &gt; - <strong>ratio( )</strong> returns the similarity score ( float in [0,1] ) between input strings. It sums the sizes of all matched sequences returned by function get_matching_blocks and calculates the ratio as: ratio = 2.0*M / T , where M = matches , T = total number of elements in both sequences &gt; - <strong>get_matching_blocks( )</strong> return list of triples describing matching subsequences. The last triple is a dummy, (len(a), len(b), 0). It works by repeated application of find_longest_match( ) &gt; - <strong>find_longest_match( )</strong> returns a triple containing the longest matching block in a[aLow:aHigh] and b[bLow:bHigh]</p>
+</section>
+<section id="varianten-im-stichprobenvergleich" class="level4">
+<h4 class="anchored" data-anchor-id="varianten-im-stichprobenvergleich">Varianten im Stichprobenvergleich</h4>
+<ol type="1">
+<li><strong>TIFF vs.&nbsp;JPG (BestStandard?)</strong> tesseract: <code>-l deu+Fraktur</code> TIF: <strong>~91.34%</strong> JPG: ~90.79%</li>
+<li><strong>BestStandard vs.&nbsp;händische Retusche</strong> BestStandard: <strong>~91.34%</strong> (händische) Retusche: ~84,36%</li>
+<li><strong>BestStandard vs.&nbsp;OCR4allDefault</strong> BestStandard: <strong>~91.34</strong> OCR4All (default): ~91,2</li>
+</ol>
+</section>
+<section id="vergleichswert-für-workflows-bei-ufa-katalogen" class="level4">
+<h4 class="anchored" data-anchor-id="vergleichswert-für-workflows-bei-ufa-katalogen">Vergleichswert für Workflows bei UFA Katalogen</h4>
+<ul>
+<li><strong>Alternative</strong>: zur Evaluation der Workflows (z.B. <a href="https://towardsdatascience.com/evaluating-ocr-output-quality-with-character-error-rate-cer-and-word-error-rate-wer-853175297510">OCR Evaluation with CER &amp; WER</a>)</li>
+<li><strong>Alternative</strong>: zur Evaluation der Workflows Reihenfolge miteinbeziehen</li>
+<li><strong>Alternative</strong>: gematchte Zeilen aus Output löschen (auskommentiert im Skript)</li>
+</ul>
+<p><img src="https://s3.hedgedoc.org/demo/uploads/4cd6456b-7d65-47f1-8370-672fa8a4e2f8.png" class="img-fluid"></p>
+<p><img src="https://s3.hedgedoc.org/demo/uploads/0e873ce3-0958-40aa-8b20-ccdfdf11f5e2.png" class="img-fluid"></p>
+<p><img src="https://s3.hedgedoc.org/demo/uploads/13081bf9-54ec-4e35-b3ab-af06beb87125.png" class="img-fluid"></p>
+<p><img src="https://s3.hedgedoc.org/demo/uploads/4b23acba-0e04-407b-874c-e094e6eb5659.png" class="img-fluid"></p>
+</section>
+<section id="auswertung" class="level4">
+<h4 class="anchored" data-anchor-id="auswertung">Auswertung</h4>
+<p>Das kommandozeilenbasierte Tesseract im Standardmodell bietet mit dem geringsten Arbeitsaufwand und einer überschaubaren Bildvorverarbeitung den besten Output. Vermutlich performt OCR4all bzgl. der Reihenfolge besser, was sich allerdings im Rahmen dieser Evaluation nicht auswerten ließ. Zudem scheint im Zusammenhang mit der Segmentierung ein bisher nicht behobener Fehler vorliegen, was die Zuordnung der Reihenfolge für den Output erheblich beeinflusst. Trainieren eines eigenen Modells (mit tesseract sowie OCR4all) wäre mit einem unverhältnismäßigen zeitlichen und/oder finanziellen Aufwand verbunden.</p>
+<hr>
+</section>
+</section>
+</section>
+<section id="könnte-nützlich-sein" class="level2">
+<h2 class="anchored" data-anchor-id="könnte-nützlich-sein">Könnte nützlich sein</h2>
+<ol type="1">
+<li>über Kommandozeile alle <a href="https://adnanvatandas.wordpress.com/2010/09/26/texterkennung-mit-tesseract-windows/">Einzel-txt-Files zu einem kopieren</a>: <code>copy /b *.txt Gesamttext.txt</code></li>
+<li><a href="https://onlyhow.net/de/4-moglichkeiten-zum-batch-umbenennen-von-dateien-in-windows">Stapelweise Umbenennung</a> von Dateien in einem Ordner über Kommandozeile/Windows Powershell: <code>dir | %{$x=0} {Rename-Item $_ -NewName &amp;#34;TestName$x.jpg&amp;#34;; $x++ }</code></li>
+<li><a href="https://averagelinuxuser.com/linux-root-folders-explained/">Linux Folder System Explained</a></li>
+</ol>
+<hr>
+<p><img src="https://licensebuttons.net/l/by/3.0/88x31.png" class="img-fluid"></p>
+<p>Dieses Werk und dessen Inhalte (Text, Abbildungen sowie Befehle und Code) sind - sofern nicht anders angegeben - lizenziert unter <a href="https://creativecommons.org/licenses/by/4.0/deed.de">https://creativecommons.org/licenses/by/4.0/deed.de</a>.</p>
+<p>Nennung bitte wie folgt: <em>Projekt-Dokumentation: Workflows zur Texterkennung mit Tesseract und OCR4all am Beispiel von Super-8-Filmkatalogen des Anbieters UFA</em> von Merle-Sophie Thoma (2022), Lizenz: <a href="https://creativecommons.org/licenses/by/4.0/deed.de">https://creativecommons.org/licenses/by/4.0/deed.de</a>.</p>
+
+
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          // default icon
+          link.classList.add("external");
+      }
+    }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">© 2023 <a href="https://www.uni-marburg.de/en/fb09/institutes/media-studies/research/research-projects/dici-hub">Digital Cinema Hub</a>, Marburg - Mainz - Frankfurt. <br> Für die Inhalte externer Seiten übernehmen wir trotz sorgfältiger Überprüfung keine Verantwortung.</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+</body></html>

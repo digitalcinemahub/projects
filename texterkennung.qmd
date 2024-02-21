@@ -2,4 +2,256 @@
 title: "How to: Computerbasierte Texterkennung"
 sidebar: false
 ---
-###### Weitere Informationen folgen in Kürze
+## I. Textdigitalisierung
+
+----
+
+### Optical Character Recognition (OCR)
+
+Optical Charater Recognition beschreibt den **Prozess automatisierter Texterkennung** innerhalb von Bilddateien (bspw. Scans). Dazu muss der zu kodierende Text zunächst als solcher erkannt und anschließend den **Buchstaben Zahlenwerte zugeordnet** werden. Als Ausgabe wird eine Textdatei im zuvor definierten Format erzeugt. Der Prozess der Texterkennung umfasst mehrere Arbeitsschritte und wird durch verschiedene Faktoren beeinflusst. 
+**Quelle**: [Möglichkeiten der Textdigitalisierung (ForText)](https://fortext.net/routinen/methoden/moeglichkeiten-der-textdigitalisierung)
+
+---
+
+**Stichworte**: Eigenschaften von Originaldokument und Bilddatei, Umfang und Qualität des Preprocessings, Umfang und Qualität der genutzten Softwarelösung, zugrundeliegende Algorithmen)
+
+----
+
+![](https://s3.hedgedoc.org/demo/uploads/8d74b9d6-b486-4380-9188-81ab14ab194d.png)
+
+----
+
+### LSTM als Grundlage der computerbasierten Texterkennung
+
+----
+
+Da die Programme gängiger Texterkennungssoftware häufig auf dem Konzept des LSTM ([Long Short Term Memory](https://de.wikipedia.org/wiki/Long_short-term_memory)) aufbauen, ist es sinnvoll, dieses zumindest im Ansatz nachvollziehen zu können:
+
+&gt; Denken Sie daran, wenn wir uns eine Geschichte anhören oder jemand mit uns kommuniziert. Betrachten wir jedes der Worte einzeln und verarbeiten jedes Wort unabhängig oder verbinden wir ein Wort mit dem nächsten und so weiter, um ihren Zusammenhang zu verstehen? 
+Quelle: [Einführung in das Konzept LSTM](https://datascience.eu/de/maschinelles-lernen/lstm-netzwerke-verstehen/)
+
+----
+
+Im Kontext des [überwachten maschinellen Lernens](https://de.wikipedia.org/wiki/%C3%9Cberwachtes_Lernen) macht sich das *lange Kurzzeitgedächtnis* darum die Technik der [Backpropagation](https://de.wikipedia.org/wiki/Backpropagation) zunutze. Auf diese Weise *vergessen* die künstlichen neuronalen Einheiten ([Units](https://en.wikipedia.org/wiki/Artificial_neural_network#Artificial_neurons)) Informationen nicht, wie beim herkömmlichen [RNN](https://de.wikipedia.org/wiki/Rekurrentes_neuronales_Netz), sondern können aufgrund eines kodierten und gewichteten *Erinnerungsvermögens* auf zurückliegende Informationen zugreifen und somit Lernfähigkeit und Resultate maßgeblich verbessern.
+
+
+----
+
+### Read
+- [Möglichkeiten der Textdigitalisierung](https://fortext.net/routinen/methoden/moeglichkeiten-der-textdigitalisierung)
+- [Was ist OCR?](https://medium.com/analytics-vidhya/what-is-ocr-f67c9ab218bf)
+- [OCR-Software](https://medium.com/technovators/review-of-best-open-source-ocr-tools-fc839a20e61f)
+- [Einführung in RNN &amp; LSTM](https://medium.com/@humble_bee/rnn-recurrent-neural-networks-lstm-842ba7205bbf)
+- [Grundlagen LSTM](http://colah.github.io/posts/2015-08-Understanding-LSTMs/)
+- [Weiterführend: Transformer-Modelle](https://towardsdatascience.com/the-fall-of-rnn-lstm-2d1594c74ce0)
+
+---
+
+## II. TESSERACT
+
+----
+
+### Geschichte, Grundlagen und Installation
+
+[Tesseract](https://github.com/tesseract-ocr) ist eine **freie Software zur Texterkennung**. Ursprünglich als proprietäre Software zwischen 1984 und 1994 bei [Hewlett-Packard](https://en.wikipedia.org/wiki/Hewlett-Packard) entwickelt, wurde Tesseract 2005 bei Google aktualisiert, freigegeben und bis heute auf GitHub weiterentwickelt.
+**Quelle**: [Tesseract Wikipedia](https://de.wikipedia.org/wiki/Tesseract_(Software))
+
+----
+
+Die Texterkennungssoftware Tesseract nimmt ein Bild (in gängigen Formaten, wie bspw. ```.tif```, ```.jpg```, etc.) entgegen und liest den erkannten Text in eine zuvor definierte Ausgabedatei aus. Aktuelle Versionen nutzen dabei die [Programmbibliothek Leptonica](http://www.leptonica.org/) zur Analyse und Verarbeitung der Bilddatei. Seit Version 4.0 bietet Tesseract die Möglichkeit zur Anwendung einer auf [KNN](https://de.wikipedia.org/wiki/K%C3%BCnstliches_neuronales_Netz) (genauer [LSTM](https://de.wikipedia.org/wiki/Long_short-term_memory)) basierenden OCR-Engine. Tesseract kann als freie Software unter den Bedingungen von Version 2.0 der [Apache-Lizenz](https://de.wikipedia.org/wiki/Apache-Lizenz) genutzt und verbreitet werden. Außerdem besteht die Möglichkeit verschiedene Formen des Trainings (für Sprachen und Schriftarten) durchzuführen. Separate Projekte stellen zwar GUIs zur Verwendung von Tesseract bereit, jedoch empfiehlt sich die Verwendung über die Kommandozeile ([Beispiel](https://en.wikipedia.org/wiki/Tesseract_(software)#/media/File:Tesseractv411_light.png)).
+**Quelle**: [Tesseract Wikipedia](https://de.wikipedia.org/wiki/Tesseract_(Software))
+
+- [Hier](https://tesseract-ocr.github.io/tessdoc/Installation.html) geht es zur Installationsanleitung für alle gängigen Betriebssysteme.
+- [Hier](https://www.youtube.com/watch?v=veJt3U44yqc) gibt es ein Videotutorial von Gabriel Garcia zur manuellen Installation über GitHub.
+
+----
+
+### Read
+- [OCR und Tesseract](https://nanonets.com/blog/ocr-with-tesseract/)
+- [Tesseract User Manual](https://tesseract-ocr.github.io/tessdoc/)
+- [hOCR(Standard) Wikipedia](https://de.wikipedia.org/wiki/HOCR_(Standard))
+
+----
+
+### Grundlagen zur kommandozeilenbasierten Nutzung von tesseract 
+
+Die [Kommandozeile](https://de.wikipedia.org/wiki/Kommandozeile) nimmt Zeichenketten als Eingaben (Kommandos/ Befehle) über die Tastatur entgegen. Die Eingabe folgt einer Syntax, die meist aus einem Kommando und dazugehörigen Parametern besteht.
+**Quelle**: [Kommandozeile Wikipedia](https://de.wikipedia.org/wiki/Kommandozeile) 
+
+**Basissyntax**
+```tesseract imagename outputbase [-l lang] [--oem ocrenginemode] [--psm pagesegmentationmode] [-c configfiles...]```
+
+----
+
+![](https://s3.hedgedoc.org/demo/uploads/8ed5ff9c-73a4-4f5c-9ceb-6ba79cd5660e.png)
+
+----
+
+**Weitere sinnvolle Befehle zu finden unter: ```tesseract --help-extra```**
+
+- [Hier](https://lerneprogrammieren.de/kommandozeile/) geht es zu einer Einführung in die Verwendung der Kommandozeile für Windows, MacOS und Linux.
+- [Hier](https://github.com/tesseract-ocr/tessdoc/blob/main/Command-Line-Usage.md) geht es zu einer ausführlichen Anleitung zur kommandozeilenbasierten Nutzung von Tesseract.
+- [Hier](https://www.onlogic.com/company/io-hub/de/bash-fuer-windows-10-und-11-aktivieren-so-geht-es/) geht es zu einer ausführlichen Anleitung zur Installation der Ubuntu Linux Bash unter Windows 10.
+
+----
+
+### Training
+
+**Training mit tesseract 5.x**
+1. [README](https://github.com/tesseract-ocr/tesstrain/blob/main/README.md) zum Tesseract Training aufrufen
+2. Zum Abschnitt *Provide Ground Truth* navigieren
+3. Mithilfe des Python Skriptes [split_training_text.py](https://github.com/astutejoe/tesseract_tutorial/blob/main/split_training_text.py) mit text2image notwendige Dateien generieren und abspeichern
+4. Dabei anzupassen: Sprache, Schriftart (.otf), sowie die Parameter: ysize (Höhe) und char_spacing (Abstand)
+5. Ordner langdata mit deu.training_text befüllen
+6. ``TESSDATA_PREFIX=../tesseract/tessdata make training MODEL_NAME=[insert model name] START_MODEL=[insert lang] TESSDATA=../tesseract/tessdata MAX_ITERATIONS=2000`` anpassen, um Training auszuführen 
+7. Mit Anzahl der Wiederholung experimentieren ([Overfit](https://www.ibm.com/cloud/learn/overfitting) vermeiden, Errorrate verringern)
+8. Model evaluieren: ``tesseract data/[insert ground truth folder]/[*].tif stdout --tessdata-dir/[*]/tesstrain/data --psm [insert psm] -l [insert model name] --loglevel ALL`` (notwendige Parameter anpassen)
+
+- [Hier](https://github.com/tesseract-ocr/tesstrain) geht es zu einer ausführlichen Anleitung zum Tesseract Training.
+- [Hier](https://www.youtube.com/watch?v=KE4xEzFGSU8&amp;t=279s) gibt es ein Videotutorial Gabriel Garcia zum Tesseract Training.
+- [Hier](https://github.com/astutejoe/tesseract_tutorial) geht es zum im Tutorial referenzierten GitHub Repository.
+
+----
+
+### Training, what else?
+Tesseract zu trainieren (oder selbst ein Finetuning für bestimmte Schriftarten) scheint nicht immer die beste Idee zu sein...
+
+**Alternative: Verbesserung des Tesseract Standard Modells**
+
+1. Dateien auf sinnvolle Weise vorverarbeiten (z.B. mit [ImageMagick](https://imagemagick.org/)).
+2. Geeignete Sprach- und Schriftmodelle auswählen ([tessdata](https://github.com/tesseract-ocr/tessdata), [tessdata_fast](https://github.com/tesseract-ocr/tessdata_best), [tessdata_best](https://github.com/tesseract-ocr/tessdata_fast)).
+3. Geeigneten Modus für die [Seitensegmentierung](https://pyimagesearch.com/2021/11/15/tesseract-page-segmentation-modes-psms-explained-how-to-improve-your-ocr-accuracy/) wählen (```--psm 1-13```).
+4. Geeigneten Modus für die Engine wählen (Legacy, LSTM).
+5. Unter Umständen weitere Parameter sinnvoll anpassen (```tesseract --print-parameters```)
+
+**Wenn alle Stricke reißen**: Hilfe im [Forum](https://groups.google.com/g/tesseract-ocr) suchen!
+
+----
+
+### Read
+- [Tesseract Dokumentation](https://tesseract-ocr.github.io/tessapi/5.x/index.html)
+- [Tesseract Seitensegmentierung](https://pyimagesearch.com/2021/11/15/tesseract-page-segmentation-modes-psms-explained-how-to-improve-your-ocr-accuracy/)
+- [Tesseract Output verbessern](https://tesseract-ocr.github.io/tessdoc/ImproveQuality.html)
+
+---
+
+## III. OCR4ALL
+
+----
+
+### Geschichte, Grundlagen und Installation
+
+OCR4all wurde primär zur Digitalisierung sehr früh gedruckter Dokumente entwickelt, da viele Texterkennungsprogramme zumeist nicht in der Lage sind, die hohe Komplexität der Textsorten und Layoutkonzepte solcher Texte zu bewältigen.
+Durch die Bündelung verschiedener Werkzeuge in einer einheitlichen Benutzeroberfläche entfällt das Wechseln zwischen verschiedenen Programmen. Aufgrund seiner intuitiven Bedienweise und des semi-automatisierten Workflows richtet sich OCR4all ausdrücklich auch an Nicht-Informatiker*innen.
+**Quelle**: [OCR4all—An Open-Source Tool Providing a (Semi-)Automatic OCR Workflow for Historical Printings](https://www.mdpi.com/2076-3417/9/22/4853)
+
+----
+
+&gt; The workflow starts with the Preprocessing of the relevant image files. Layout segmentation (so-called Region Segmentation carried out with LAREX and Line Segmentation follow. Next is the Text Recognition which is carried out with Calamari. The final stage is the correction of the recognized texts the so-called Ground Truth Production. This Ground Truth is then the foundation for creating work-specific OCR models in a training module. Therefore OCR4all entails a full-featured OCR workflow.
+&gt; [Zur zitierten Quelle](https://www.ocr4all.org/about/ocr4all)
+
+----
+
+Durch die Ausführung mit Docker bleiben Bild-und Textdaten auf dem eigenen System. Selbst wenn OCR4all auf einem Server installiert und kollaborativ genutzt wird,  ist die Nutzung von OCR4all aus urheberrechtlicher Sicht vollkommen unbedenklich.
+**Quelle**: [forTEXT zu OCR4all](https://fortext.net/tools/tools/ocr4all)
+
+- [Hier](https://docs.docker.com/desktop/install/windows-install/) geht es zu einer ausführlichen Installationsanleitung für Docker
+- [Hier](https://www.ocr4all.org/guide/setup-guide/windows) geht es zu einer ausführlichen Installationsanleitung für OCR4all
+- [Hier](https://github.com/Calamari-OCR/calamari) geht es zur in OCR4all eingebundenen ATR (automatic text recognition) engine Calamari, einer Abspaltung von [OCRopus](https://de.wikipedia.org/wiki/OCRopus)
+
+
+----
+
+### GUI und Standardmodell
+- Bilddateien in entsprechend [erstelltem Verzeichnis]() ablegen
+- Bilddateien ggf. konvertieren lassen (falls nicht ```.png```)
+- Workflow (&amp;rarr; nächster Abschnitt) für Stichprobe festlegen und ausführen
+- Ground Truth Production ([LAREX](https://www.uni-wuerzburg.de/fileadmin/10030600/Mitarbeiter/Reul_Christian/Projects/Layout_Analysis/LAREX_Quick_Guide.pdf))
+
+----
+
+### Workflow
+
+1. Preprocessing
+2. Noise Removal
+3. Page Segmentation
+4. Line Segmentation
+5. Text Recognition (geeignetes [Model](https://github.com/OCR4all/ocr4all_models))
+6. Ground-Truth Production
+
+**nützliche Shortcuts bei der manuellen Segmentierung:**
+- ```3``` &amp;rarr; rechteckige Textregion oder Zeile eingrenzen
+- ```7``` &amp;rarr; rechteckige Fläche entfernen
+- ```R``` &amp;rarr; Textregion oder Zeile zur Lesereihenfolge hinzufügen
+
+----
+
+![](https://s3.hedgedoc.org/demo/uploads/7f00b39e-82bb-4dee-acd6-9ce068389e5f.png)
+
+----
+
+### Training
+1. Zur Anleitung im [OCR-Workflow](https://www.ocr4all.org/guide/user-guide/workflow) zu Training navigieren
+2. Ground Truth mithilfe von [LAREX-Editor] erstellen
+3. Input: Bilddateien mit Textzeilen + GroundTruth (ggf. OCR-Model)
+4. Der schrittweisen Erläuterung im OCR4all UserGuide folgen, um die Einstellungen zum Training vorzunehmen
+
+[Hier](https://www.youtube.com/watch?v=NWd74RTByA0) geht es zu einem anwendungsorientierten Vortrag zu OCR4all von Dr. Christian Reul (Universität Würzburg) im Rahmen des Transkribathons „Faithful Transcriptions“ von Universitätsbibliothek Leipzig und Staatsbibliothek zu Berlin
+
+---
+
+## IV. Workflow-Evaluation 
+
+----
+
+**Stichprobenauswahl**
+- ca. 10% des Materials
+- *repräsentative* Auswahl
+- pragmatisches Kriterium: enthält der Output die minimal notwendigen (zum Abgleich als -gt.txt festgehaltenen) Informationen?
+
+----
+
+**Evaluationsvorgehen**
+- [Jupyter-Notebook]() mit [Python](https://www.python.org/)-Skript &amp; Dokumentation 
+- Abgleich zweier .txt Dateien (Output = -out.txt &amp;rarr; Ground-Truth = -gt.txt)
+- Auswertung mithilfe der [SequenceMatcher]() Library
+- Visualisierung mithilfe der [Matplotlib]() Library
+
+----
+
+![](https://s3.hedgedoc.org/demo/uploads/c768801a-e7c1-4c4d-8b6e-02e9df933c2f.png)
+
+---
+
+## V. Anwendungsbeispiel Super-8-Filmkataloge
+
+----
+
+**Kontext**: Digitalisierungsvorhaben des [DiCi-Hub](https://www.uni-marburg.de/en/fb09/institutes/media-studies/research/research-projects/dici-hub) zur Datenextraktion (und anschließende Datenbank-Überführung) aus [Super-8](https://off2.de/ueber-super-8/geschichte/)-Filmkatalogen verschiedener Anbieter (UFA, marketing film, piccolo)  
+**Fragestellung**: Welcher Workflow zur Texterkennung erweist sich für das o. g. Material als sinnvoll? 
+
+----
+
+1. Einarbeitung in [computerbasierte Texterkennung](https://de.wikipedia.org/wiki/Texterkennung)
+2. Einarbeitung in [Tesseract](https://github.com/tesseract-ocr)
+3. Kommandozeilenbasierte Verwendung von Tesseract 
+4. Kommandozeilenbasierte Vorverarbeitung des Bildmaterials ([ImageMagick](https://imagemagick.org/))
+5. Einarbeitung in Tesseract Parameter 
+6. Verbesserung des Outputs 
+7. Entwicklung eines Evaluationsskriptes ([Jupyter Notebook](https://jupyter.org/), [Python](https://www.python.org/))
+8. Einarbeitung in Tesseract Training
+9. Einarbeitung in [OCR4all](https://github.com/OCR4all) (&amp; [Docker](https://www.docker.com/))
+10. Verwendung des Default-Workflows von OCR4all
+11. Einarbeitung in OCR4all Training
+12. Evaluation der Workflows
+
+[Hier](texterkennung_super8.qmd) geht es zur ausführlichen Projektdokumentation.
+
+----
+
+# Lizenzierung
+![](https://licensebuttons.net/l/by/3.0/88x31.png)
+
+Weiternutzung als OER ausdrücklich erlaubt. Dieses Werk und dessen Inhalte (Text, Abbildungen sowie Befehle und Code) sind - sofern nicht anders angegeben - lizenziert unter [https://creativecommons.org/licenses/by/4.0/deed.de](https://creativecommons.org/licenses/by/4.0/deed.de). 
+
+Nennung bitte wie folgt: *How to: computerbasierte Texterkennung* von Merle-Sophie Thoma (2022), Lizenz: [https://creativecommons.org/licenses/by/4.0/deed.de](https://creativecommons.org/licenses/by/4.0/deed.de).

@@ -116,7 +116,37 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#i.-textdigitalisierung" id="toc-i.-textdigitalisierung" class="nav-link active" data-scroll-target="#i.-textdigitalisierung">I. Textdigitalisierung</a>
+  <ul class="collapse">
+  <li><a href="#optical-character-recognition-ocr" id="toc-optical-character-recognition-ocr" class="nav-link" data-scroll-target="#optical-character-recognition-ocr">Optical Character Recognition (OCR)</a></li>
+  <li><a href="#lstm-als-grundlage-der-computerbasierten-texterkennung" id="toc-lstm-als-grundlage-der-computerbasierten-texterkennung" class="nav-link" data-scroll-target="#lstm-als-grundlage-der-computerbasierten-texterkennung">LSTM als Grundlage der computerbasierten Texterkennung</a></li>
+  <li><a href="#read" id="toc-read" class="nav-link" data-scroll-target="#read">Read</a></li>
+  </ul></li>
+  <li><a href="#ii.-tesseract" id="toc-ii.-tesseract" class="nav-link" data-scroll-target="#ii.-tesseract">II. TESSERACT</a>
+  <ul class="collapse">
+  <li><a href="#geschichte-grundlagen-und-installation" id="toc-geschichte-grundlagen-und-installation" class="nav-link" data-scroll-target="#geschichte-grundlagen-und-installation">Geschichte, Grundlagen und Installation</a></li>
+  <li><a href="#read-1" id="toc-read-1" class="nav-link" data-scroll-target="#read-1">Read</a></li>
+  <li><a href="#grundlagen-zur-kommandozeilenbasierten-nutzung-von-tesseract" id="toc-grundlagen-zur-kommandozeilenbasierten-nutzung-von-tesseract" class="nav-link" data-scroll-target="#grundlagen-zur-kommandozeilenbasierten-nutzung-von-tesseract">Grundlagen zur kommandozeilenbasierten Nutzung von tesseract</a></li>
+  <li><a href="#training" id="toc-training" class="nav-link" data-scroll-target="#training">Training</a></li>
+  <li><a href="#training-what-else" id="toc-training-what-else" class="nav-link" data-scroll-target="#training-what-else">Training, what else?</a></li>
+  <li><a href="#read-2" id="toc-read-2" class="nav-link" data-scroll-target="#read-2">Read</a></li>
+  </ul></li>
+  <li><a href="#iii.-ocr4all" id="toc-iii.-ocr4all" class="nav-link" data-scroll-target="#iii.-ocr4all">III. OCR4ALL</a>
+  <ul class="collapse">
+  <li><a href="#geschichte-grundlagen-und-installation-1" id="toc-geschichte-grundlagen-und-installation-1" class="nav-link" data-scroll-target="#geschichte-grundlagen-und-installation-1">Geschichte, Grundlagen und Installation</a></li>
+  <li><a href="#gui-und-standardmodell" id="toc-gui-und-standardmodell" class="nav-link" data-scroll-target="#gui-und-standardmodell">GUI und Standardmodell</a></li>
+  <li><a href="#workflow" id="toc-workflow" class="nav-link" data-scroll-target="#workflow">Workflow</a></li>
+  <li><a href="#training-1" id="toc-training-1" class="nav-link" data-scroll-target="#training-1">Training</a></li>
+  </ul></li>
+  <li><a href="#iv.-workflow-evaluation" id="toc-iv.-workflow-evaluation" class="nav-link" data-scroll-target="#iv.-workflow-evaluation">IV. Workflow-Evaluation</a></li>
+  <li><a href="#v.-anwendungsbeispiel-super-8-filmkataloge" id="toc-v.-anwendungsbeispiel-super-8-filmkataloge" class="nav-link" data-scroll-target="#v.-anwendungsbeispiel-super-8-filmkataloge">V. Anwendungsbeispiel Super-8-Filmkataloge</a></li>
+  <li><a href="#lizenzierung" id="toc-lizenzierung" class="nav-link" data-scroll-target="#lizenzierung">Lizenzierung</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -138,8 +168,204 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="weitere-informationen-folgen-in-kürze" class="level6">
-<h6 class="anchored" data-anchor-id="weitere-informationen-folgen-in-kürze">Weitere Informationen folgen in Kürze</h6>
+<section id="i.-textdigitalisierung" class="level2">
+<h2 class="anchored" data-anchor-id="i.-textdigitalisierung">I. Textdigitalisierung</h2>
+<hr>
+<section id="optical-character-recognition-ocr" class="level3">
+<h3 class="anchored" data-anchor-id="optical-character-recognition-ocr">Optical Character Recognition (OCR)</h3>
+<p>Optical Charater Recognition beschreibt den <strong>Prozess automatisierter Texterkennung</strong> innerhalb von Bilddateien (bspw. Scans). Dazu muss der zu kodierende Text zunächst als solcher erkannt und anschließend den <strong>Buchstaben Zahlenwerte zugeordnet</strong> werden. Als Ausgabe wird eine Textdatei im zuvor definierten Format erzeugt. Der Prozess der Texterkennung umfasst mehrere Arbeitsschritte und wird durch verschiedene Faktoren beeinflusst. <strong>Quelle</strong>: <a href="https://fortext.net/routinen/methoden/moeglichkeiten-der-textdigitalisierung">Möglichkeiten der Textdigitalisierung (ForText)</a></p>
+<hr>
+<p><strong>Stichworte</strong>: Eigenschaften von Originaldokument und Bilddatei, Umfang und Qualität des Preprocessings, Umfang und Qualität der genutzten Softwarelösung, zugrundeliegende Algorithmen)</p>
+<hr>
+<p><img src="https://s3.hedgedoc.org/demo/uploads/8d74b9d6-b486-4380-9188-81ab14ab194d.png" class="img-fluid"></p>
+<hr>
+</section>
+<section id="lstm-als-grundlage-der-computerbasierten-texterkennung" class="level3">
+<h3 class="anchored" data-anchor-id="lstm-als-grundlage-der-computerbasierten-texterkennung">LSTM als Grundlage der computerbasierten Texterkennung</h3>
+<hr>
+<p>Da die Programme gängiger Texterkennungssoftware häufig auf dem Konzept des LSTM (<a href="https://de.wikipedia.org/wiki/Long_short-term_memory">Long Short Term Memory</a>) aufbauen, ist es sinnvoll, dieses zumindest im Ansatz nachvollziehen zu können:</p>
+<p>&gt; Denken Sie daran, wenn wir uns eine Geschichte anhören oder jemand mit uns kommuniziert. Betrachten wir jedes der Worte einzeln und verarbeiten jedes Wort unabhängig oder verbinden wir ein Wort mit dem nächsten und so weiter, um ihren Zusammenhang zu verstehen? Quelle: <a href="https://datascience.eu/de/maschinelles-lernen/lstm-netzwerke-verstehen/">Einführung in das Konzept LSTM</a></p>
+<hr>
+<p>Im Kontext des <a href="https://de.wikipedia.org/wiki/%C3%9Cberwachtes_Lernen">überwachten maschinellen Lernens</a> macht sich das <em>lange Kurzzeitgedächtnis</em> darum die Technik der <a href="https://de.wikipedia.org/wiki/Backpropagation">Backpropagation</a> zunutze. Auf diese Weise <em>vergessen</em> die künstlichen neuronalen Einheiten (<a href="https://en.wikipedia.org/wiki/Artificial_neural_network#Artificial_neurons">Units</a>) Informationen nicht, wie beim herkömmlichen <a href="https://de.wikipedia.org/wiki/Rekurrentes_neuronales_Netz">RNN</a>, sondern können aufgrund eines kodierten und gewichteten <em>Erinnerungsvermögens</em> auf zurückliegende Informationen zugreifen und somit Lernfähigkeit und Resultate maßgeblich verbessern.</p>
+<hr>
+</section>
+<section id="read" class="level3">
+<h3 class="anchored" data-anchor-id="read">Read</h3>
+<ul>
+<li><a href="https://fortext.net/routinen/methoden/moeglichkeiten-der-textdigitalisierung">Möglichkeiten der Textdigitalisierung</a></li>
+<li><a href="https://medium.com/analytics-vidhya/what-is-ocr-f67c9ab218bf">Was ist OCR?</a></li>
+<li><a href="https://medium.com/technovators/review-of-best-open-source-ocr-tools-fc839a20e61f">OCR-Software</a></li>
+<li><a href="https://medium.com/@humble_bee/rnn-recurrent-neural-networks-lstm-842ba7205bbf">Einführung in RNN &amp; LSTM</a></li>
+<li><a href="http://colah.github.io/posts/2015-08-Understanding-LSTMs/">Grundlagen LSTM</a></li>
+<li><a href="https://towardsdatascience.com/the-fall-of-rnn-lstm-2d1594c74ce0">Weiterführend: Transformer-Modelle</a></li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="ii.-tesseract" class="level2">
+<h2 class="anchored" data-anchor-id="ii.-tesseract">II. TESSERACT</h2>
+<hr>
+<section id="geschichte-grundlagen-und-installation" class="level3">
+<h3 class="anchored" data-anchor-id="geschichte-grundlagen-und-installation">Geschichte, Grundlagen und Installation</h3>
+<p><a href="https://github.com/tesseract-ocr">Tesseract</a> ist eine <strong>freie Software zur Texterkennung</strong>. Ursprünglich als proprietäre Software zwischen 1984 und 1994 bei <a href="https://en.wikipedia.org/wiki/Hewlett-Packard">Hewlett-Packard</a> entwickelt, wurde Tesseract 2005 bei Google aktualisiert, freigegeben und bis heute auf GitHub weiterentwickelt. <strong>Quelle</strong>: <a href="https://de.wikipedia.org/wiki/Tesseract_(Software)">Tesseract Wikipedia</a></p>
+<hr>
+<p>Die Texterkennungssoftware Tesseract nimmt ein Bild (in gängigen Formaten, wie bspw. <code>.tif</code>, <code>.jpg</code>, etc.) entgegen und liest den erkannten Text in eine zuvor definierte Ausgabedatei aus. Aktuelle Versionen nutzen dabei die <a href="http://www.leptonica.org/">Programmbibliothek Leptonica</a> zur Analyse und Verarbeitung der Bilddatei. Seit Version 4.0 bietet Tesseract die Möglichkeit zur Anwendung einer auf <a href="https://de.wikipedia.org/wiki/K%C3%BCnstliches_neuronales_Netz">KNN</a> (genauer <a href="https://de.wikipedia.org/wiki/Long_short-term_memory">LSTM</a>) basierenden OCR-Engine. Tesseract kann als freie Software unter den Bedingungen von Version 2.0 der <a href="https://de.wikipedia.org/wiki/Apache-Lizenz">Apache-Lizenz</a> genutzt und verbreitet werden. Außerdem besteht die Möglichkeit verschiedene Formen des Trainings (für Sprachen und Schriftarten) durchzuführen. Separate Projekte stellen zwar GUIs zur Verwendung von Tesseract bereit, jedoch empfiehlt sich die Verwendung über die Kommandozeile (<a href="https://en.wikipedia.org/wiki/Tesseract_(software)#/media/File:Tesseractv411_light.png">Beispiel</a>). <strong>Quelle</strong>: <a href="https://de.wikipedia.org/wiki/Tesseract_(Software)">Tesseract Wikipedia</a></p>
+<ul>
+<li><a href="https://tesseract-ocr.github.io/tessdoc/Installation.html">Hier</a> geht es zur Installationsanleitung für alle gängigen Betriebssysteme.</li>
+<li><a href="https://www.youtube.com/watch?v=veJt3U44yqc">Hier</a> gibt es ein Videotutorial von Gabriel Garcia zur manuellen Installation über GitHub.</li>
+</ul>
+<hr>
+</section>
+<section id="read-1" class="level3">
+<h3 class="anchored" data-anchor-id="read-1">Read</h3>
+<ul>
+<li><a href="https://nanonets.com/blog/ocr-with-tesseract/">OCR und Tesseract</a></li>
+<li><a href="https://tesseract-ocr.github.io/tessdoc/">Tesseract User Manual</a></li>
+<li><a href="https://de.wikipedia.org/wiki/HOCR_(Standard)">hOCR(Standard) Wikipedia</a></li>
+</ul>
+<hr>
+</section>
+<section id="grundlagen-zur-kommandozeilenbasierten-nutzung-von-tesseract" class="level3">
+<h3 class="anchored" data-anchor-id="grundlagen-zur-kommandozeilenbasierten-nutzung-von-tesseract">Grundlagen zur kommandozeilenbasierten Nutzung von tesseract</h3>
+<p>Die <a href="https://de.wikipedia.org/wiki/Kommandozeile">Kommandozeile</a> nimmt Zeichenketten als Eingaben (Kommandos/ Befehle) über die Tastatur entgegen. Die Eingabe folgt einer Syntax, die meist aus einem Kommando und dazugehörigen Parametern besteht. <strong>Quelle</strong>: <a href="https://de.wikipedia.org/wiki/Kommandozeile">Kommandozeile Wikipedia</a></p>
+<p><strong>Basissyntax</strong> <code>tesseract imagename outputbase [-l lang] [--oem ocrenginemode] [--psm pagesegmentationmode] [-c configfiles...]</code></p>
+<hr>
+<p><img src="https://s3.hedgedoc.org/demo/uploads/8ed5ff9c-73a4-4f5c-9ceb-6ba79cd5660e.png" class="img-fluid"></p>
+<hr>
+<p><strong>Weitere sinnvolle Befehle zu finden unter: <code>tesseract --help-extra</code></strong></p>
+<ul>
+<li><a href="https://lerneprogrammieren.de/kommandozeile/">Hier</a> geht es zu einer Einführung in die Verwendung der Kommandozeile für Windows, MacOS und Linux.</li>
+<li><a href="https://github.com/tesseract-ocr/tessdoc/blob/main/Command-Line-Usage.md">Hier</a> geht es zu einer ausführlichen Anleitung zur kommandozeilenbasierten Nutzung von Tesseract.</li>
+<li><a href="https://www.onlogic.com/company/io-hub/de/bash-fuer-windows-10-und-11-aktivieren-so-geht-es/">Hier</a> geht es zu einer ausführlichen Anleitung zur Installation der Ubuntu Linux Bash unter Windows 10.</li>
+</ul>
+<hr>
+</section>
+<section id="training" class="level3">
+<h3 class="anchored" data-anchor-id="training">Training</h3>
+<p><strong>Training mit tesseract 5.x</strong> 1. <a href="https://github.com/tesseract-ocr/tesstrain/blob/main/README.md">README</a> zum Tesseract Training aufrufen 2. Zum Abschnitt <em>Provide Ground Truth</em> navigieren 3. Mithilfe des Python Skriptes <a href="https://github.com/astutejoe/tesseract_tutorial/blob/main/split_training_text.py">split_training_text.py</a> mit text2image notwendige Dateien generieren und abspeichern 4. Dabei anzupassen: Sprache, Schriftart (.otf), sowie die Parameter: ysize (Höhe) und char_spacing (Abstand) 5. Ordner langdata mit deu.training_text befüllen 6. <code>TESSDATA_PREFIX=../tesseract/tessdata make training MODEL_NAME=[insert model name] START_MODEL=[insert lang] TESSDATA=../tesseract/tessdata MAX_ITERATIONS=2000</code> anpassen, um Training auszuführen 7. Mit Anzahl der Wiederholung experimentieren (<a href="https://www.ibm.com/cloud/learn/overfitting">Overfit</a> vermeiden, Errorrate verringern) 8. Model evaluieren: <code>tesseract data/[insert ground truth folder]/[*].tif stdout --tessdata-dir/[*]/tesstrain/data --psm [insert psm] -l [insert model name] --loglevel ALL</code> (notwendige Parameter anpassen)</p>
+<ul>
+<li><a href="https://github.com/tesseract-ocr/tesstrain">Hier</a> geht es zu einer ausführlichen Anleitung zum Tesseract Training.</li>
+<li><a href="https://www.youtube.com/watch?v=KE4xEzFGSU8&amp;t=279s">Hier</a> gibt es ein Videotutorial Gabriel Garcia zum Tesseract Training.</li>
+<li><a href="https://github.com/astutejoe/tesseract_tutorial">Hier</a> geht es zum im Tutorial referenzierten GitHub Repository.</li>
+</ul>
+<hr>
+</section>
+<section id="training-what-else" class="level3">
+<h3 class="anchored" data-anchor-id="training-what-else">Training, what else?</h3>
+<p>Tesseract zu trainieren (oder selbst ein Finetuning für bestimmte Schriftarten) scheint nicht immer die beste Idee zu sein…</p>
+<p><strong>Alternative: Verbesserung des Tesseract Standard Modells</strong></p>
+<ol type="1">
+<li>Dateien auf sinnvolle Weise vorverarbeiten (z.B. mit <a href="https://imagemagick.org/">ImageMagick</a>).</li>
+<li>Geeignete Sprach- und Schriftmodelle auswählen (<a href="https://github.com/tesseract-ocr/tessdata">tessdata</a>, <a href="https://github.com/tesseract-ocr/tessdata_best">tessdata_fast</a>, <a href="https://github.com/tesseract-ocr/tessdata_fast">tessdata_best</a>).</li>
+<li>Geeigneten Modus für die <a href="https://pyimagesearch.com/2021/11/15/tesseract-page-segmentation-modes-psms-explained-how-to-improve-your-ocr-accuracy/">Seitensegmentierung</a> wählen (<code>--psm 1-13</code>).</li>
+<li>Geeigneten Modus für die Engine wählen (Legacy, LSTM).</li>
+<li>Unter Umständen weitere Parameter sinnvoll anpassen (<code>tesseract --print-parameters</code>)</li>
+</ol>
+<p><strong>Wenn alle Stricke reißen</strong>: Hilfe im <a href="https://groups.google.com/g/tesseract-ocr">Forum</a> suchen!</p>
+<hr>
+</section>
+<section id="read-2" class="level3">
+<h3 class="anchored" data-anchor-id="read-2">Read</h3>
+<ul>
+<li><a href="https://tesseract-ocr.github.io/tessapi/5.x/index.html">Tesseract Dokumentation</a></li>
+<li><a href="https://pyimagesearch.com/2021/11/15/tesseract-page-segmentation-modes-psms-explained-how-to-improve-your-ocr-accuracy/">Tesseract Seitensegmentierung</a></li>
+<li><a href="https://tesseract-ocr.github.io/tessdoc/ImproveQuality.html">Tesseract Output verbessern</a></li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="iii.-ocr4all" class="level2">
+<h2 class="anchored" data-anchor-id="iii.-ocr4all">III. OCR4ALL</h2>
+<hr>
+<section id="geschichte-grundlagen-und-installation-1" class="level3">
+<h3 class="anchored" data-anchor-id="geschichte-grundlagen-und-installation-1">Geschichte, Grundlagen und Installation</h3>
+<p>OCR4all wurde primär zur Digitalisierung sehr früh gedruckter Dokumente entwickelt, da viele Texterkennungsprogramme zumeist nicht in der Lage sind, die hohe Komplexität der Textsorten und Layoutkonzepte solcher Texte zu bewältigen. Durch die Bündelung verschiedener Werkzeuge in einer einheitlichen Benutzeroberfläche entfällt das Wechseln zwischen verschiedenen Programmen. Aufgrund seiner intuitiven Bedienweise und des semi-automatisierten Workflows richtet sich OCR4all ausdrücklich auch an Nicht-Informatiker*innen. <strong>Quelle</strong>: <a href="https://www.mdpi.com/2076-3417/9/22/4853">OCR4all—An Open-Source Tool Providing a (Semi-)Automatic OCR Workflow for Historical Printings</a></p>
+<hr>
+<p>&gt; The workflow starts with the Preprocessing of the relevant image files. Layout segmentation (so-called Region Segmentation carried out with LAREX and Line Segmentation follow. Next is the Text Recognition which is carried out with Calamari. The final stage is the correction of the recognized texts the so-called Ground Truth Production. This Ground Truth is then the foundation for creating work-specific OCR models in a training module. Therefore OCR4all entails a full-featured OCR workflow. &gt; <a href="https://www.ocr4all.org/about/ocr4all">Zur zitierten Quelle</a></p>
+<hr>
+<p>Durch die Ausführung mit Docker bleiben Bild-und Textdaten auf dem eigenen System. Selbst wenn OCR4all auf einem Server installiert und kollaborativ genutzt wird, ist die Nutzung von OCR4all aus urheberrechtlicher Sicht vollkommen unbedenklich. <strong>Quelle</strong>: <a href="https://fortext.net/tools/tools/ocr4all">forTEXT zu OCR4all</a></p>
+<ul>
+<li><a href="https://docs.docker.com/desktop/install/windows-install/">Hier</a> geht es zu einer ausführlichen Installationsanleitung für Docker</li>
+<li><a href="https://www.ocr4all.org/guide/setup-guide/windows">Hier</a> geht es zu einer ausführlichen Installationsanleitung für OCR4all</li>
+<li><a href="https://github.com/Calamari-OCR/calamari">Hier</a> geht es zur in OCR4all eingebundenen ATR (automatic text recognition) engine Calamari, einer Abspaltung von <a href="https://de.wikipedia.org/wiki/OCRopus">OCRopus</a></li>
+</ul>
+<hr>
+</section>
+<section id="gui-und-standardmodell" class="level3">
+<h3 class="anchored" data-anchor-id="gui-und-standardmodell">GUI und Standardmodell</h3>
+<ul>
+<li>Bilddateien in entsprechend <a href="">erstelltem Verzeichnis</a> ablegen</li>
+<li>Bilddateien ggf. konvertieren lassen (falls nicht <code>.png</code>)</li>
+<li>Workflow (&amp;rarr; nächster Abschnitt) für Stichprobe festlegen und ausführen</li>
+<li>Ground Truth Production (<a href="https://www.uni-wuerzburg.de/fileadmin/10030600/Mitarbeiter/Reul_Christian/Projects/Layout_Analysis/LAREX_Quick_Guide.pdf">LAREX</a>)</li>
+</ul>
+<hr>
+</section>
+<section id="workflow" class="level3">
+<h3 class="anchored" data-anchor-id="workflow">Workflow</h3>
+<ol type="1">
+<li>Preprocessing</li>
+<li>Noise Removal</li>
+<li>Page Segmentation</li>
+<li>Line Segmentation</li>
+<li>Text Recognition (geeignetes <a href="https://github.com/OCR4all/ocr4all_models">Model</a>)</li>
+<li>Ground-Truth Production</li>
+</ol>
+<p><strong>nützliche Shortcuts bei der manuellen Segmentierung:</strong> - <code>3</code> &amp;rarr; rechteckige Textregion oder Zeile eingrenzen - <code>7</code> &amp;rarr; rechteckige Fläche entfernen - <code>R</code> &amp;rarr; Textregion oder Zeile zur Lesereihenfolge hinzufügen</p>
+<hr>
+<p><img src="https://s3.hedgedoc.org/demo/uploads/7f00b39e-82bb-4dee-acd6-9ce068389e5f.png" class="img-fluid"></p>
+<hr>
+</section>
+<section id="training-1" class="level3">
+<h3 class="anchored" data-anchor-id="training-1">Training</h3>
+<ol type="1">
+<li>Zur Anleitung im <a href="https://www.ocr4all.org/guide/user-guide/workflow">OCR-Workflow</a> zu Training navigieren</li>
+<li>Ground Truth mithilfe von [LAREX-Editor] erstellen</li>
+<li>Input: Bilddateien mit Textzeilen + GroundTruth (ggf. OCR-Model)</li>
+<li>Der schrittweisen Erläuterung im OCR4all UserGuide folgen, um die Einstellungen zum Training vorzunehmen</li>
+</ol>
+<p><a href="https://www.youtube.com/watch?v=NWd74RTByA0">Hier</a> geht es zu einem anwendungsorientierten Vortrag zu OCR4all von Dr.&nbsp;Christian Reul (Universität Würzburg) im Rahmen des Transkribathons „Faithful Transcriptions“ von Universitätsbibliothek Leipzig und Staatsbibliothek zu Berlin</p>
+<hr>
+</section>
+</section>
+<section id="iv.-workflow-evaluation" class="level2">
+<h2 class="anchored" data-anchor-id="iv.-workflow-evaluation">IV. Workflow-Evaluation</h2>
+<hr>
+<p><strong>Stichprobenauswahl</strong> - ca. 10% des Materials - <em>repräsentative</em> Auswahl - pragmatisches Kriterium: enthält der Output die minimal notwendigen (zum Abgleich als -gt.txt festgehaltenen) Informationen?</p>
+<hr>
+<p><strong>Evaluationsvorgehen</strong> - <a href="">Jupyter-Notebook</a> mit <a href="https://www.python.org/">Python</a>-Skript &amp; Dokumentation - Abgleich zweier .txt Dateien (Output = -out.txt &amp;rarr; Ground-Truth = -gt.txt) - Auswertung mithilfe der <a href="">SequenceMatcher</a> Library - Visualisierung mithilfe der <a href="">Matplotlib</a> Library</p>
+<hr>
+<p><img src="https://s3.hedgedoc.org/demo/uploads/c768801a-e7c1-4c4d-8b6e-02e9df933c2f.png" class="img-fluid"></p>
+<hr>
+</section>
+<section id="v.-anwendungsbeispiel-super-8-filmkataloge" class="level2">
+<h2 class="anchored" data-anchor-id="v.-anwendungsbeispiel-super-8-filmkataloge">V. Anwendungsbeispiel Super-8-Filmkataloge</h2>
+<hr>
+<p><strong>Kontext</strong>: Digitalisierungsvorhaben des <a href="https://www.uni-marburg.de/en/fb09/institutes/media-studies/research/research-projects/dici-hub">DiCi-Hub</a> zur Datenextraktion (und anschließende Datenbank-Überführung) aus <a href="https://off2.de/ueber-super-8/geschichte/">Super-8</a>-Filmkatalogen verschiedener Anbieter (UFA, marketing film, piccolo)<br>
+<strong>Fragestellung</strong>: Welcher Workflow zur Texterkennung erweist sich für das o. g. Material als sinnvoll?</p>
+<hr>
+<ol type="1">
+<li>Einarbeitung in <a href="https://de.wikipedia.org/wiki/Texterkennung">computerbasierte Texterkennung</a></li>
+<li>Einarbeitung in <a href="https://github.com/tesseract-ocr">Tesseract</a></li>
+<li>Kommandozeilenbasierte Verwendung von Tesseract</li>
+<li>Kommandozeilenbasierte Vorverarbeitung des Bildmaterials (<a href="https://imagemagick.org/">ImageMagick</a>)</li>
+<li>Einarbeitung in Tesseract Parameter</li>
+<li>Verbesserung des Outputs</li>
+<li>Entwicklung eines Evaluationsskriptes (<a href="https://jupyter.org/">Jupyter Notebook</a>, <a href="https://www.python.org/">Python</a>)</li>
+<li>Einarbeitung in Tesseract Training</li>
+<li>Einarbeitung in <a href="https://github.com/OCR4all">OCR4all</a> (&amp; <a href="https://www.docker.com/">Docker</a>)</li>
+<li>Verwendung des Default-Workflows von OCR4all</li>
+<li>Einarbeitung in OCR4all Training</li>
+<li>Evaluation der Workflows</li>
+</ol>
+<p><a href="./texterkennung_super8.html">Hier</a> geht es zur ausführlichen Projektdokumentation.</p>
+<hr>
+</section>
+<section id="lizenzierung" class="level1">
+<h1>Lizenzierung</h1>
+<p><img src="https://licensebuttons.net/l/by/3.0/88x31.png" class="img-fluid"></p>
+<p>Weiternutzung als OER ausdrücklich erlaubt. Dieses Werk und dessen Inhalte (Text, Abbildungen sowie Befehle und Code) sind - sofern nicht anders angegeben - lizenziert unter <a href="https://creativecommons.org/licenses/by/4.0/deed.de">https://creativecommons.org/licenses/by/4.0/deed.de</a>.</p>
+<p>Nennung bitte wie folgt: <em>How to: computerbasierte Texterkennung</em> von Merle-Sophie Thoma (2022), Lizenz: <a href="https://creativecommons.org/licenses/by/4.0/deed.de">https://creativecommons.org/licenses/by/4.0/deed.de</a>.</p>
 
 
 </section>
